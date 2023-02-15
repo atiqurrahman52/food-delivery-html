@@ -38,6 +38,7 @@ module.exports = {
         Playfair: ["Playfair Display", "sans-serif"],
         Inter: ["Inter", "sans-serif"],
         Overpass: ["Overpass", "sans-serif"],
+        edwardian: ["edwardian_script_itcregular"],
       },
 
       colors: {
