@@ -30,10 +30,13 @@
     background-image: url("/assets/image/banner/mobile-banner.png");
 }
 .banner-shop {
-  background-image: url("./assets/image/shop/shop-banner.svg");
+  background-image: url("/assets/image/shop/shop-banner.svg");
 }
 .subscribe-banner{
   background-image: url("assets/image/shop/subscribe.webp");
+}
+.subscribe-banner-mobile{
+  background-image: url("assets/image/shop/mobile-subscribe.webp");
 }
 /* background images started  */
 

@@ -15,3 +15,34 @@ var grid = document.querySelector('.gallery');
     columnWidth: 200
   });
   // Image gallery end
+
+
+
+  // Highest Selling Courses started
+var swiper8 = new Swiper(".itemsSlider", {
+  spaceBetween: 20,
+  slidesPerView: 1,
+  loop: true,
+  pagination: {
+    el: ".itemsSliderPage",
+    clickable: true,
+  },
+  breakpoints: {
+    1024: {
+      slidesPerView: 1,
+      spaceBetween: 24,
+    },
+    768: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+  },
+});
