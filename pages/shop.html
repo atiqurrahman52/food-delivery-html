@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Food Delivery</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <link
+      href="//db.onlinewebfonts.com/c/84ae358e627d67d90bd613fcedc20c10?family=Edwardian+Script+ITC"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- <link rel="stylesheet" href="./dist/main.css" /> -->
+    <!-- <link rel="stylesheet" href="./main.css" /> -->
+    <link rel="stylesheet" href="../main.css" />
+  </head>
+  <body>
+    <!-- Header started  -->
+    <header id="navbar" class="navbar">
+      <div class="container">
+        <nav
+          class="flex flex-wrap items-center justify-between sticky top-0 z-10 w-full py-4 md:py-0 px-4 text-lg text-gray-700 bg-white"
+        >
+          <div class="flex justify-center items-center">
+            <a href="#">
+              <img src="./assets/image/logo/logo.webp" alt="" />
+            </a>
+
+            <ul
+              class="pt-4 text-base text-gray-700 hidden md:flex md:justify-between md:pt-0"
+            >
+              <li>
+                <a
+                  class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
+                  href="../index.html"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
+                  href="#"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
+                  href="#"
+                  >Recipes</a
+                >
+              </li>
+              <li>
+                <a
+                  class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
+                  href="./shop.html"
+                  >Shop</a
+                >
+              </li>
+              <li>
+                <a
+                  class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
+                  href="#"
+                  >Blog</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <svg
+            id="menu-button"
+            class="h-6 w-6 cursor-pointer md:hidden block"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5.9375 5H14.0625"
+              stroke="#004738"
+              stroke-width="1.5"
+              stroke-linecap="square"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M3.125 10H16.875"
+              stroke="#004738"
+              stroke-width="1.5"
+              stroke-linecap="square"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M5.9375 15H14.0625"
+              stroke="#004738"
+              stroke-width="1.5"
+              stroke-linecap="square"
+              stroke-linejoin="round"
+            />
+          </svg>
+
+          <div
+            class="hidden w-full md:flex md:items-center md:w-auto"
+            id="menu"
+          >
+            <ul
+              class="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0"
+            >
+              <li class="md:p-4 py-2 block">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.2"
+                    d="M27 9H5C4.44772 9 4 9.44772 4 10V26C4 26.5523 4.44772 27 5 27H27C27.5523 27 28 26.5523 28 26V10C28 9.44772 27.5523 9 27 9Z"
+                    fill="#070707"
+                  />
+                  <path
+                    d="M27 9H5C4.44772 9 4 9.44772 4 10V26C4 26.5523 4.44772 27 5 27H27C27.5523 27 28 26.5523 28 26V10C28 9.44772 27.5523 9 27 9Z"
+                    stroke="#070707"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M11 13V9C11 7.67392 11.5268 6.4021px5 12.4645 5.46447C13.4021px 4.52678 14.6739 4 16 4C17.3261 4 18.5979 4.52678 19.5355 5.46447C20.4732 6.4021px5 21px 7.67392 21px 9V13"
+                    stroke="#070707"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </li>
+              <li class="md:p-4 py-2 block">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.2"
+                    d="M14.5 25C20.299 25 25 20.299 25 14.5C25 8.70101 20.299 4 14.5 4C8.70101 4 4 8.70101 4 14.5C4 20.299 8.70101 25 14.5 25Z"
+                    fill="#070707"
+                  />
+                  <path
+                    d="M14.5 25C20.299 25 25 20.299 25 14.5C25 8.70101 20.299 4 14.5 4C8.70101 4 4 8.70101 4 14.5C4 20.299 8.70101 25 14.5 25Z"
+                    stroke="#070707"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M21px.925 21px.9248L28 27.9998"
+                    stroke="#070707"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </li>
+
+              <li class="md:p-4 py-2 block">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.2"
+                    d="M16 4C13.5718 3.99929 11.2006 4.73521px 9.19952 6.11053C7.19843 7.48586 5.66165 9.43589 4.7921px8 11.703C3.92271 13.9701 3.76146 16.4477 4.32972 18.8084C4.89799 21px.1691 6.16904 23.3019 7.97497 24.925C8.72746 23.4432 9.87557 22.1986 11.292 21px.3293C12.7085 20.46 14.338 19.9999 16 20C15.0111 20 14.0444 19.7068 13.2221px 19.1573C12.3999 18.6079 11.759 17.827 11.3806 16.9134C11.0021px 15.9998 10.9031 14.9945 11.096 14.0245C11.289 13.0546 11.7652 12.1637 12.4644 11.4645C13.1637 10.7652 14.0546 10.289 15.0245 10.0961C15.9944 9.90315 16.9998 10.0022 17.9134 10.3806C18.827 10.759 19.6079 11.3999 20.1573 12.2221pxC20.7067 13.0444 21px 14.0111 21px 15C21px 16.3261 20.4732 17.5979 19.5355 18.5355C18.5978 19.4732 17.3261 20 16 20C17.6619 19.9999 19.2914 20.46 20.7079 21px.3293C22.1244 22.1986 23.2725 23.4432 24.025 24.925C25.8309 23.3019 27.1019 21px.1691 27.6702 18.8084C28.2385 16.4477 28.0772 13.9701 27.2078 11.703C26.3383 9.43589 24.8015 7.48586 22.8004 6.11053C20.7993 4.73521px 18.4281 3.99929 16 4Z"
+                    fill="#070707"
+                  />
+                  <path
+                    d="M16 28C22.6274 28 28 22.6274 28 16C28 9.37258 22.6274 4 16 4C9.37258 4 4 9.37258 4 16C4 22.6274 9.37258 28 16 28Z"
+                    stroke="#070707"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M16 20C18.7614 20 21px 17.7614 21px 15C21px 12.2386 18.7614 10 16 10C13.2386 10 11 12.2386 11 15C11 17.7614 13.2386 20 16 20Z"
+                    stroke="#070707"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M7.97498 24.9248C8.72736 23.4428 9.87542 22.1981 11.2919 21px.3287C12.7084 20.4592 14.3379 19.999 16 19.999C17.662 19.999 19.2916 20.4592 20.708 21px.3287C22.1245 22.1981 23.2726 23.4428 24.025 24.9248"
+                    stroke="#070707"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Header end  -->
+
+    <!-- Banner Header started  -->
+    <section id="banner-header">
+      <div class="banner-shop bg-center bg-no-repeat bg-cover h-[300px]">
+        <div class="container">
+          <div class="flex flex-col space-y-2 pt-[104px]">
+            <h3
+              class="font-Playfair font-bold text-5xl leading-[48px] text-black"
+            >
+              Shop
+            </h3>
+            <p
+              class="font-Raleway font-medium text-base leading-6 text-primary opacity-60"
+            >
+              From Home Cooks to Professional Chefs
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Banner Header end  -->
+
+    <!-- Customer Favorites started  -->
+    <section id="customer-favorites">
+      <div class="bg-[#F3F4EF]">
+        <div class="container">
+          <div class="py-10">
+            <div class="flex justify-between pb-6">
+              <div>
+                <p
+                  class="font-Playfair font-bold text-xl leading-[28px] text-black"
+                >
+                  Product (24)
+                </p>
+              </div>
+
+              <div class="flex justify-center items-center gap-3">
+                <div
+                  class="flex justify-center items-center gap-2 border-[1.5px] border-success rounded p-2"
+                >
+                  <i
+                    class="ph-sliders-horizontal-bold text-2xl text-success"
+                  ></i>
+                  <p
+                    class="font-Raleway font-semibold text-sm leading-[21px] text-success"
+                  >
+                    Filter
+                  </p>
+                </div>
+                <div
+                  class="flex justify-center items-center gap-2 border-[1.5px] border-success rounded p-2"
+                >
+                  <i
+                    class="ph-circles-three-plus-bold text-2xl text-success"
+                  ></i>
+                  <p
+                    class="font-Raleway font-semibold text-sm leading-[21px] text-success"
+                  >
+                    Categories
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <a href="./pages/product-details.html">
+                <div class="bg-[#E6E8D3] p-6 product-card">
+                  <div
+                    class="flex justify-center w-full h-[264px] items-center"
+                  >
+                    <img src="../assets/image/food/food-1.webp" alt="" />
+                  </div>
+
+                  <div class="space-y-2 lg:space-y-4 mt-4">
+                    <p
+                      class="font-Raleway font-semibold text-base lg:text-xl leading-6 lg:leading-[30px] text-primary"
+                    >
+                      Best Fresh Tasting Avocado
+                    </p>
+                    <p
+                      class="font-Playfair font-bold text-xl lg:text-2xl text-success leading-[28px] lg:leading-[34px]"
+                    >
+                      $4.50
+                      <span
+                        class="font-Raleway text-sm lg:text-base leading-[21pxpx] text-primary"
+                        >/kg</span
+                      >
+                    </p>
+                    <button
+                      type=""
+                      class="font-Raleway font-medium text-sm lg:text-base leading-[21pxpx] lg:leading-6 py-2 text-success md:py-3 w-full border border-success rounded-[5px] z-[1] relative overflow-hidden add-to-cart-btn"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </a>
+
+              <a href="./pages/product-details.html">
+                <div class="bg-[#E3F0E5] p-6 product-card">
+                  <div
+                    class="flex justify-center w-full h-[264px] items-center"
+                  >
+                    <img src="../assets/image/food/food-2.webp" alt="" />
+                  </div>
+
+                  <div class="space-y-2 lg:space-y-4 mt-4">
+                    <p
+                      class="font-Raleway font-semibold text-base lg:text-xl leading-6 lg:leading-[30px] text-primary"
+                    >
+                      Best Fresh Tasting Avocado
+                    </p>
+                    <p
+                      class="font-Playfair font-bold text-xl lg:text-2xl text-success leading-[28px] lg:leading-[34px]"
+                    >
+                      $4.50
+                      <span
+                        class="font-Raleway text-sm lg:text-base leading-[21pxpx] text-primary"
+                        >/kg</span
+                      >
+                    </p>
+                    <button
+                      type=""
+                      class="font-Raleway font-medium text-sm lg:text-base leading-[21pxpx] lg:leading-6 py-2 text-success md:py-3 w-full border border-success rounded-[5px] z-[1] relative overflow-hidden add-to-cart-btn"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </a>
+
+              <a href="./pages/product-details.html">
+                <div class="bg-[#FFEEDC] p-6 product-card">
+                  <div
+                    class="flex justify-center w-full h-[264px] items-center"
+                  >
+                    <img src="../assets/image/food/food-3.webp" alt="" />
+                  </div>
+
+                  <div class="space-y-2 lg:space-y-4 mt-4">
+                    <p
+                      class="font-Raleway font-semibold text-base lg:text-xl leading-6 lg:leading-[30px] text-primary"
+                    >
+                      Best Fresh Tasting Avocado
+                    </p>
+                    <p
+                      class="font-Playfair font-bold text-xl lg:text-2xl text-success leading-[28px] lg:leading-[34px]"
+                    >
+                      $4.50
+                      <span
+                        class="font-Raleway text-sm lg:text-base leading-[21pxpx] text-primary"
+                        >/kg</span
+                      >
+                    </p>
+                    <button
+                      type=""
+                      class="font-Raleway font-medium text-sm lg:text-base leading-[21pxpx] lg:leading-6 py-2 text-success md:py-3 w-full border border-success rounded-[5px] z-[1] relative overflow-hidden add-to-cart-btn"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </a>
+
+              <a href="../pages/product-details.html">
+                <div class="bg-[#FFDDCE] p-6 product-card">
+                  <div
+                    class="flex justify-center w-full h-[264px] items-center"
+                  >
+                    <img src="../assets/image/food/food-4.webp" alt="" />
+                  </div>
+
+                  <div class="space-y-2 lg:space-y-4 mt-4">
+                    <p
+                      class="font-Raleway font-semibold text-base lg:text-xl leading-6 lg:leading-[30px] text-primary"
+                    >
+                      Best Fresh Tasting Avocado
+                    </p>
+                    <p
+                      class="font-Playfair font-bold text-xl lg:text-2xl text-success leading-[28px] lg:leading-[34px]"
+                    >
+                      $4.50
+                      <span
+                        class="font-Raleway text-sm lg:text-base leading-[21pxpx] text-primary"
+                        >/kg</span
+                      >
+                    </p>
+                    <button
+                      type=""
+                      class="font-Raleway font-medium text-sm lg:text-base leading-[21pxpx] lg:leading-6 py-2 text-success md:py-3 w-full border border-success rounded-[5px] z-[1] relative overflow-hidden add-to-cart-btn"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </a>
+
+              <a href="./pages/product-details.html">
+                <div class="bg-[#F5E6D3] p-6 product-card">
+                  <div
+                    class="flex justify-center w-full h-[264px] items-center"
+                  >
+                    <img src="../assets/image/food/food-5.webp" alt="" />
+                  </div>
+
+                  <div class="space-y-2 lg:space-y-4 mt-4">
+                    <p
+                      class="font-Raleway font-semibold text-base lg:text-xl leading-6 lg:leading-[30px] text-primary"
+                    >
+                      Best Fresh Tasting Avocado
+                    </p>
+                    <p
+                      class="font-Playfair font-bold text-xl lg:text-2xl text-success leading-[28px] lg:leading-[34px]"
+                    >
+                      $4.50
+                      <span
+                        class="font-Raleway text-sm lg:text-base leading-[21pxpx] text-primary"
+                        >/kg</span
+                      >
+                    </p>
+                    <button
+                      type=""
+                      class="font-Raleway font-medium text-sm lg:text-base leading-[21pxpx] lg:leading-6 py-2 text-success md:py-3 w-full border border-success rounded-[5px] z-[1] relative overflow-hidden add-to-cart-btn"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </a>
+
+              <a href="./pages/product-details.html">
+                <div class="bg-[#F8FFF5] p-6 product-card">
+                  <div
+                    class="flex justify-center w-full h-[264px] items-center"
+                  >
+                    <img src="../assets/image/food/food-6.webp" alt="" />
+                  </div>
+
+                  <div class="space-y-2 lg:space-y-4 mt-4">
+                    <p
+                      class="font-Raleway font-semibold text-base lg:text-xl leading-6 lg:leading-[30px] text-primary"
+                    >
+                      Best Fresh Tasting Avocado
+                    </p>
+                    <p
+                      class="font-Playfair font-bold text-xl lg:text-2xl text-success leading-[28px] lg:leading-[34px]"
+                    >
+                      $4.50
+                      <span
+                        class="font-Raleway text-sm lg:text-base leading-[21pxpx] text-primary"
+                        >/kg</span
+                      >
+                    </p>
+                    <button
+                      type=""
+                      class="font-Raleway font-medium text-sm lg:text-base leading-[21pxpx] lg:leading-6 py-2 text-success md:py-3 w-full border border-success rounded-[5px] z-[1] relative overflow-hidden add-to-cart-btn"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </a>
+
+              <a href="./pages/product-details.html">
+                <div class="bg-[#FFF5D8] p-6 product-card">
+                  <div
+                    class="flex justify-center w-full h-[264px] items-center"
+                  >
+                    <img src="../assets/image/food/food-7.webp" alt="" />
+                  </div>
+
+                  <div class="space-y-2 lg:space-y-4 mt-4">
+                    <p
+                      class="font-Raleway font-semibold text-base lg:text-xl leading-6 lg:leading-[30px] text-primary"
+                    >
+                      Best Fresh Tasting Avocado
+                    </p>
+                    <p
+                      class="font-Playfair font-bold text-xl lg:text-2xl text-success leading-[28px] lg:leading-[34px]"
+                    >
+                      $4.50
+                      <span
+                        class="font-Raleway text-sm lg:text-base leading-[21pxpx] text-primary"
+                        >/kg</span
+                      >
+                    </p>
+                    <button
+                      type=""
+                      class="font-Raleway font-medium text-sm lg:text-base leading-[21pxpx] lg:leading-6 py-2 text-success md:py-3 w-full border border-success rounded-[5px] z-[1] relative overflow-hidden add-to-cart-btn"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </a>
+
+              <a href="./pages/product-details.html">
+                <div class="bg-[#F5FEFF] p-6 product-card">
+                  <div
+                    class="flex justify-center w-full h-[264px] items-center"
+                  >
+                    <img src="../assets/image/food/food-8.webp" alt="" />
+                  </div>
+
+                  <div class="space-y-2 lg:space-y-4 mt-4">
+                    <p
+                      class="font-Raleway font-semibold text-base lg:text-xl leading-6 lg:leading-[30px] text-primary"
+                    >
+                      Best Fresh Tasting Avocado
+                    </p>
+                    <p
+                      class="font-Playfair font-bold text-xl lg:text-2xl text-success leading-[28px] lg:leading-[34px]"
+                    >
+                      $4.50
+                      <span
+                        class="font-Raleway text-sm lg:text-base leading-[21pxpx] text-primary"
+                        >/kg</span
+                      >
+                    </p>
+                    <button
+                      type=""
+                      class="font-Raleway font-medium text-sm lg:text-base leading-[21pxpx] lg:leading-6 py-2 text-success md:py-3 w-full border border-success rounded-[5px] z-[1] relative overflow-hidden add-to-cart-btn"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </a>
+
+              <a href="./pages/product-details.html">
+                <div class="bg-[#FCF8E8] p-6 product-card">
+                  <div
+                    class="flex justify-center w-full h-[264px] items-center"
+                  >
+                    <img src="../assets/image/food/food-9.webp" alt="" />
+                  </div>
+
+                  <div class="space-y-2 lg:space-y-4 mt-4">
+                    <p
+                      class="font-Raleway font-semibold text-base lg:text-xl leading-6 lg:leading-[30px] text-primary"
+                    >
+                      Best Fresh Tasting Avocado
+                    </p>
+                    <p
+                      class="font-Playfair font-bold text-xl lg:text-2xl text-success leading-[28px] lg:leading-[34px]"
+                    >
+                      $4.50
+                      <span
+                        class="font-Raleway text-sm lg:text-base leading-[21pxpx] text-primary"
+                        >/kg</span
+                      >
+                    </p>
+                    <button
+                      type=""
+                      class="font-Raleway font-medium text-sm lg:text-base leading-[21pxpx] lg:leading-6 py-2 text-success md:py-3 w-full border border-success rounded-[5px] z-[1] relative overflow-hidden add-to-cart-btn"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </a>
+
+              <a href="./pages/product-details.html">
+                <div class="bg-[#FEFEFE] p-6 product-card">
+                  <div
+                    class="flex justify-center w-full h-[264px] items-center"
+                  >
+                    <img src="../assets/image/food/food-10.webp" alt="" />
+                  </div>
+
+                  <div class="space-y-2 lg:space-y-4 mt-4">
+                    <p
+                      class="font-Raleway font-semibold text-base lg:text-xl leading-6 lg:leading-[30px] text-primary"
+                    >
+                      Best Fresh Tasting Avocado
+                    </p>
+                    <p
+                      class="font-Playfair font-bold text-xl lg:text-2xl text-success leading-[28px] lg:leading-[34px]"
+                    >
+                      $4.50
+                      <span
+                        class="font-Raleway text-sm lg:text-base leading-[21pxpx] text-primary"
+                        >/kg</span
+                      >
+                    </p>
+                    <button
+                      type=""
+                      class="font-Raleway font-medium text-sm lg:text-base leading-[21pxpx] lg:leading-6 py-2 text-success md:py-3 w-full border border-success rounded-[5px] z-[1] relative overflow-hidden add-to-cart-btn"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </a>
+
+              <a href="./pages/product-details.html">
+                <div class="bg-[#F5FFE3] p-6 product-card">
+                  <div
+                    class="flex justify-center w-full h-[264px] items-center"
+                  >
+                    <img src="../assets/image/food/food-11.webp" alt="" />
+                  </div>
+
+                  <div class="space-y-2 lg:space-y-4 mt-4">
+                    <p
+                      class="font-Raleway font-semibold text-base lg:text-xl leading-6 lg:leading-[30px] text-primary"
+                    >
+                      Best Fresh Tasting Avocado
+                    </p>
+                    <p
+                      class="font-Playfair font-bold text-xl lg:text-2xl text-success leading-[28px] lg:leading-[34px]"
+                    >
+                      $4.50
+                      <span
+                        class="font-Raleway text-sm lg:text-base leading-[21pxpx] text-primary"
+                        >/kg</span
+                      >
+                    </p>
+                    <button
+                      type=""
+                      class="font-Raleway font-medium text-sm lg:text-base leading-[21pxpx] lg:leading-6 py-2 text-success md:py-3 w-full border border-success rounded-[5px] z-[1] relative overflow-hidden add-to-cart-btn"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </a>
+
+              <a href="./pages/product-details.html">
+                <div class="bg-[#E6EAE0] p-6 product-card">
+                  <div
+                    class="flex justify-center w-full h-[264px] items-center"
+                  >
+                    <img src="../assets/image/food/food-12.webp" alt="" />
+                  </div>
+
+                  <div class="space-y-2 lg:space-y-4 mt-4">
+                    <p
+                      class="font-Raleway font-semibold text-base lg:text-xl leading-6 lg:leading-[30px] text-primary"
+                    >
+                      Best Fresh Tasting Avocado
+                    </p>
+                    <p
+                      class="font-Playfair font-bold text-xl lg:text-2xl text-success leading-[28px] lg:leading-[34px]"
+                    >
+                      $4.50
+                      <span
+                        class="font-Raleway text-sm lg:text-base leading-[21pxpx] text-primary"
+                        >/kg</span
+                      >
+                    </p>
+                    <button
+                      type=""
+                      class="font-Raleway font-medium text-sm lg:text-base leading-[21pxpx] lg:leading-6 py-2 text-success md:py-3 w-full border border-success rounded-[5px] z-[1] relative overflow-hidden add-to-cart-btn"
+                    >
+                      Add to cart
+                    </button>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="flex justify-center pt-6 lg:pt-8">
+              <button
+                class="flex items-center gap-2 py-3 px-4 w-[120px] h-[52px] rounded-[48px] bg-[#248C80]"
+              >
+                <p
+                  class="font-Raleway font-semibold text-sm lg:text-base leading-[21pxpx] lg:leading-6 text-white"
+                >
+                  See all
+                </p>
+                <span
+                  class="bg-white rounded-full w-7 h-7 flex justify-center items-center"
+                >
+                  <i class="ph-caret-right-bold text-success"></i
+                ></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Customer Favorites end  -->
+
+    <!-- Subscribe Newsletter started -->
+    <section id="subscribe">
+      <div class="subscribe-banner bg-center bg-no-repeat bg-cover h-[300px]">
+        <div class="container">
+          <div class="flex justify-between gap-14 pt-[83px]">
+            <div class="space-y-3">
+              <h3 class="font-Playfair font-bold text-[32px] leading-[42px]">
+                Subscribe to our Newsletter
+              </h3>
+              <p class="font-Raleway text-sm leading-[21px] text-primary">
+                Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do
+                eiusmod tempor <br />
+                incididunt ut labore et dolore magna aliqut enim ad minim
+              </p>
+            </div>
+            <div class="rounded w-[514px] h-[60px] flex items-center px-2 bg-white">
+              <input
+                type=""
+                name=""
+                value=""
+                class="w-full h-[60px] px-3"
+                placeholder="Your email address..."
+              />
+              <button class="w-[101px] h-[48px] bg-black text-white" type="">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Subscribe Newsletter end -->
+
+    <!-- Footer started  -->
+    <footer id="footer mb-14">
+      <div class="footer-background">
+        <div class="container">
+          <div class="grid grid-cols-12 py-10 xl:py-20">
+            <div class="col-span-12 lg:col-span-8">
+              <a href="#">
+                <img src="./assets/image/footer/footer-logo.webp" alt="" />
+              </a>
+              <div>
+                <h3
+                  class="font-Raleway font-medium text-base text-yellow leading-6"
+                >
+                  Address:
+                </h3>
+                <p class="text-white">Level 1, 12 Sample St, Sydney NSW 2000</p>
+              </div>
+
+              <div class="mb-6">
+                <h3
+                  class="font-Raleway font-medium text-base text-yellow leading-6 mb-1"
+                >
+                  Contact:
+                </h3>
+                <div class="flex flex-col">
+                  <a
+                    href="tel:1800 123 4567"
+                    class="font-Raleway font-medium text-sm leading-[21pxpx] text-white"
+                    >1800 123 4567</a
+                  >
+                  <a
+                    href="mailto:info@relume.io"
+                    class="font-Raleway font-medium text-sm leading-[21pxpx] text-white"
+                    >info@relume.io</a
+                  >
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-3">
+                <a href="#">
+                  <img src="./assets/image/footer/facebook.webp" alt="" />
+                </a>
+                <a href="#">
+                  <img src="./assets/image/footer/instagram.webp" alt="" />
+                </a>
+                <a href="#">
+                  <img src="./assets/image/footer/twitter.webp" alt="" />
+                </a>
+                <a href="#">
+                  <img src="./assets/image/footer/linkedin.webp" alt="" />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-span-6 lg:col-span-2">
+              <ul class="space-y-3">
+                <li>
+                  <a
+                    href="#"
+                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+                  >
+                    Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+                  >
+                    About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+                  >
+                    Recipes</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+                  >
+                    Shop</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+                  >
+                    Blog</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-span-6 lg:col-span-2 text-end space-y-3">
+              <p
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+              >
+                Open Hour
+              </p>
+              <p
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+              >
+                Monday: 12-6PM
+              </p>
+              <p
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+              >
+                Tuesday: 12-6PM
+              </p>
+              <p
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+              >
+                Wednesday: 12-6PM
+              </p>
+              <p
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+              >
+                Thursday: 12-6PM
+              </p>
+              <p
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+              >
+                Friday: 12-6PM
+              </p>
+              <p
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+              >
+                Sunday: 12-6PM
+              </p>
+            </div>
+          </div>
+          <div class="bg-white h-[2px]"></div>
+
+          <div>
+            <div>
+              <p>© 2000-2021, All Rights Reserved</p>
+            </div>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer end -->
+  </body>
+
+  <script src="./assets/js/jquery-3.6.3.min.js"></script>
+  <script src="./assets/js/common.js"></script>
+</html>

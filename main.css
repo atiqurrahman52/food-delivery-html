@@ -11,6 +11,14 @@
   font-style: normal;
 }
 
+/* navbar started */
+.navbar{
+  background: rgba(255, 255, 255, 0.5);
+
+  backdrop-filter: blur(2px);
+}
+/* navbar end */
+
 /* background images started  */
 .footer-background {
   background-image: url("/assets/image/footer/footer.webp");
@@ -20,6 +28,12 @@
 }
 .banner-mobile-background{
     background-image: url("/assets/image/banner/mobile-banner.png");
+}
+.banner-shop {
+  background-image: url("./assets/image/shop/shop-banner.svg");
+}
+.subscribe-banner{
+  background-image: url("assets/image/shop/subscribe.webp");
 }
 /* background images started  */
 
