@@ -58,7 +58,7 @@ var swiper1 = new Swiper(".babyPotato", {
 
 
   // Related product started
-  var swiper8 = new Swiper(".relatedProduct", {
+  var swiper2 = new Swiper(".relatedProduct", {
     spaceBetween: 20,
     slidesPerView: 1,
     loop: true,
@@ -89,6 +89,40 @@ var swiper1 = new Swiper(".babyPotato", {
     },
   });
   // Related product end
+
+
+  // Our Team started 
+  var swiper2 = new Swiper(".ourTeam", {
+    spaceBetween: 20,
+    slidesPerView: 1,
+    loop: true,
+    autoplay: {
+      delay: 2000,
+    },
+    pagination: {
+      el: ".ourTeamPage",
+      clickable: true,
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 24,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+    },
+  });
+  // Our Team end 
 
 
 // Swiper Js end    
