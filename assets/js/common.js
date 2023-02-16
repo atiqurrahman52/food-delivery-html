@@ -20,7 +20,7 @@ if(grid){
   // Image gallery end
 
 
-
+// Swiper Js Started 
 
 // babyPotato started
 var swiper1 = new Swiper(".babyPotato", {
@@ -57,7 +57,7 @@ var swiper1 = new Swiper(".babyPotato", {
 
 
 
-  // Highest Selling Courses started
+  // Related product started
   var swiper8 = new Swiper(".relatedProduct", {
     spaceBetween: 20,
     slidesPerView: 1,
@@ -88,3 +88,7 @@ var swiper1 = new Swiper(".babyPotato", {
       },
     },
   });
+  // Related product end
+
+
+// Swiper Js end    

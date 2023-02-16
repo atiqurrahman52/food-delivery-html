@@ -38,6 +38,12 @@
 .subscribe-banner-mobile{
   background-image: url("assets/image/shop/mobile-subscribe.webp");
 }
+.about-banner{
+  background-image: url("assets/image/about/about-banner.webp");
+}
+.about-banner-mobile{
+  background-image: url("assets/image/about/about-banner-mobile.webp");
+}
 /* background images started  */
 
 .add-to-cart-btn::before {
