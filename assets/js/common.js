@@ -135,10 +135,10 @@ $(document).ready(function() {
     
   //alert('here');
 
-$('.tabs a').click(function(){
+$('.outlets a').click(function(){
 
-   $('.panel').hide();
-   $('.tabs a.active').removeClass('active');
+   $('.outlet').hide();
+   $('.outlets a.active').removeClass('active');
    $(this).addClass('active');
    
    var panel = $(this).attr('href');
@@ -148,7 +148,7 @@ $('.tabs a').click(function(){
   
 });  // end click 
 
-   $('.tabs li:first a').click();
+   $('.outlets li:first a').click();
    
 }); // end ready
 

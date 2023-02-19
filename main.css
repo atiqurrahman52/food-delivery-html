@@ -147,70 +147,35 @@
 }
 
 
-/* practice start  */
-.tabbedPanels { width: 600px; 
-  margin-top: 25px;
-}
-
-.panelContainer {
-clear: left;
-margin-bottom: 25px;
-border: 2px solid green;	
-background-color: #fff;
-padding: 10px;
-/* add height if you want equal panels */
-}
 
 
 
 
-/* reset ul defaults  */
-.tabs {
-margin: 0;
-padding: 0;	
-list-style: none;	
-}
 
-/* set li properties  */
-.tabs li {
-float: left;
-width: 75px;
-padding: 0;
-margin: 0;
-text-align: center;
-}
 
 /* all formatting goes inside 'a' */
-.tabs a {
+.outlets a {
 display: block;
 text-decoration: none;
-color: #fff;
+color: black;
 font-weight: bold;
 padding:  8px;
-margin-right: 4px;  /* spaces out the tabs  */
-border: 2px solid green;
+margin-right: 4px;  
 border-top-right-radius: 5px;
 border-top-left-radius: 5px;
-background-color: green;
-margin-bottom: -2px;  /* negative margin will move it down
-             to blend in with outer border  */
+margin-bottom: -2px;  
+
 }
 
 
-.tabs a.active {
-border-bottom: 2px solid white;
+.outlets a.active {
+/* border-bottom: 2px solid white; */
 background-color: #fff;
 color: #000;
 font-weight: bold;
+background-color: #F4F4F4;
+border-left: 2px solid #FEBB41;
+
 }
 
-.panel img {
-
-margin-top: 10px;
-}
-
-.panel p  {
-
-margin-bottom: 0px;
-}
 
