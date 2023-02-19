@@ -44,6 +44,15 @@
 .about-banner-mobile{
   background-image: url("assets/image/about/about-banner-mobile.webp");
 }
+.recipes-banner {
+  background-image: url("assets/image/recipes/recipes-banner.webp");
+}
+.recipes-mobile-banner{
+  background-image: url("assets/image/recipes/recipes-mobile-banner.webp");
+}
+.blog-banner{
+  background-image: url("assets/image/blog/blog-banner.webp");
+}
 /* background images started  */
 
 .add-to-cart-btn::before {

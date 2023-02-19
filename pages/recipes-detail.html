@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Food Delivery</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <link
+      href="//db.onlinewebfonts.com/c/84ae358e627d67d90bd613fcedc20c10?family=Edwardian+Script+ITC"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../main.css" />
+  </head>
+  <body>
+    <!-- Header started  -->
+    <header id="navbar" class="navbar">
+      <div class="container">
+        <nav
+          class="flex flex-wrap items-center justify-between sticky top-0 z-10 w-full py-4 md:py-0 px-4 text-lg text-gray-700 bg-white"
+        >
+          <div class="flex justify-center items-center">
+            <a href="../index.html">
+              <img src="../assets/image/logo/logo.webp" alt="" />
+            </a>
+
+            <ul
+              class="pt-4 text-base text-gray-700 hidden md:flex md:justify-between md:pt-0"
+            >
+              <li>
+                <a
+                  class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
+                  href="../index.html"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
+                  href="./about.html"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
+                  href="./recipes.html"
+                  >Recipes</a
+                >
+              </li>
+              <li>
+                <a
+                  class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
+                  href="./shop.html"
+                  >Shop</a
+                >
+              </li>
+              <li>
+                <a
+                  class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
+                  href="./blog.html"
+                  >Blog</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <svg
+            id="menu-button"
+            class="h-6 w-6 cursor-pointer md:hidden block"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5.9375 5H14.0625"
+              stroke="#004738"
+              stroke-width="1.5"
+              stroke-linecap="square"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M3.125 10H16.875"
+              stroke="#004738"
+              stroke-width="1.5"
+              stroke-linecap="square"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M5.9375 15H14.0625"
+              stroke="#004738"
+              stroke-width="1.5"
+              stroke-linecap="square"
+              stroke-linejoin="round"
+            />
+          </svg>
+
+          <div
+            class="hidden w-full md:flex md:items-center md:w-auto"
+            id="menu"
+          >
+            <ul
+              class="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0"
+            >
+              <li class="md:p-4 py-2 block">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.2"
+                    d="M14.5 25C20.299 25 25 20.299 25 14.5C25 8.70101 20.299 4 14.5 4C8.70101 4 4 8.70101 4 14.5C4 20.299 8.70101 25 14.5 25Z"
+                    fill="#070707"
+                  />
+                  <path
+                    d="M14.5 25C20.299 25 25 20.299 25 14.5C25 8.70101 20.299 4 14.5 4C8.70101 4 4 8.70101 4 14.5C4 20.299 8.70101 25 14.5 25Z"
+                    stroke="#070707"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M21.9248 21.9248L27.9998 27.9998"
+                    stroke="#070707"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </li>
+              <li class="md:p-4 py-2 block">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.2"
+                    d="M16.0001 4C13.572 3.99929 11.2007 4.73521 9.19964 6.11053C7.19856 7.48586 5.66178 9.43589 4.7923 11.703C3.92283 13.9701 3.76158 16.4477 4.32984 18.8084C4.89811 21.1691 6.16916 23.3019 7.97509 24.925C8.72758 23.4432 9.87569 22.1986 11.2922 21.3293C12.7086 20.46 14.3381 19.9999 16.0001 20C15.0112 20 14.0445 19.7068 13.2222 19.1573C12.4 18.6079 11.7591 17.827 11.3807 16.9134C11.0023 15.9998 10.9032 14.9945 11.0962 14.0245C11.2891 13.0546 11.7653 12.1637 12.4646 11.4645C13.1638 10.7652 14.0547 10.289 15.0246 10.0961C15.9945 9.90315 16.9999 10.0022 17.9135 10.3806C18.8271 10.759 19.608 11.3999 20.1574 12.2221C20.7068 13.0444 21.0001 14.0111 21.0001 15C21.0001 16.3261 20.4733 17.5979 19.5356 18.5355C18.5979 19.4732 17.3262 20 16.0001 20C17.662 19.9999 19.2916 20.46 20.708 21.3293C22.1245 22.1986 23.2726 23.4432 24.0251 24.925C25.831 23.3019 27.1021 21.1691 27.6703 18.8084C28.2386 16.4477 28.0774 13.9701 27.2079 11.703C26.3384 9.43589 24.8016 7.48586 22.8005 6.11053C20.7995 4.73521 18.4282 3.99929 16.0001 4Z"
+                    fill="#070707"
+                  />
+                  <path
+                    d="M16 28C22.6274 28 28 22.6274 28 16C28 9.37258 22.6274 4 16 4C9.37258 4 4 9.37258 4 16C4 22.6274 9.37258 28 16 28Z"
+                    stroke="#070707"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M16 20C18.7614 20 21 17.7614 21 15C21 12.2386 18.7614 10 16 10C13.2386 10 11 12.2386 11 15C11 17.7614 13.2386 20 16 20Z"
+                    stroke="#070707"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M7.9751 24.9248C8.72749 23.4428 9.87555 22.1981 11.292 21.3287C12.7085 20.4592 14.3381 19.999 16.0001 19.999C17.6621 19.999 19.2917 20.4592 20.7082 21.3287C22.1246 22.1981 23.2727 23.4428 24.0251 24.9248"
+                    stroke="#070707"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </li>
+
+              <li class="md:p-4 py-2 block">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.2"
+                    d="M27 9H5C4.44772 9 4 9.44772 4 10V26C4 26.5523 4.44772 27 5 27H27C27.5523 27 28 26.5523 28 26V10C28 9.44772 27.5523 9 27 9Z"
+                    fill="#070707"
+                  />
+                  <path
+                    d="M27 9H5C4.44772 9 4 9.44772 4 10V26C4 26.5523 4.44772 27 5 27H27C27.5523 27 28 26.5523 28 26V10C28 9.44772 27.5523 9 27 9Z"
+                    stroke="#070707"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M11 13V9C11 7.67392 11.5268 6.40215 12.4645 5.46447C13.4021 4.52678 14.6739 4 16 4C17.3261 4 18.5979 4.52678 19.5355 5.46447C20.4732 6.40215 21 7.67392 21 9V13"
+                    stroke="#070707"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Header end  -->
+
+    <!-- Recipes details Banner started  -->
+    <section id="recipes-banner">
+      <div class="bg-[#F9F6F1]">
+        <div class="py-4 lg:py-8">
+          <div class="container">
+            <h3
+              class="font-Playfair font-bold text-2xl lg:text-5xl leading-[29px] lg:leading-[58px] mb-8 lg:mb-12"
+            >
+              Connecting with Food Lovers Everywhere
+            </h3>
+            <div class="flex justify-between flex-col md:flex-row gap-[14px]">
+              <div class="flex space-x-3 lg:space-x-4">
+                <div>
+                  <img src="../assets/image/recipes-detail/user.webp" alt="" />
+                </div>
+                <div>
+                  <p
+                    class="font-Raleway font-semibold text-sm lg:text-base leading-6 text-primary"
+                  >
+                    Full name
+                  </p>
+                  <div class="flex items-center space-x-2">
+                    <p
+                      class="font-Raleway font-medium text-xs lg:text-sm leading-[18px] lg:leading-[21px] text-black"
+                    >
+                      11 Jan 2022 .
+                    </p>
+                    <!-- <p class="font-Raleway font-extrabold text-xs lg:text-2xl leading-[18px] lg:leading-[21px] text-black">.</p> -->
+                    <p
+                      class="font-Raleway font-medium text-xs lg:text-sm leading-[18px] lg:leading-[21px] text-black"
+                    >
+                      5 min read
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex space-x-2">
+                <a href="#">
+                  <svg
+                    width="24"
+                    height="25"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M20.9999 8.16008V8.50008C21.0007 9.56616 20.576 10.5885 19.8199 11.34L16.9999 14.17C16.4738 14.6911 15.6261 14.6911 15.1 14.17L15 14.06C14.8094 13.8656 14.8094 13.5544 15 13.36L18.4399 9.92006C18.807 9.53938 19.0083 9.02883 18.9999 8.50008V8.16008C19.0003 7.62705 18.788 7.11589 18.4099 6.7401L17.7599 6.09011C17.3841 5.71207 16.873 5.49969 16.3399 5.50011H15.9999C15.4669 5.49969 14.9558 5.71207 14.58 6.09011L11.14 9.50007C10.9456 9.69064 10.6344 9.69064 10.44 9.50007L10.33 9.39007C9.8089 8.86394 9.8089 8.01623 10.33 7.49009L13.16 4.65012C13.9165 3.90505 14.9382 3.49133 15.9999 3.50014H16.3399C17.4011 3.4993 18.4191 3.92018 19.1699 4.67012L19.8299 5.33012C20.5798 6.0809 21.0007 7.09891 20.9999 8.16008ZM8.64993 14.44L13.9399 9.15008C14.0338 9.05543 14.1616 9.00218 14.2949 9.00218C14.4282 9.00218 14.556 9.05543 14.6499 9.15008L15.3499 9.85007C15.4445 9.94395 15.4978 10.0717 15.4978 10.2051C15.4978 10.3384 15.4445 10.4662 15.3499 10.5601L10.0599 15.85C9.96604 15.9447 9.83824 15.9979 9.70492 15.9979C9.57161 15.9979 9.44381 15.9447 9.34993 15.85L8.64993 15.15C8.55528 15.0561 8.50204 14.9283 8.50204 14.795C8.50204 14.6617 8.55528 14.5339 8.64993 14.44ZM13.5599 15.5C13.3655 15.3094 13.0543 15.3094 12.8599 15.5L9.42993 18.91C9.0517 19.2905 8.53645 19.503 7.99995 19.4999H7.65995C7.12691 19.5004 6.61576 19.288 6.23997 18.91L5.58997 18.26C5.21194 17.8842 4.99956 17.373 4.99998 16.84V16.5C4.99956 15.9669 5.21194 15.4558 5.58997 15.08L9.00993 11.64C9.2005 11.4456 9.2005 11.1345 9.00993 10.94L8.89993 10.83C8.3738 10.3089 7.52609 10.3089 6.99996 10.83L4.17999 13.66C3.42392 14.4116 2.99916 15.4339 3 16.5V16.85C3.00182 17.9077 3.42249 18.9216 4.16999 19.6699L4.82998 20.3299C5.58076 21.0799 6.59878 21.5008 7.65995 21.4999H7.99995C9.05338 21.5061 10.0667 21.0964 10.8199 20.3599L13.6699 17.51C14.191 16.9838 14.191 16.1361 13.6699 15.61L13.5599 15.5Z"
+                      fill="#004738"
+                    />
+                  </svg>
+                </a>
+                <a href="#">
+                  <svg
+                    width="24"
+                    height="25"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M5 3.5H19C20.1046 3.5 21 4.39543 21 5.5V19.5C21 20.6046 20.1046 21.5 19 21.5H5C3.89543 21.5 3 20.6046 3 19.5V5.5C3 4.39543 3.89543 3.5 5 3.5ZM8 18.5C8.27614 18.5 8.5 18.2761 8.5 18V11C8.5 10.7239 8.27614 10.5 8 10.5H6.5C6.22386 10.5 6 10.7239 6 11V18C6 18.2761 6.22386 18.5 6.5 18.5H8ZM7.25 9.5C6.42157 9.5 5.75 8.82843 5.75 8C5.75 7.17157 6.42157 6.5 7.25 6.5C8.07843 6.5 8.75 7.17157 8.75 8C8.75 8.82843 8.07843 9.5 7.25 9.5ZM17.5 18.5C17.7761 18.5 18 18.2761 18 18V13.4C18.0325 11.8108 16.8576 10.4545 15.28 10.26C14.177 10.1593 13.1083 10.6744 12.5 11.6V11C12.5 10.7239 12.2761 10.5 12 10.5H10.5C10.2239 10.5 10 10.7239 10 11V18C10 18.2761 10.2239 18.5 10.5 18.5H12C12.2761 18.5 12.5 18.2761 12.5 18V14.25C12.5 13.4216 13.1716 12.75 14 12.75C14.8284 12.75 15.5 13.4216 15.5 14.25V18C15.5 18.2761 15.7239 18.5 16 18.5H17.5Z"
+                      fill="#2231BC"
+                    />
+                  </svg>
+                </a>
+                <a href="#">
+                  <svg
+                    width="24"
+                    height="25"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20.9727 7.2174C20.5083 7.83692 19.9469 8.37733 19.3102 8.81776C19.3102 8.97959 19.3102 9.14142 19.3102 9.31225C19.3153 12.2511 18.1414 15.0691 16.0517 17.1345C13.9619 19.1999 11.1311 20.3399 8.19393 20.2989C6.49587 20.3046 4.81955 19.9169 3.2963 19.1661C3.21416 19.1302 3.16119 19.049 3.1615 18.9593V18.8604C3.1615 18.7313 3.26611 18.6267 3.39515 18.6267C5.0643 18.5716 6.6739 17.9929 7.99622 16.9724C6.48541 16.9419 5.12607 16.0469 4.50048 14.6707C4.46889 14.5956 4.47872 14.5093 4.52645 14.4432C4.57417 14.3771 4.65288 14.3407 4.73413 14.3471C5.1933 14.3932 5.65706 14.3505 6.10008 14.2212C4.43227 13.875 3.17909 12.4904 2.99974 10.7957C2.99337 10.7144 3.0298 10.6357 3.09588 10.5879C3.16195 10.5402 3.24812 10.5303 3.32326 10.562C3.77082 10.7595 4.25397 10.8635 4.74312 10.8676C3.28172 9.90846 2.65049 8.08405 3.20643 6.42622C3.26382 6.26513 3.40169 6.14612 3.56938 6.11294C3.73706 6.07975 3.90984 6.13728 4.0242 6.26439C5.99627 8.36325 8.70592 9.61396 11.5818 9.75279C11.5082 9.45885 11.472 9.15676 11.474 8.85372C11.5009 7.26472 12.4841 5.84921 13.9633 5.26987C15.4424 4.69054 17.1248 5.06203 18.2229 6.21044C18.9713 6.06785 19.6949 5.81645 20.3706 5.46421C20.4201 5.43331 20.4829 5.43331 20.5324 5.46421C20.5633 5.51373 20.5633 5.57652 20.5324 5.62604C20.2051 6.37552 19.6522 7.00412 18.9508 7.42419C19.565 7.35296 20.1684 7.20807 20.7481 6.99264C20.7969 6.95942 20.861 6.95942 20.9098 6.99264C20.9507 7.01134 20.9813 7.04711 20.9934 7.09042C21.0055 7.13373 20.9979 7.18018 20.9727 7.2174Z"
+                      fill="#1DA1F2"
+                    />
+                  </svg>
+                </a>
+                <a href="#">
+                  <svg
+                    width="24"
+                    height="25"
+                    viewBox="0 0 24 25"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16.5 6.5H13.5C12.9477 6.5 12.5 6.94772 12.5 7.5V10.5H16.5C16.6137 10.4975 16.7216 10.5504 16.7892 10.6419C16.8568 10.7334 16.8758 10.852 16.84 10.96L16.1 13.16C16.0318 13.3619 15.8431 13.4984 15.63 13.5H12.5V21C12.5 21.2761 12.2761 21.5 12 21.5H9.5C9.22386 21.5 9 21.2761 9 21V13.5H7.5C7.22386 13.5 7 13.2761 7 13V11C7 10.7239 7.22386 10.5 7.5 10.5H9V7.5C9 5.29086 10.7909 3.5 13 3.5H16.5C16.7761 3.5 17 3.72386 17 4V6C17 6.27614 16.7761 6.5 16.5 6.5Z"
+                      fill="#2058CD"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img src="../assets/image/recipes-detail/recipes-detail-1.webp" />
+      </div>
+
+      <!-- Introduction part start  -->
+      <div class="bg-[#F9F6F1]">
+        <div class="container">
+          <div class="py-4 lg:py-8">
+            <div class="mb-4 lg:mb-12">
+              <h3
+                class="font-Playfair font-bold text-2xl lg:text-[32px] leading-[34px] lg:leading-[42px] text-primary mb-2"
+              >
+                Introduction
+              </h3>
+              <p
+                class="font-Playfair font-medium text-sm lg:text-base leading-[21px] lg:leading-6 text-primary/60"
+              >
+                Mi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam
+                suspendisse morbi eleifend faucibus eget vestibulum felis.
+                Dictum quis montes, sit sit. Tellus aliquam enim urna, etiam.
+                Mauris posuere vulputate arcu amet, vitae nisi, tellus
+                tincidunt. At feugiat sapien varius id. <br />
+                <br />
+                Eget quis mi enim, leo lacinia pharetra, semper. Eget in
+                volutpat mollis at volutpat lectus velit, sed auctor. Porttitor
+                fames arcu quis fusce augue enim. Quis at habitant diam at.
+                Suscipit tristique risus, at donec. In turpis vel et quam
+                imperdiet. Ipsum molestie aliquet sodales id est ac volutpat.
+              </p>
+            </div>
+
+            <div>
+              <img
+                src="../assets/image/recipes-detail/recipes-detail-2.webp"
+                alt=""
+              />
+            </div>
+            <div class="divide-x">
+              <p
+                class="font-Raleway font-medium text-sm leading-[21px] text-primary pt-4"
+              >
+                Image caption goes here
+              </p>
+            </div>
+
+            <div class="mt-6">
+              <p class="font-Playfair font-bold text-xl leading-7 text-primary mb-4">
+                Dolor enim eu tortor urna sed duis nulla. Aliquam vestibulum,
+                nulla odio nisl vitae. In aliquet pellentesque aenean hac
+                vestibulum turpis mi bibendum diam. Tempor integer aliquam in
+                vitae malesuada fringilla.
+              </p>
+              <p class="font-Raleway font-medium text-sm lg:text-base leading-6 text-black mb-4">
+                Collaboratively deploy intuitive partnerships whereas customized
+                e-markets. Energistically maintain performance based strategic
+                theme areas whereas just in time methodologies.
+                Phosfluorescently drive functionalized intellectual capital and.
+              </p>
+              <p class="font-Inter italic text-base lg:text-xl leading-7 text-black mb-8">
+                "Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris id. Non pellentesque congue eget 
+                consectetur turpis. Sapien, dictum molestie sem tempor. Diam elit, orci, tincidunt aenean tempus."
+              </p>
+              <p class="font-Raleway font-medium text-sm lg:text-base leading-[21px] lg:leading-6 text-primary">
+                Tristique odio senectus nam posuere ornare leo metus, ultricies. Blandit duis ultricies vulputate morbi feugiat cras placerat elit. Aliquam tellus lorem sed ac. Montes, sed mattis pellentesque suscipit accumsan.
+                 Cursus viverra aenean magna risus elementum faucibus molestie pellentesque. Arcu ultricies sed mauris vestibulum.
+              </p>
+            </div>
+
+            <div class="pt-7">
+                <h3
+                class="font-Playfair font-bold text-2xl lg:text-[32px] leading-[34px] lg:leading-[42px] text-primary mb-2"
+              >
+              Conclusion
+              </h3>
+              <p class="font-Raleway font-medium text-sm lg:text-base leading-[21px] lg:leading-6 text-primary mb-4">Morbi sed imperdiet in ipsum, adipiscing elit dui lectus. Tellus id scelerisque est ultricies ultricies. Duis est sit sed leo nisl, 
+                blandit elit sagittis. Quisque tristique consequat quam sed. Nisl at scelerisque amet nulla purus habitasse.</p>
+              <p class="font-Raleway font-medium text-sm lg:text-base leading-[21px] lg:leading-6 text-primary mb-4">Nunc sed faucibus bibendum feugiat sed interdum. Ipsum egestas condimentum mi massa. In tincidunt pharetra consectetur sed duis facilisis metus.
+                 Etiam egestas in nec sed et. Quis lobortis at sit dictum eget nibh tortor commodo cursus.</p>
+              <p class="font-Raleway font-medium text-sm lg:text-base leading-[21px] lg:leading-6 text-primary">Odio felis sagittis, morbi feugiat tortor vitae feugiat fusce aliquet. Nam elementum urna nisi aliquet erat dolor enim. Ornare id morbi eget ipsum. Aliquam senectus neque ut id eget consectetur dictum. Donec posuere pharetra odio consequat scelerisque et,
+                 nunc tortor. Nulla adipiscing erat a erat. Condimentum lorem posuere gravida enim posuere cursus diam.</p>
+            </div>
+            
+            <div class="flex justify-between flex-col md:flex-row gap-[14px] pt-6 lg:pt-16 border-b border-b-[#989794] pb-4 lg:pb-6">
+                <div class="">
+                    <p
+                      class="font-Raleway font-medium text-sm lg:text-lg leading-[21px] lg:leading-[27px] text-primary mb-3 lg:mb-4"
+                    >
+                    Share this post
+                    </p>
+                   
+                  
+                  <div class="flex space-x-2">
+                    <a href="#">
+                        <svg
+                          width="24"
+                          height="25"
+                          viewBox="0 0 24 25"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M20.9999 8.16008V8.50008C21.0007 9.56616 20.576 10.5885 19.8199 11.34L16.9999 14.17C16.4738 14.6911 15.6261 14.6911 15.1 14.17L15 14.06C14.8094 13.8656 14.8094 13.5544 15 13.36L18.4399 9.92006C18.807 9.53938 19.0083 9.02883 18.9999 8.50008V8.16008C19.0003 7.62705 18.788 7.11589 18.4099 6.7401L17.7599 6.09011C17.3841 5.71207 16.873 5.49969 16.3399 5.50011H15.9999C15.4669 5.49969 14.9558 5.71207 14.58 6.09011L11.14 9.50007C10.9456 9.69064 10.6344 9.69064 10.44 9.50007L10.33 9.39007C9.8089 8.86394 9.8089 8.01623 10.33 7.49009L13.16 4.65012C13.9165 3.90505 14.9382 3.49133 15.9999 3.50014H16.3399C17.4011 3.4993 18.4191 3.92018 19.1699 4.67012L19.8299 5.33012C20.5798 6.0809 21.0007 7.09891 20.9999 8.16008ZM8.64993 14.44L13.9399 9.15008C14.0338 9.05543 14.1616 9.00218 14.2949 9.00218C14.4282 9.00218 14.556 9.05543 14.6499 9.15008L15.3499 9.85007C15.4445 9.94395 15.4978 10.0717 15.4978 10.2051C15.4978 10.3384 15.4445 10.4662 15.3499 10.5601L10.0599 15.85C9.96604 15.9447 9.83824 15.9979 9.70492 15.9979C9.57161 15.9979 9.44381 15.9447 9.34993 15.85L8.64993 15.15C8.55528 15.0561 8.50204 14.9283 8.50204 14.795C8.50204 14.6617 8.55528 14.5339 8.64993 14.44ZM13.5599 15.5C13.3655 15.3094 13.0543 15.3094 12.8599 15.5L9.42993 18.91C9.0517 19.2905 8.53645 19.503 7.99995 19.4999H7.65995C7.12691 19.5004 6.61576 19.288 6.23997 18.91L5.58997 18.26C5.21194 17.8842 4.99956 17.373 4.99998 16.84V16.5C4.99956 15.9669 5.21194 15.4558 5.58997 15.08L9.00993 11.64C9.2005 11.4456 9.2005 11.1345 9.00993 10.94L8.89993 10.83C8.3738 10.3089 7.52609 10.3089 6.99996 10.83L4.17999 13.66C3.42392 14.4116 2.99916 15.4339 3 16.5V16.85C3.00182 17.9077 3.42249 18.9216 4.16999 19.6699L4.82998 20.3299C5.58076 21.0799 6.59878 21.5008 7.65995 21.4999H7.99995C9.05338 21.5061 10.0667 21.0964 10.8199 20.3599L13.6699 17.51C14.191 16.9838 14.191 16.1361 13.6699 15.61L13.5599 15.5Z"
+                            fill="#004738"
+                          />
+                        </svg>
+                      </a>
+                      <a href="#">
+                        <svg
+                          width="24"
+                          height="25"
+                          viewBox="0 0 24 25"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M5 3.5H19C20.1046 3.5 21 4.39543 21 5.5V19.5C21 20.6046 20.1046 21.5 19 21.5H5C3.89543 21.5 3 20.6046 3 19.5V5.5C3 4.39543 3.89543 3.5 5 3.5ZM8 18.5C8.27614 18.5 8.5 18.2761 8.5 18V11C8.5 10.7239 8.27614 10.5 8 10.5H6.5C6.22386 10.5 6 10.7239 6 11V18C6 18.2761 6.22386 18.5 6.5 18.5H8ZM7.25 9.5C6.42157 9.5 5.75 8.82843 5.75 8C5.75 7.17157 6.42157 6.5 7.25 6.5C8.07843 6.5 8.75 7.17157 8.75 8C8.75 8.82843 8.07843 9.5 7.25 9.5ZM17.5 18.5C17.7761 18.5 18 18.2761 18 18V13.4C18.0325 11.8108 16.8576 10.4545 15.28 10.26C14.177 10.1593 13.1083 10.6744 12.5 11.6V11C12.5 10.7239 12.2761 10.5 12 10.5H10.5C10.2239 10.5 10 10.7239 10 11V18C10 18.2761 10.2239 18.5 10.5 18.5H12C12.2761 18.5 12.5 18.2761 12.5 18V14.25C12.5 13.4216 13.1716 12.75 14 12.75C14.8284 12.75 15.5 13.4216 15.5 14.25V18C15.5 18.2761 15.7239 18.5 16 18.5H17.5Z"
+                            fill="#2231BC"
+                          />
+                        </svg>
+                      </a>
+                      <a href="#">
+                        <svg
+                          width="24"
+                          height="25"
+                          viewBox="0 0 24 25"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M20.9727 7.2174C20.5083 7.83692 19.9469 8.37733 19.3102 8.81776C19.3102 8.97959 19.3102 9.14142 19.3102 9.31225C19.3153 12.2511 18.1414 15.0691 16.0517 17.1345C13.9619 19.1999 11.1311 20.3399 8.19393 20.2989C6.49587 20.3046 4.81955 19.9169 3.2963 19.1661C3.21416 19.1302 3.16119 19.049 3.1615 18.9593V18.8604C3.1615 18.7313 3.26611 18.6267 3.39515 18.6267C5.0643 18.5716 6.6739 17.9929 7.99622 16.9724C6.48541 16.9419 5.12607 16.0469 4.50048 14.6707C4.46889 14.5956 4.47872 14.5093 4.52645 14.4432C4.57417 14.3771 4.65288 14.3407 4.73413 14.3471C5.1933 14.3932 5.65706 14.3505 6.10008 14.2212C4.43227 13.875 3.17909 12.4904 2.99974 10.7957C2.99337 10.7144 3.0298 10.6357 3.09588 10.5879C3.16195 10.5402 3.24812 10.5303 3.32326 10.562C3.77082 10.7595 4.25397 10.8635 4.74312 10.8676C3.28172 9.90846 2.65049 8.08405 3.20643 6.42622C3.26382 6.26513 3.40169 6.14612 3.56938 6.11294C3.73706 6.07975 3.90984 6.13728 4.0242 6.26439C5.99627 8.36325 8.70592 9.61396 11.5818 9.75279C11.5082 9.45885 11.472 9.15676 11.474 8.85372C11.5009 7.26472 12.4841 5.84921 13.9633 5.26987C15.4424 4.69054 17.1248 5.06203 18.2229 6.21044C18.9713 6.06785 19.6949 5.81645 20.3706 5.46421C20.4201 5.43331 20.4829 5.43331 20.5324 5.46421C20.5633 5.51373 20.5633 5.57652 20.5324 5.62604C20.2051 6.37552 19.6522 7.00412 18.9508 7.42419C19.565 7.35296 20.1684 7.20807 20.7481 6.99264C20.7969 6.95942 20.861 6.95942 20.9098 6.99264C20.9507 7.01134 20.9813 7.04711 20.9934 7.09042C21.0055 7.13373 20.9979 7.18018 20.9727 7.2174Z"
+                            fill="#1DA1F2"
+                          />
+                        </svg>
+                      </a>
+                      <a href="#">
+                        <svg
+                          width="24"
+                          height="25"
+                          viewBox="0 0 24 25"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M16.5 6.5H13.5C12.9477 6.5 12.5 6.94772 12.5 7.5V10.5H16.5C16.6137 10.4975 16.7216 10.5504 16.7892 10.6419C16.8568 10.7334 16.8758 10.852 16.84 10.96L16.1 13.16C16.0318 13.3619 15.8431 13.4984 15.63 13.5H12.5V21C12.5 21.2761 12.2761 21.5 12 21.5H9.5C9.22386 21.5 9 21.2761 9 21V13.5H7.5C7.22386 13.5 7 13.2761 7 13V11C7 10.7239 7.22386 10.5 7.5 10.5H9V7.5C9 5.29086 10.7909 3.5 13 3.5H16.5C16.7761 3.5 17 3.72386 17 4V6C17 6.27614 16.7761 6.5 16.5 6.5Z"
+                            fill="#2058CD"
+                          />
+                        </svg>
+                      </a>
+                  </div>
+                </div>
+
+                <div class="flex items-center space-x-1 lg:space-x-2">
+                  <p class="font-Raleway font-bold text-xs lg:text-sm leading-[18px] lg:leading-[21px] text-primary bg-[#F4F4F4] w-full h-[29px]">Food</p>
+                  <p class="font-Raleway font-bold text-xs lg:text-sm leading-[18px] lg:leading-[21px] text-primary bg-[#F4F4F4] w-full h-[29px]">Vegetable</p>
+                  <p class="font-Raleway font-bold text-xs lg:text-sm leading-[18px] lg:leading-[21px] text-primary bg-[#F4F4F4] w-full h-[29px]">freshfood</p>
+                  <p class="font-Raleway font-bold text-xs lg:text-sm leading-[18px] lg:leading-[21px] text-primary bg-[#F4F4F4] w-full h-[29px]">veggie</p>
+                </div>
+                
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Recipes details Banner end  -->
+
+    <!-- Recipes details product started -->
+    <section id="related-product">
+      <div class="bg-[#F3F4EF]">
+        <div class="container">
+          <div class="py-10 lg:py-20">
+            <div class="flex flex-col items-center mb-10 lg:mb-14">
+              <h3
+                class="font-edwardian text-[32px] lg:text-[80px] leading-[38px] text-primary opacity-[0.2]"
+              >
+                Popular
+              </h3>
+              <h3
+                class="font-Playfair font-bold text-2xl lg:text-5xl leading-[29px] lg:leading-[58px] text-primary mb-2"
+              >
+                Related Products
+              </h3>
+              <p
+                class="font-Raleway font-medium text-sm leading-[21pxpx] text-primary/60"
+              >
+                Lorem ipsum dolor sit amet consectetur. i psum Lorem dolor sit
+                amet consectetur.
+              </p>
+            </div>
+
+            <div class="relative">
+              <div class="swiper recipesDetailsProduct">
+                <div class="swiper-wrapper">
+
+                  <div class="swiper-slide">
+                    <a href="#">
+                        <div class="border border-[#D6D7D2] rounded">
+                          <div class="p-3 space-y-3">
+                            <div class="w-full h-full mb-6">
+                              <img src="../assets/image/recipes/featured-post-1.webp" alt="" />
+                            </div>
+                            <div class="flex space-x-3 mb-4">
+                              <p
+                                class="font-Raleway font-bold text-xs leading-[18px] text-success"
+                              >
+                                Category
+                              </p>
+                              <p
+                                class="font-Raleway font-bold text-xs leading-[18px] text-primary"
+                              >
+                                5 min read
+                              </p>
+                            </div>
+                            <p
+                              class="font-Raleway font-bold text-2xl leading-[34px] text-primary mb-2"
+                            >
+                            Spice up your weeknight...
+                            </p>
+                            <p
+                              class="font-Raleway text-base leading-6 text-primary/60 mb-6"
+                            >
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
+                            </p>
+                            <div
+                              class="flex items-center gap-2 text-primary font-medium text-sm leading-[21pxpx]"
+                            >
+                              <p class="font-Raleway font-medium text-sm leading-[21px]">Read More</p>
+                              <i class="ph-arrow-up-right-bold text-2xl text-primary"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                        <div class="border border-[#D6D7D2] rounded">
+                          <div class="p-3 space-y-3">
+                            <div class="w-full h-full mb-6">
+                              <img src="../assets/image/recipes/featured-post-2.webp" alt="" />
+                            </div>
+                            <div class="flex space-x-3 mb-4">
+                              <p
+                                class="font-Raleway font-bold text-xs leading-[18px] text-success"
+                              >
+                                Category
+                              </p>
+                              <p
+                                class="font-Raleway font-bold text-xs leading-[18px] text-primary"
+                              >
+                                5 min read
+                              </p>
+                            </div>
+                            <p
+                              class="font-Raleway font-bold text-2xl leading-[34px] text-primary mb-2"
+                            >
+                            Spice up your weeknight...
+                            </p>
+                            <p
+                              class="font-Raleway text-base leading-6 text-primary/60 mb-6"
+                            >
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
+                            </p>
+                            <div
+                              class="flex items-center gap-2 text-primary font-medium text-sm leading-[21pxpx]"
+                            >
+                              <p class="font-Raleway font-medium text-sm leading-[21px]">Read More</p>
+                              <i class="ph-arrow-up-right-bold text-2xl text-primary"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                        <div class="border border-[#D6D7D2] rounded">
+                          <div class="p-3 space-y-3">
+                            <div class="w-full h-full mb-6">
+                              <img src="../assets/image/recipes/featured-post-3.webp" alt="" />
+                            </div>
+                            <div class="flex space-x-3 mb-4">
+                              <p
+                                class="font-Raleway font-bold text-xs leading-[18px] text-success"
+                              >
+                                Category
+                              </p>
+                              <p
+                                class="font-Raleway font-bold text-xs leading-[18px] text-primary"
+                              >
+                                5 min read
+                              </p>
+                            </div>
+                            <p
+                              class="font-Raleway font-bold text-2xl leading-[34px] text-primary mb-2"
+                            >
+                            Spice up your weeknight...
+                            </p>
+                            <p
+                              class="font-Raleway text-base leading-6 text-primary/60 mb-6"
+                            >
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
+                            </p>
+                            <div
+                              class="flex items-center gap-2 text-primary font-medium text-sm leading-[21pxpx]"
+                            >
+                              <p class="font-Raleway font-medium text-sm leading-[21px]">Read More</p>
+                              <i class="ph-arrow-up-right-bold text-2xl text-primary"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                        <div class="border border-[#D6D7D2] rounded">
+                          <div class="p-3 space-y-3">
+                            <div class="w-full h-full mb-6">
+                              <img src="../assets/image/recipes/featured-post-4.webp" alt="" />
+                            </div>
+                            <div class="flex space-x-3 mb-4">
+                              <p
+                                class="font-Raleway font-bold text-xs leading-[18px] text-success"
+                              >
+                                Category
+                              </p>
+                              <p
+                                class="font-Raleway font-bold text-xs leading-[18px] text-primary"
+                              >
+                                5 min read
+                              </p>
+                            </div>
+                            <p
+                              class="font-Raleway font-bold text-2xl leading-[34px] text-primary mb-2"
+                            >
+                            Spice up your weeknight...
+                            </p>
+                            <p
+                              class="font-Raleway text-base leading-6 text-primary/60 mb-6"
+                            >
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
+                            </p>
+                            <div
+                              class="flex items-center gap-2 text-primary font-medium text-sm leading-[21pxpx]"
+                            >
+                              <p class="font-Raleway font-medium text-sm leading-[21px]">Read More</p>
+                              <i class="ph-arrow-up-right-bold text-2xl text-primary"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                        <div class="border border-[#D6D7D2] rounded">
+                          <div class="p-3 space-y-3">
+                            <div class="w-full h-full mb-6">
+                              <img src="../assets/image/recipes/featured-post-5.webp" alt="" />
+                            </div>
+                            <div class="flex space-x-3 mb-4">
+                              <p
+                                class="font-Raleway font-bold text-xs leading-[18px] text-success"
+                              >
+                                Category
+                              </p>
+                              <p
+                                class="font-Raleway font-bold text-xs leading-[18px] text-primary"
+                              >
+                                5 min read
+                              </p>
+                            </div>
+                            <p
+                              class="font-Raleway font-bold text-2xl leading-[34px] text-primary mb-2"
+                            >
+                            Spice up your weeknight...
+                            </p>
+                            <p
+                              class="font-Raleway text-base leading-6 text-primary/60 mb-6"
+                            >
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
+                            </p>
+                            <div
+                              class="flex items-center gap-2 text-primary font-medium text-sm leading-[21pxpx]"
+                            >
+                              <p class="font-Raleway font-medium text-sm leading-[21px]">Read More</p>
+                              <i class="ph-arrow-up-right-bold text-2xl text-primary"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                        <div class="border border-[#D6D7D2] rounded">
+                          <div class="p-3 space-y-3">
+                            <div class="w-full h-full mb-6">
+                              <img src="../assets/image/recipes/featured-post-6.webp" alt="" />
+                            </div>
+                            <div class="flex space-x-3 mb-4">
+                              <p
+                                class="font-Raleway font-bold text-xs leading-[18px] text-success"
+                              >
+                                Category
+                              </p>
+                              <p
+                                class="font-Raleway font-bold text-xs leading-[18px] text-primary"
+                              >
+                                5 min read
+                              </p>
+                            </div>
+                            <p
+                              class="font-Raleway font-bold text-2xl leading-[34px] text-primary mb-2"
+                            >
+                            Spice up your weeknight...
+                            </p>
+                            <p
+                              class="font-Raleway text-base leading-6 text-primary/60 mb-6"
+                            >
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
+                            </p>
+                            <div
+                              class="flex items-center gap-2 text-primary font-medium text-sm leading-[21pxpx]"
+                            >
+                              <p class="font-Raleway font-medium text-sm leading-[21px]">Read More</p>
+                              <i class="ph-arrow-up-right-bold text-2xl text-primary"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                  </div>
+
+                </div>
+              </div>
+              <div class="swiper-pagination recipesDetailsProductPage"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Recipes details product  end -->
+
+    <!-- Footer started  -->
+    <footer id="footer mb-14">
+      <div class="footer-background">
+        <div class="container">
+          <div class="grid grid-cols-12 py-10 xl:py-20">
+            <div class="col-span-12 lg:col-span-8">
+              <a href="#">
+                <img src="../assets/image/footer/footer-logo.webp" alt="" />
+              </a>
+              <div>
+                <h3
+                  class="font-Raleway font-medium text-base text-yellow leading-6"
+                >
+                  Address:
+                </h3>
+                <p class="text-white">Level 1, 12 Sample St, Sydney NSW 2000</p>
+              </div>
+
+              <div class="mb-6">
+                <h3
+                  class="font-Raleway font-medium text-base text-yellow leading-6 mb-1"
+                >
+                  Contact:
+                </h3>
+                <div class="flex flex-col">
+                  <a
+                    href="tel:1800 123 4567"
+                    class="font-Raleway font-medium text-sm leading-[21pxpx] text-white"
+                    >1800 123 4567</a
+                  >
+                  <a
+                    href="mailto:info@relume.io"
+                    class="font-Raleway font-medium text-sm leading-[21pxpx] text-white"
+                    >info@relume.io</a
+                  >
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-3">
+                <a href="#">
+                  <img src="../assets/image/footer/facebook.webp" alt="" />
+                </a>
+                <a href="#">
+                  <img src="../assets/image/footer/instagram.webp" alt="" />
+                </a>
+                <a href="#">
+                  <img src="../assets/image/footer/twitter.webp" alt="" />
+                </a>
+                <a href="#">
+                  <img src="../assets/image/footer/linkedin.webp" alt="" />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-span-6 lg:col-span-2">
+              <ul class="space-y-3">
+                <li>
+                  <a
+                    href="#"
+                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+                  >
+                    Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+                  >
+                    About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+                  >
+                    Recipes</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+                  >
+                    Shop</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+                  >
+                    Blog</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-span-6 lg:col-span-2 text-end space-y-3">
+              <p
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+              >
+                Open Hour
+              </p>
+              <p
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+              >
+                Monday: 12-6PM
+              </p>
+              <p
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+              >
+                Tuesday: 12-6PM
+              </p>
+              <p
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+              >
+                Wednesday: 12-6PM
+              </p>
+              <p
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+              >
+                Thursday: 12-6PM
+              </p>
+              <p
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+              >
+                Friday: 12-6PM
+              </p>
+              <p
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+              >
+                Sunday: 12-6PM
+              </p>
+            </div>
+          </div>
+          <div class="bg-white h-[1px]"></div>
+
+          <div>
+            <div>
+              <p>© 2000-2021, All Rights Reserved</p>
+            </div>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer end -->
+  </body>
+
+  <script src="../assets/js/jquery-3.6.3.min.js"></script>
+  <script src="../assets/js/swiper-bundle.min.js"></script>
+  <script src="../assets/js/common.js"></script>
+</html>

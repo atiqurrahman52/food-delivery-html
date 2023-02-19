@@ -92,7 +92,7 @@ var swiper1 = new Swiper(".babyPotato", {
 
 
   // Our Team started 
-  var swiper2 = new Swiper(".ourTeam", {
+  var swiper3 = new Swiper(".ourTeam", {
     spaceBetween: 20,
     slidesPerView: 1,
     loop: true,
@@ -123,6 +123,74 @@ var swiper1 = new Swiper(".babyPotato", {
     },
   });
   // Our Team end 
+
+
+  
+  // Related product Recipes started
+  var swiper4 = new Swiper(".relatedProductRecipes", {
+    spaceBetween: 20,
+    slidesPerView: 1,
+    loop: true,
+    autoplay: {
+      delay: 2000,
+    },
+    pagination: {
+      el: ".relatedProductRecipesPage",
+      clickable: true,
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 24,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+    },
+  });
+  // Related product end
+
+  // Recipes Details Product started
+  var swiper4 = new Swiper(".recipesDetailsProduct", {
+    spaceBetween: 20,
+    slidesPerView: 1,
+    loop: true,
+    autoplay: {
+      delay: 2000,
+    },
+    pagination: {
+      el: ".recipesDetailsProductPage",
+      clickable: true,
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 24,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+    },
+  });
+  //Recipes Details Product end
 
 
 // Swiper Js end    
