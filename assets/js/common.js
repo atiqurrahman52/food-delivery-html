@@ -6,6 +6,11 @@ button.addEventListener('click', () => {
   menu.classList.toggle('hidden');
 });
 
+$('.filter-btn').click(function(){
+  $(this).toggleClass('active');
+  $('.filter-dropdown').toggleClass('hidden');
+})
+
 
 // Image gallery started 
 var grid = document.querySelector('.gallery');
@@ -219,4 +224,6 @@ $('.outlets a').click(function(){
    $('.outlets li:first a').click();
    
 }); // end ready
+
+
 

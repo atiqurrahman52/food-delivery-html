@@ -53,6 +53,9 @@
 .blog-banner{
   background-image: url("assets/image/blog/blog-banner.webp");
 }
+.not-found{
+  background-image: url("assets/image/not-found/not-found.webp");
+}
 /* background images started  */
 
 .add-to-cart-btn::before {
@@ -187,4 +190,8 @@ border-left: 2px solid #FEBB41;
 
 }
 
-
+.filter-btn.active,
+.filter-btn.active p,
+.filter-btn.active i{
+  @apply text-white bg-success;
+}
