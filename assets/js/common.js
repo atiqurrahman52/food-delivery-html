@@ -11,6 +11,12 @@ $('.filter-btn').click(function(){
   $('.filter-dropdown').toggleClass('hidden');
 })
 
+$('.categories-btn').click(function(){
+  $(this).toggleClass('active');
+  $('.categories-dropdown').toggleClass('hidden');
+})
+
+
 
 // Image gallery started 
 var grid = document.querySelector('.gallery');
@@ -206,7 +212,7 @@ var swiper1 = new Swiper(".babyPotato", {
 
 $(document).ready(function() {
     
-  //alert('here');
+
 
 $('.outlets a').click(function(){
 
@@ -222,6 +228,20 @@ $('.outlets a').click(function(){
 });  // end click 
 
    $('.outlets li:first a').click();
+
+
+  //  shop filter and categories dropdown started 
+  // $('.filter-btn').click(function(){
+  //   $(this).toggleClass('active');
+  //   $('.filter-dropdown').toggleClass('hidden');
+  // })
+  
+  // $('.categories-btn').click(function(){
+  //   $(this).toggleClass('active');
+  //   $('.categories-dropdown').toggleClass('hidden');
+  // })
+  
+  //  shop filter and categories dropdown end
    
 }); // end ready
 
