@@ -46,10 +46,7 @@ module.exports = {
         primary: "#070707",
         yellow: "#FEBB41",
         success: "#004738",
-        accent: "#ECF1F4",
-        light: "#FAFCFE",
-        gray: "#6D737A",
-        disable: "#637381",
+       
       },
     },
   },

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Sign Up</title>
+    <title>Sign In</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="css/style.css" rel="stylesheet" />
@@ -11,8 +11,7 @@
       rel="stylesheet"
       type="text/css"
     />
-    <!-- <link rel="stylesheet" href="./dist/main.css" /> -->
-    <!-- <link rel="stylesheet" href="./main.css" /> -->
+   
     <link rel="stylesheet" href="../main.css" />
   </head>
   <body>
@@ -24,7 +23,7 @@
         <div class="col-span-12 md:col-span-5 hidden lg:block">
           <img
             class="h-full w-full"
-            src="../assets/image/auth/sign-up.webp"
+            src="../assets/image/auth/sign-in.webp"
             alt=""
           />
         </div>
@@ -34,7 +33,7 @@
           </div>
           <div class="flex flex-col items-center">
       
-            <p class="font-Playfair font-bold text-2xl lg:text-[40px] leading-[29px] lg:leading-[48px] text-[#222329] mb-8 lg:mb-12">Create Your Account</p>
+            <p class="font-Playfair font-bold text-2xl lg:text-[40px] leading-[29px] lg:leading-[48px] text-[#222329] mb-8 lg:mb-12">Sign In</p>
             <div>
               <div class="flex flex-col lg:flex-row gap-3 lg:gap-4 mb-3 lg:mb-4">
                 <div class="flex flex-col">
@@ -46,25 +45,23 @@
                   <input class="w-[288px] lg:w-[292px] h-10 lg:h-12 border border-[#A3A3A5] rounded outline-none px-2 lg:px-4" type="text" name="" value="" placeholder="First Name">
                 </div>
               </div>
-              <div class="flex flex-col lg:flex-row gap-3 lg:gap-4">
-                <div class="flex flex-col">
-                  <label for="" class="font-Raleway font-semibold text-xs lg:text-base leading-[18px] lg:leading-6 text-[#222329] mb-1">Your Email</label>
-                  <input class="w-[288px] lg:w-[292px] h-10 lg:h-12 border border-[#A3A3A5] rounded outline-none px-2 lg:px-4" type="email" name="" value="" placeholder="First Name">
-                </div>
-                <div class="flex flex-col">
-                  <label for="" class="font-Raleway font-semibold text-xs lg:text-base leading-[18px] lg:leading-6 text-[#222329] mb-1">Password</label>
-                  <input class="w-[288px] lg:w-[292px] h-10 lg:h-12 border border-[#A3A3A5] rounded outline-none px-2 lg:px-4" type="password" name="" value="" placeholder="First Name">
-                </div>
-              </div>
+             
+               <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-1 py-6 lg:py-4">
-                  <input class="accent-success" type="checkbox" id="accept" name="accept" value="accept">
-                     <label for="accept" class="font-Raleway font-medium text-xs lg:text-sm leading-[21px] text-[#222329]"> I accept the <span class="text-success">Terms and Conditions</span></label><br>
-                </div>
+                    <input class="accent-success" type="checkbox" id="accept" name="accept" value="accept">
+                       <label for="accept" class="font-Raleway font-medium text-xs lg:text-sm leading-[21px] text-[#222329]"> Remember me</label><br>
+                  </div>
+                  <div>
+                   
+                   <a href="./forget-password.html" class="font-Raleway font-medium text-xs lg:text-sm leading-[21px] text-success">Forget Password?</a>
+                  </div>
+               </div>
+
                 <button type="" class="bg-success w-full font-Raleway font-semibold text-sm leading-[21px] text-white py-2.5 lg:py-3 rounded">Sign Up</button>
                <div class="py-6 lg:py-4">
                 <div class="flex gap-1 mb-12 lg:mb-6 ">
-                  <p class="font-Raleway font-medium text-xs lg:text-sm leading-[18px] lg:leading-[21px] text-[#222329]">Already have an account?</p> 
-                  <a  class="font-Raleway font-medium text-xs lg:text-sm leading-[18px] lg:leading-[21px] text-success" href="./sing-in.html">Sign In</a>
+                  <p class="font-Raleway font-medium text-xs lg:text-sm leading-[18px] lg:leading-[21px] text-[#222329]">Don’t have an account?</p> 
+                  <a  class="font-Raleway font-medium text-xs lg:text-sm leading-[18px] lg:leading-[21px] text-success" href="./sign-up.html">Sign Up</a>
                 </div>
                     <p class="font-Raleway font-semibold text-sm text-primary/60 border-t w-9 pt-2">Or,</p>
                </div>
