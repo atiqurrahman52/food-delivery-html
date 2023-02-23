@@ -19,7 +19,7 @@
     <header id="navbar" class="navbar">
       <div class="container">
         <nav
-          class="flex flex-wrap items-center justify-between sticky top-0 z-10 w-full py-4 md:py-0 px-4 text-lg text-gray-700 bg-white"
+          class="flex flex-wrap items-center justify-between sticky top-0 z-10 w-full py-4 md:py-0 text-lg text-gray-700 bg-white"
         >
           <div class="flex justify-center items-center">
             <a href="index.html">
@@ -99,15 +99,17 @@
             />
           </svg>
 
+        
           <div
-            class="hidden w-full md:flex md:items-center md:w-auto"
+            class="hidden md:flex md:items-center md:w-auto w-full"
             id="menu"
           >
             <ul
               class="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0"
             >
-              <li class="md:p-4 py-2 block">
-                <svg
+
+              <li class="md:p-4 py-2 cursor-pointer">
+                  <svg
                   width="32"
                   height="32"
                   viewBox="0 0 32 32"
@@ -133,9 +135,10 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
-                </svg>
+                </svg> 
               </li>
-              <li class="md:p-4 py-2 block">
+
+              <li class="md:p-4 py-2 cursor-pointer">
                 <svg
                   width="32"
                   height="32"
@@ -172,37 +175,41 @@
                 </svg>
               </li>
 
-              <li class="md:p-4 py-2 block">
+              <li class="md:p-4 py-2 cursor-pointer">
+               <a href="./pages/shopping-cart.html">
                 <svg
-                  width="32"
-                  height="32"
-                  viewBox="0 0 32 32"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    opacity="0.2"
-                    d="M27 9H5C4.44772 9 4 9.44772 4 10V26C4 26.5523 4.44772 27 5 27H27C27.5523 27 28 26.5523 28 26V10C28 9.44772 27.5523 9 27 9Z"
-                    fill="#070707"
-                  />
-                  <path
-                    d="M27 9H5C4.44772 9 4 9.44772 4 10V26C4 26.5523 4.44772 27 5 27H27C27.5523 27 28 26.5523 28 26V10C28 9.44772 27.5523 9 27 9Z"
-                    stroke="#070707"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M11 13V9C11 7.67392 11.5268 6.40215 12.4645 5.46447C13.4021 4.52678 14.6739 4 16 4C17.3261 4 18.5979 4.52678 19.5355 5.46447C20.4732 6.40215 21 7.67392 21 9V13"
-                    stroke="#070707"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.2"
+                  d="M27 9H5C4.44772 9 4 9.44772 4 10V26C4 26.5523 4.44772 27 5 27H27C27.5523 27 28 26.5523 28 26V10C28 9.44772 27.5523 9 27 9Z"
+                  fill="#070707"
+                />
+                <path
+                  d="M27 9H5C4.44772 9 4 9.44772 4 10V26C4 26.5523 4.44772 27 5 27H27C27.5523 27 28 26.5523 28 26V10C28 9.44772 27.5523 9 27 9Z"
+                  stroke="#070707"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M11 13V9C11 7.67392 11.5268 6.40215 12.4645 5.46447C13.4021 4.52678 14.6739 4 16 4C17.3261 4 18.5979 4.52678 19.5355 5.46447C20.4732 6.40215 21 7.67392 21 9V13"
+                  stroke="#070707"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+               </a>
               </li>
+              
             </ul>
           </div>
+
         </nav>
       </div>
     </header>
@@ -965,7 +972,7 @@
     <!-- Banner end  -->
 
     <!-- Image Gallery started  -->
-    <section id="gallery">
+    <!-- <section id="gallery">
       <div class="bg-[#F3F4EF]">
         <div class="container">
           <div class="py-10 lg:py-20">
@@ -1013,7 +1020,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- Image Gallery end  -->
 
     <!-- Blog started  -->
@@ -1166,11 +1173,13 @@
       <div class="footer-background">
         <div class="container">
           <div class="grid grid-cols-12 py-10 xl:py-20">
-            <div class="col-span-12 lg:col-span-8">
-              <a href="#">
-                <img src="./assets/image/footer/footer-logo.webp" alt="" />
-              </a>
-              <div>
+            <div class="col-span-12 lg:col-span-8 mb-5 md:mb-0">
+              <div class="mb-8 flex ">
+                <a href="#">
+                  <img src="./assets/image/footer/footer-logo.webp" alt="" />
+                </a>
+              </div>
+              <div class="mb-4 lg:mb-6">
                 <h3
                   class="font-Raleway font-medium text-base text-yellow leading-6"
                 >
@@ -1179,7 +1188,7 @@
                 <p class="text-white">Level 1, 12 Sample St, Sydney NSW 2000</p>
               </div>
 
-              <div class="mb-6">
+              <div class="mb-4 lg:mb-6">
                 <h3
                   class="font-Raleway font-medium text-base text-yellow leading-6 mb-1"
                 >
@@ -1199,7 +1208,7 @@
                 </div>
               </div>
 
-              <div class="flex items-start space-x-3">
+              <div class="flex items-center space-x-3">
                 <a href="#">
                   <img src="./assets/image/footer/facebook.webp" alt="" />
                 </a>
@@ -1220,7 +1229,7 @@
                 <li>
                   <a
                     href="#"
-                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white"
                   >
                     Home</a
                   >
@@ -1228,7 +1237,7 @@
                 <li>
                   <a
                     href="#"
-                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white"
                   >
                     About</a
                   >
@@ -1236,7 +1245,7 @@
                 <li>
                   <a
                     href="#"
-                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white"
                   >
                     Recipes</a
                   >
@@ -1244,7 +1253,7 @@
                 <li>
                   <a
                     href="#"
-                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white"
                   >
                     Shop</a
                   >
@@ -1252,7 +1261,7 @@
                 <li>
                   <a
                     href="#"
-                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white"
                   >
                     Blog</a
                   >
@@ -1261,7 +1270,7 @@
                 <li>
                   <a
                     href="/pages/sign-up.html"
-                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white"
                   >
                     Sign Up</a
                   >
@@ -1271,37 +1280,37 @@
 
             <div class="col-span-6 lg:col-span-2 text-end space-y-3">
               <p
-                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white"
               >
                 Open Hour
               </p>
               <p
-                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white"
               >
                 Monday: 12-6PM
               </p>
               <p
-                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white"
               >
                 Tuesday: 12-6PM
               </p>
               <p
-                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white"
               >
                 Wednesday: 12-6PM
               </p>
               <p
-                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white"
               >
                 Thursday: 12-6PM
               </p>
               <p
-                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white"
               >
                 Friday: 12-6PM
               </p>
               <p
-                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white hover:text-yellow"
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white"
               >
                 Sunday: 12-6PM
               </p>
@@ -1309,13 +1318,13 @@
           </div>
           <div class="bg-white h-[1px]"></div>
 
-          <div>
+          <div class="flex flex-col md:flex-row justify-between gap-4 items-center py-8">
             <div>
-              <p>© 2000-2021, All Rights Reserved</p>
+              <p class="font-Poppins text-xs lg:text-sm leading-[21px] text-white">© 2000-2021, All Rights Reserved</p>
             </div>
-            <ul>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms of Service</a></li>
+            <ul class="flex space-x-6">
+              <li class="font-Roboto text-xs lg:text-sm leading-[18px] lg:leading-[21px] text-white"><a href="#">Privacy Policy</a></li>
+              <li class="font-Roboto text-xs lg:text-sm leading-[18px] lg:leading-[21px] text-white"><a href="#">Terms of Service</a></li>
             </ul>
           </div>
         </div>

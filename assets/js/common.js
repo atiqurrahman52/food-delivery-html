@@ -247,3 +247,6 @@ $('.outlets a').click(function(){
 
 
 
+// Custom input design  started
+
+// Custom input design  end
