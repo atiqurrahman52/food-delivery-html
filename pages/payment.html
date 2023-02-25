@@ -221,57 +221,90 @@
          <div class="grid grid-cols-12 gap-3 lg:gap-4">
 
             <div class="col-span-12 lg:col-span-8">
-               <div class="border border-[#EBEBEB] p-6 rounded-xl mb-8">
+
+               <div class="border border-[#EBEBEB] p-3 lg:p-6 rounded-xl mb-8">
 
                 <p class="font-Playfair font-bold text-base lg:text-2xl leading-[19px] lg:leading-[34px] text-primary mb-4">03. Payment</p>
 
-                 <div class="border border-[#EBEBEB] p-6 rounded-lg shadow-[0_4px_8px_-2px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.06)] mb-3">
-                    <div class="flex justify-between mb-4">
+                 <div class="border border-[#EBEBEB] py-6 px-2 lg:px-14 rounded-lg shadow-[0_4px_8px_-2px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.06)] mb-3">
+                   <div class="flex flex-col lg:flex-row justify-between gap-3 py-4">
+                       <div class="flex items-center space-x-1 lg:space-x-3">
+                            <input class="accent-success" type="radio" id="Debit" name="Debit" value="Debit">
+                            <label for="Debit" class="font-Raleway font-bold text-sm leading-[21px] text-[#222329]">Debit / Credit Card</label>
+                       </div>
+                       <div class="flex items-center lg:space-x-2">
+                        <svg width="36" height="24" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect x="12.5703" y="3.27051" width="10.21" height="16.68" fill="#F26122"/>
+                          <path d="M13.6687 11.6102C13.6518 8.3637 15.1264 5.28922 17.6687 3.27017C13.3189 -0.15054 7.07064 0.346185 3.31599 4.41117C-0.438663 8.47616 -0.438663 14.7442 3.31599 18.8092C7.07064 22.8741 13.3189 23.3709 17.6687 19.9502C15.1264 17.9311 13.6518 14.8566 13.6687 11.6102Z" fill="#EA1D25"/>
+                          <path d="M34.828 11.6101C34.8254 15.6694 32.5068 19.3715 28.8558 21.1459C25.2049 22.9203 20.8614 22.4561 17.668 19.9501C22.268 16.328 23.0646 9.66439 19.448 5.06009C18.9295 4.39336 18.3318 3.79227 17.668 3.27009C20.8614 0.764088 25.2049 0.299837 28.8558 2.07427C32.5068 3.8487 34.8254 7.55075 34.828 11.6101Z" fill="#F69E1E"/>
+                          </svg>
+
+                          <svg width="36" height="24" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="36" height="24" rx="4" fill="white"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24.19 14.44C24.1961 12.9153 22.9386 12.2567 21.9627 11.7456C21.3449 11.4221 20.84 11.1577 20.84 10.77C20.84 10.44 21.16 10.09 21.84 10C22.6493 9.91993 23.4651 10.0617 24.2 10.41L24.62 8.41C23.9036 8.14136 23.1451 8.00252 22.38 8C20.02 8 18.38 9.26 18.38 11.06C18.38 12.39 19.57 13.13 20.47 13.57C21.37 14.01 21.72 14.32 21.71 14.72C21.71 15.34 20.97 15.62 20.28 15.63C19.4289 15.641 18.589 15.4344 17.84 15.03L17.41 17.03C18.2575 17.3608 19.1603 17.5271 20.07 17.52C22.58 17.52 24.23 16.28 24.24 14.36L24.19 14.44ZM17.7 8.16L15.7 17.41H13.3L15.3 8.16H17.7ZM27.76 14.16L29.02 10.69L29.75 14.16H27.76ZM32.65 17.44H30.43L30.14 16.06H27.13L26.64 17.44H24.12L27.71 8.87C27.8755 8.46225 28.27 8.19402 28.71 8.19H30.71L32.65 17.44ZM10.45 17.38L14.33 8.13H11.73L9.24 14.42L8.24 9.07C8.15148 8.52635 7.68081 8.12776 7.13 8.13H3.06L3 8.4C3.81634 8.55972 4.60927 8.82179 5.36 9.18C5.67976 9.33034 5.89644 9.63826 5.93 9.99L7.84 17.38H10.45Z" fill="#2A2A6C"/>
+                            </svg>
+                            
+                          
+                       </div>
+                   </div>
+
+                   <div class="mb-4 lg:mb-6">
+                    <p class="font-Raleway font-medium text-xs leading-[18px] text-primary/60 mb-1">Name on Card  <span class="text-[#FF0000] text-xs pl-1"><i class="ph-asterisk-simple-bold"></i></span> </p>
+                     <input class="border border-[#D0D1D3] rounded-[5px] outline-none w-full h-10 font-Raleway font-medium text-sm lg:text-base leading-[21px] lg:leading-6 text-primary placeholder:text-primary px-3 lg:px-4" placeholder="Izak Newton" type="text" name="" value="">
+                   </div>
+                   <div class="mb-4 lg:mb-6">
+                    <p class="font-Raleway font-medium text-xs leading-[18px] text-primary/60 mb-1">Enter Card Number <span class="text-[#FF0000] text-xs pl-1"><i class="ph-asterisk-simple-bold"></i></span> </p>
+                     <input class="border border-[#D0D1D3] rounded-[5px] outline-none w-full h-10 font-Raleway font-medium text-sm lg:text-base leading-[21px] lg:leading-6 text-primary placeholder:text-primary px-3 lg:px-4" placeholder="433 566 3778 98882" type="number" name="" value="">
+                   </div>
+
+                   <div class="flex space-x-3">
+                       <div>
+                        <p class="font-Raleway font-medium text-xs leading-[18px] text-primary/60 mb-1">valid Date<span class="text-[#FF0000] text-xs pl-1"><i class="ph-asterisk-simple-bold"></i></span> </p>
+                        <input class="border border-[#D0D1D3] py-2.5 px-2 rounded-[5px]" type="date" id="birthday" name="birthday">
+                       </div>
+
+                       <div>
+                        <p class="font-Raleway font-medium text-xs leading-[18px] text-primary/60 mb-1">CVV<span class="text-[#FF0000] text-xs pl-1"><i class="ph-asterisk-simple-bold"></i></span> </p>
+                        <input class="border border-[#D0D1D3] outline-none w-[115px] h-10 py-2 px-4 font-Raleway text-base leading-6 text-primary/40 rounded-[5px]" type="text" placeholder="Enter Code">
+                       </div>
+                   </div>
+
+                 </div>
+
+                 <div class="border border-[#EBEBEB] py-4 px-3 lg:px-[60px] rounded-lg mb-3">
+                    <div class="flex justify-between">
                         <div class="flex items-center space-x-2">
-                            <input class="accent-success" type="radio" id="Home" name="Home" value="Home">
-                            <label for="Home" class="font-Raleway font-bold text-sm leading-[21px] text-[#222329]">Home</label>
+                            <input class="accent-success" type="radio" id="Net" name="Net" value="Net">
+                            <label for="Net" class="font-Raleway font-bold text-sm leading-[21px] text-[#222329]">Net banking</label>
                            </div>
                            <div>
-                            <p class="font-Raleway font-semibold text-xs leading-[18px] text-success bg-[#F5F5F5] py-[5px] px-3 rounded-[100px]">Default</p>
+                            <span class="border border-success rounded-lg py-[4px] px-[6px]"><i class="ph-globe-hemisphere-west-bold text-success"></i></span>
                            </div>
-                      </div>
-                      <div class="flex justify-between items-center">
-                        <p class="font-Raleway font-medium text-base leading-6 text-primary/60">Nathan C. Collette, 4503 Villa DriveElkhart, <br> IN 46516,574-322-7161,USA</p>
-                        <button class="text-2xl text-[#FF0000]" type=""><i class="ph-trash-bold"></i></button>
-                      </div>
-                      <div class="w-max ml-auto pt-4">
-                        <button type="" class="bg-success font-Raleway font-semibold text-sm leading-[21px] text-white w-[94px] h-[36px] rounded-lg">Edit</button>
                       </div>
                  </div>
 
-                 <div class="border border-[#EBEBEB] p-6 rounded-lg shadow-[0_4px_8px_-2px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.06)] mb-3">
-                    <div class="flex justify-between mb-4">
-                        <div class="flex items-center space-x-2">
-                            <input class="accent-success" type="radio" id="Home" name="Home" value="Home">
-                            <label for="Home" class="font-Raleway font-bold text-sm leading-[21px] text-[#222329]">Work</label>
-                           </div>
-                           <!-- <div>
-                            <p class="font-Raleway font-semibold text-xs leading-[18px] text-success bg-[#F5F5F5] py-[5px] px-3 rounded-[100px]">Default</p>
-                           </div> -->
-                      </div>
-                      <div class="flex justify-between items-center">
-                        <p class="font-Raleway font-medium text-base leading-6 text-primary/60">Nathan C. Collette, 4503 Villa DriveElkhart, <br> IN 46516,574-322-7161,USA</p>
-                        <button class="text-2xl text-[#FF0000]" type=""><i class="ph-trash-bold"></i></button>
-                      </div>
-                      <div class="w-max ml-auto pt-4">
-                        <button type="" class="border border-success font-Raleway font-semibold text-sm leading-[21px] text-success w-[94px] h-[36px] rounded-lg">Edit</button>
-                      </div>
-                 </div>
-
+                 <div class="border border-[#EBEBEB] py-4 px-3 lg:px-[60px] rounded-lg mb-3">
+                  <div class="flex justify-between">
+                      <div class="flex items-center space-x-2">
+                          <input class="accent-success" type="radio" id="Google" name="Google" value="Google">
+                          <label for="Google" class="font-Raleway font-bold text-sm leading-[21px] text-[#222329]">Google / apple Wallet</label>
+                         </div>
+                         <div>
+                          <span class="border border-success rounded-lg py-[4px] px-[6px]"><i class="ph-wallet-bold text-success"></i></span>
+                         </div>
+                    </div>
                </div>
-               <div class="flex w-max ml-auto space-x-2 pt-4">
-                <button class="text-success text-xl" type=""><i class="ph-plus"></i></button>
-                <p class="font-Overpass font-semibold text-sm leading-[21px] text-success">Add More</p>
-            </div> 
 
-            <div class="flex items-center justify-center space-x-[6px] lg:space-x-2.5 border border-[#EBEBEB] rounded-xl w-[178px] h-[64px] mb-16">
+              <div class="flex w-max ml-auto space-x-2 pt-4">
+                  <button class="text-success text-xl" type=""><i class="ph-plus"></i></button>
+                  <p class="font-Overpass font-semibold text-sm leading-[21px] text-success">Add More</p>
+              </div>
+
+               </div> 
+
+            <div class="flex items-center justify-center space-x-[6px] lg:space-x-2.5 border border-[#EBEBEB] rounded-xl w-[164px] h-[64px] mb-16">
                 <button class="text-primary text-2xl" type=""><i class="ph-caret-left"></i></button>
-                <p class="font-Raleway font-bold text-base leading-6 text-primary">Shopping Cart</p>
+                <p class="font-Raleway font-bold text-base leading-6 text-primary">Payment</p>
             </div> 
             </div>
            
