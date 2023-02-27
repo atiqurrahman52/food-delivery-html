@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Step</title>
+    <title>Mobile</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="css/style.css" rel="stylesheet" />
@@ -18,96 +18,58 @@
   <body>
     <!-- Header started  -->
     <header id="navbar" class="sticky top-0 z-10 w-full bg-white">
-      <div class="container">
-        <nav
-          class="flex flex-wrap items-center justify-between py-4 md:py-0 px-4 text-lg text-gray-700"
-        >
-          <div class="flex justify-center items-center">
-            <a href="../index.html">
-              <img src="../assets/image/logo/logo.webp" alt="" />
-            </a>
+      <!-- Large screen started -->
+      <nav class="container flex items-center justify-between">
+        <div class="flex justify-center items-center">
+          <a href="../index.html">
+            <img src="../assets/image/logo/logo.webp" alt="" />
+          </a>
 
-            <ul
-              class="pt-4 text-base text-gray-700 hidden md:flex md:justify-between md:pt-0"
-            >
-              <li>
-                <a
-                  class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
-                  href="../index.html"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a
-                  class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
-                  href="./about.html"
-                  >About</a
-                >
-              </li>
-              <li>
-                <a
-                  class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
-                  href="./recipes.html"
-                  >Recipes</a
-                >
-              </li>
-              <li>
-                <a
-                  class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
-                  href="./shop.html"
-                  >Shop</a
-                >
-              </li>
-              <li>
-                <a
-                  class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
-                  href="./blog.html"
-                  >Blog</a
-                >
-              </li>
-            </ul>
-          </div>
+          <ul class="hidden md:flex">
+            <li>
+              <a
+                class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
+                href="../index.html"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
+                href="./about.html"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
+                href="./recipes.html"
+                >Recipes</a
+              >
+            </li>
+            <li>
+              <a
+                class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
+                href="./shop.html"
+                >Shop</a
+              >
+            </li>
+            <li>
+              <a
+                class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
+                href="./blog.html"
+                >Blog</a
+              >
+            </li>
+          </ul>
+        </div>
 
-          <svg
-            id="menu-button"
-            class="h-6 w-6 cursor-pointer md:hidden block"
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+        <div class="hidden w-full md:flex md:items-center md:w-auto">
+          <ul
+            class="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0 gap-4"
           >
-            <path
-              d="M5.9375 5H14.0625"
-              stroke="#004738"
-              stroke-width="1.5"
-              stroke-linecap="square"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M3.125 10H16.875"
-              stroke="#004738"
-              stroke-width="1.5"
-              stroke-linecap="square"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M5.9375 15H14.0625"
-              stroke="#004738"
-              stroke-width="1.5"
-              stroke-linecap="square"
-              stroke-linejoin="round"
-            />
-          </svg>
-
-          <div
-            class="hidden w-full md:flex md:items-center md:w-auto"
-            id="menu"
-          >
-            <ul
-              class="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0"
-            >
-              <li class="md:p-4 py-2 block">
+            <li class="py-2 block">
+              <button type="">
                 <svg
                   width="32"
                   height="32"
@@ -135,8 +97,11 @@
                     stroke-linejoin="round"
                   />
                 </svg>
-              </li>
-              <li class="md:p-4 py-2 block">
+              </button>
+            </li>
+
+            <li class="py-2 block">
+              <button type="">
                 <svg
                   width="32"
                   height="32"
@@ -171,9 +136,11 @@
                     stroke-linejoin="round"
                   />
                 </svg>
-              </li>
+              </button>
+            </li>
 
-              <li class="md:p-4 py-2 block">
+            <li class="py-2 block">
+              <button type="">
                 <svg
                   width="32"
                   height="32"
@@ -201,11 +168,211 @@
                     stroke-linejoin="round"
                   />
                 </svg>
-              </li>
-            </ul>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+      
+
+        <!-- Large screen end -->
+
+        <!-- Mobile screen started  -->
+        <button class="md:hidden block" type="">
+          <svg
+            id="menu-button"
+            class="h-6 w-6 cursor-pointer"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5.9375 5H14.0625"
+              stroke="#004738"
+              stroke-width="1.5"
+              stroke-linecap="square"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M3.125 10H16.875"
+              stroke="#004738"
+              stroke-width="1.5"
+              stroke-linecap="square"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M5.9375 15H14.0625"
+              stroke="#004738"
+              stroke-width="1.5"
+              stroke-linecap="square"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <div
+          id="menu"
+          class="fixed left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 hidden"
+        >
+          <div class="relative bg-white rounded-lg border w-[264px] h-[516px]">
+            <div class="text-center mb-[85px] pt-3">
+              <p class="font-Playfair font-semibold text-sm text-primary">
+                Menu
+              </p>
+            </div>
+            <div class="mobile-menu">
+              <ul class="flex flex-col justify-center items-center px-[34px]">
+                <li
+                  class="font-Raleway font-medium text-sm text-primary/60 py-3 border-b border-[#EBEBEB] w-full text-center"
+                >
+                  <a href="#">Home</a>
+                </li>
+                <li
+                  class="font-Raleway font-medium text-sm text-primary/60 py-3 border-b border-[#EBEBEB] w-full text-center"
+                >
+                  <a href="#">About</a>
+                </li>
+                <li
+                  class="font-Raleway font-medium text-sm text-primary/60 py-3 border-b border-[#EBEBEB] w-full text-center"
+                >
+                  <a href="#">Recipes</a>
+                </li>
+                <li
+                  class="font-Raleway font-medium text-sm text-primary/60 py-3 border-b border-[#EBEBEB] w-full text-center"
+                >
+                  <a href="#">Shop</a>
+                </li>
+                <li
+                  class="font-Raleway font-medium text-sm text-primary/60 py-3 w-full text-center"
+                >
+                  <a href="#">Blog</a>
+                </li>
+                <li>
+                  <div class="flex justify-center gap-6 py-14">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        opacity="0.2"
+                        d="M10.875 18.75C15.2242 18.75 18.75 15.2242 18.75 10.875C18.75 6.52576 15.2242 3 10.875 3C6.52576 3 3 6.52576 3 10.875C3 15.2242 6.52576 18.75 10.875 18.75Z"
+                        fill="#070707"
+                      />
+                      <path
+                        d="M10.875 18.75C15.2242 18.75 18.75 15.2242 18.75 10.875C18.75 6.52576 15.2242 3 10.875 3C6.52576 3 3 6.52576 3 10.875C3 15.2242 6.52576 18.75 10.875 18.75Z"
+                        stroke="#070707"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M16.4453 16.4434L21.0016 20.9996"
+                        stroke="#070707"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        opacity="0.2"
+                        d="M11.9987 3C10.1776 2.99947 8.3992 3.55141 6.89839 4.5829C5.39758 5.6144 4.24499 7.07692 3.59288 8.77726C2.94078 10.4776 2.81984 12.3358 3.24604 14.1063C3.67224 15.8768 4.62553 17.4764 5.97998 18.6937C6.54435 17.5824 7.40543 16.649 8.46778 15.997C9.53013 15.345 10.7523 14.9999 11.9987 15C11.257 15 10.532 14.7801 9.91534 14.368C9.29865 13.956 8.81801 13.3703 8.53418 12.6851C8.25035 11.9998 8.17609 11.2458 8.32078 10.5184C8.46548 9.79098 8.82263 9.1228 9.34708 8.59835C9.87152 8.0739 10.5397 7.71675 11.2671 7.57205C11.9946 7.42736 12.7486 7.50162 13.4338 7.78545C14.119 8.06928 14.7047 8.54993 15.1167 9.16661C15.5288 9.7833 15.7487 10.5083 15.7487 11.25C15.7487 12.2446 15.3536 13.1984 14.6504 13.9017C13.9471 14.6049 12.9933 15 11.9987 15C13.2452 14.9999 14.4673 15.345 15.5297 15.997C16.592 16.649 17.4531 17.5824 18.0175 18.6937C19.3719 17.4764 20.3252 15.8768 20.7514 14.1063C21.1776 12.3358 21.0567 10.4776 20.4046 8.77726C19.7525 7.07692 18.5999 5.6144 17.0991 4.5829C15.5983 3.55141 13.8198 2.99947 11.9987 3Z"
+                        fill="#070707"
+                      />
+                      <path
+                        d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z"
+                        stroke="#070707"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M12 15C14.0711 15 15.75 13.3211 15.75 11.25C15.75 9.17893 14.0711 7.5 12 7.5C9.92893 7.5 8.25 9.17893 8.25 11.25C8.25 13.3211 9.92893 15 12 15Z"
+                        stroke="#070707"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M5.98047 18.6943C6.54476 17.5828 7.40581 16.6493 8.46816 15.9972C9.53052 15.3452 10.7527 15 11.9992 15C13.2457 15 14.4679 15.3452 15.5303 15.9972C16.5926 16.6493 17.4537 17.5828 18.018 18.6943"
+                        stroke="#070707"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        opacity="0.2"
+                        d="M20.25 6.75H3.75C3.33579 6.75 3 7.08579 3 7.5V19.5C3 19.9142 3.33579 20.25 3.75 20.25H20.25C20.6642 20.25 21 19.9142 21 19.5V7.5C21 7.08579 20.6642 6.75 20.25 6.75Z"
+                        fill="#070707"
+                      />
+                      <path
+                        d="M20.25 6.75H3.75C3.33579 6.75 3 7.08579 3 7.5V19.5C3 19.9142 3.33579 20.25 3.75 20.25H20.25C20.6642 20.25 21 19.9142 21 19.5V7.5C21 7.08579 20.6642 6.75 20.25 6.75Z"
+                        stroke="#070707"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M8.25 9.75V6.75C8.25 5.75544 8.64509 4.80161 9.34835 4.09835C10.0516 3.39509 11.0054 3 12 3C12.9946 3 13.9484 3.39509 14.6517 4.09835C15.3549 4.80161 15.75 5.75544 15.75 6.75V9.75"
+                        stroke="#070707"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <button id="close-button" class="absolute -top-4 -right-4">
+              <svg
+                width="36"
+                height="36"
+                viewBox="0 0 36 36"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="36" height="36" rx="18" fill="#FEBB41" />
+                <path
+                  d="M23.625 12.375L12.375 23.625"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M23.625 23.625L12.375 12.375"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
           </div>
-        </nav>
-      </div>
+        </div>
+        <!-- Mobile screen end -->
+      </nav>
     </header>
     <!-- Header end  -->
 
