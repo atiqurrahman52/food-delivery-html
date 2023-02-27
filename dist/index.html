@@ -11,16 +11,15 @@
       rel="stylesheet"
       type="text/css"
     />
-    <!-- <link rel="stylesheet" href="./dist/main.css" /> -->
     
-    <link rel="stylesheet" href="/assets/index-b2991193.css">
+    <link rel="stylesheet" href="/assets/index-f86272cb.css">
   </head>
   <body>
     <!-- Header started  -->
-    <header id="navbar" class="navbar">
+    <header id="navbar" class="sticky top-0 z-10 w-full bg-white">
       <div class="container">
         <nav
-          class="flex flex-wrap items-center justify-between sticky top-0 z-10 w-full py-4 md:py-0 text-lg text-gray-700 bg-white"
+          class="flex flex-wrap items-center justify-between py-4 md:py-0 text-lg text-gray-700"
         >
           <div class="flex justify-center items-center">
             <a href="index.html">
@@ -100,7 +99,6 @@
             />
           </svg>
 
-        
           <div
             class="hidden md:flex md:items-center md:w-auto w-full"
             id="menu"
@@ -108,9 +106,8 @@
             <ul
               class="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0"
             >
-
               <li class="md:p-4 py-2 cursor-pointer">
-                  <svg
+                <svg
                   width="32"
                   height="32"
                   viewBox="0 0 32 32"
@@ -136,7 +133,7 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
-                </svg> 
+                </svg>
               </li>
 
               <li class="md:p-4 py-2 cursor-pointer">
@@ -177,40 +174,38 @@
               </li>
 
               <li class="md:p-4 py-2 cursor-pointer">
-               <a href="./pages/shopping-cart.html">
-                <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  opacity="0.2"
-                  d="M27 9H5C4.44772 9 4 9.44772 4 10V26C4 26.5523 4.44772 27 5 27H27C27.5523 27 28 26.5523 28 26V10C28 9.44772 27.5523 9 27 9Z"
-                  fill="#070707"
-                />
-                <path
-                  d="M27 9H5C4.44772 9 4 9.44772 4 10V26C4 26.5523 4.44772 27 5 27H27C27.5523 27 28 26.5523 28 26V10C28 9.44772 27.5523 9 27 9Z"
-                  stroke="#070707"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M11 13V9C11 7.67392 11.5268 6.40215 12.4645 5.46447C13.4021 4.52678 14.6739 4 16 4C17.3261 4 18.5979 4.52678 19.5355 5.46447C20.4732 6.40215 21 7.67392 21 9V13"
-                  stroke="#070707"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-               </a>
+                <a href="./pages/shopping-cart.html">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      opacity="0.2"
+                      d="M27 9H5C4.44772 9 4 9.44772 4 10V26C4 26.5523 4.44772 27 5 27H27C27.5523 27 28 26.5523 28 26V10C28 9.44772 27.5523 9 27 9Z"
+                      fill="#070707"
+                    />
+                    <path
+                      d="M27 9H5C4.44772 9 4 9.44772 4 10V26C4 26.5523 4.44772 27 5 27H27C27.5523 27 28 26.5523 28 26V10C28 9.44772 27.5523 9 27 9Z"
+                      stroke="#070707"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M11 13V9C11 7.67392 11.5268 6.40215 12.4645 5.46447C13.4021 4.52678 14.6739 4 16 4C17.3261 4 18.5979 4.52678 19.5355 5.46447C20.4732 6.40215 21 7.67392 21 9V13"
+                      stroke="#070707"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
               </li>
-              
             </ul>
           </div>
-
         </nav>
       </div>
     </header>
@@ -1174,9 +1169,11 @@
       <div class="footer-background">
         <div class="container">
           <div class="grid grid-cols-12 py-10 xl:py-20">
-            <div class="col-span-12 lg:col-span-8 mb-5 md:mb-0">
-              <div class="mb-8 flex ">
-                <a href="#">
+            <div
+              class="col-span-12 md:col-span-6 lg:col-span-8 mb-5 md:mb-0 text-center md:text-left"
+            >
+              <div class="mb-8 flex justify-center md:justify-start">
+                <a href="#" class="inline-block w-fit">
                   <img src="data:image/webp;base64,UklGRh4DAABXRUJQVlA4TBIDAAAvLwAMEA/CoJEkRf3+xR4zzLMGhm3bONLvP+z1fvdi2LaNI/3+w17vdy+EkGxlEUL4KplkEFIZxJBJCD+CTzZAUZjdAQBKCkgggQQS+ED97HMDKOAf39eAA1wTwnQpkfI5k5La/79jrWP/v1AKKSmpUAqXEqn9/6RirdZ7gA5ErHVJzXtJX+495r2kcu+k5r1Sa8Y5cu+kxjly7/reQMG29qZ19eXTj2KDZYLFH+VF9u2998ZNm/+wJDD2egOI6P8EYH2ty0JImsLOFgGbDnMhzaR0zlWTgqRtNuItaWvFQF8JpRktzGhcwNreUppxvLAKGNULyzDCN0qL0R1F15pzGrBBL6JrzOmwWRXRQXM6bFpFdIBnCUAL3QRaY/tUJAAoKboJNKx7SioACGnqTWBiNKOsAKBlKn4DwdhMKZosMmSpo8HRA1DOkLoemnq0YCYAKmqmIrmXkPP1QgbOBEAsslOSPM2wXutbzrNGyyZXJXsxQx2mM4YM5Csaaq5OeJqzA/ysIPk9VxmUBnmfOTzMsM2EuWG2p+F3a3tChpcx45LWsBf5lgspe2Az8SUjANSQZCRpepQ1XZ/P8PQyYQCEJPcS2wO6IbAZPu4lCyxI8mRFktVIajLxc0WyRknGy8i0HWKqAWgyPPxDsoJw9RKZTjBEyiGoM7x6Ib8qVx+RqWhfy2ZSDEIrCV9vaP3qc8VUFP2evmIYhOCS+OdGbj9XJGnrgIE1w4J+GKBNQa7+Pf135+qmDRhuCwRW6wDQhdv/8hMjBpaANSMA+PETYzb0wIJ+lJGtAICxW6NsEsftFU2CbE+DrN8aQW+1LdoXJPP83C3f338fH7+9XfDhmuf3vD64XnZvF5kaA1VIHjzz6KE7ejjryIP4/hav/+48H1y/7/A4cRisQu4+8OChO/8df/P611nXXVwfd8kyM8WaKmT3/Hv5vry4vnh+eO92dp6vD866g+uD38/XpMPaWpDLyEhGxiUjyUhGRsYlTY0xHccvWoyr05FMjfF1OoJxARvVZmKGSOWxje2ids65pg34PwQ=" alt="" />
                 </a>
               </div>
@@ -1209,7 +1206,9 @@
                 </div>
               </div>
 
-              <div class="flex items-center space-x-3">
+              <div
+                class="flex items-center justify-center md:justify-start space-x-3"
+              >
                 <a href="#">
                   <img src="data:image/webp;base64,UklGRmIAAABXRUJQVlA4TFUAAAAvF8AFEE8w//M//wSBoLERMnikA/lwQAEAAzCKJEnR0tHvpJ2FczIS5rmldxkERPR/Asy8f+QuvBGewgfcBSWYsuLHCcCV08TlJLE5o3hT3ofgKsYDAA==" alt="" />
                 </a>
@@ -1225,11 +1224,11 @@
               </div>
             </div>
 
-            <div class="col-span-6 lg:col-span-2">
+            <div class="col-span-6 md:col-span-3 lg:col-span-2">
               <ul class="space-y-3">
                 <li>
                   <a
-                    href="#"
+                    href="./index.html"
                     class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white"
                   >
                     Home</a
@@ -1237,7 +1236,7 @@
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="./pages/about.html"
                     class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white"
                   >
                     About</a
@@ -1245,7 +1244,7 @@
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="./pages/recipes.html"
                     class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white"
                   >
                     Recipes</a
@@ -1253,7 +1252,7 @@
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="./pages/shop.html"
                     class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white"
                   >
                     Shop</a
@@ -1261,7 +1260,7 @@
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="./pages/blog.html"
                     class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white"
                   >
                     Blog</a
@@ -1270,7 +1269,7 @@
 
                 <li>
                   <a
-                    href="/pages/sign-up.html"
+                    href="./pages/sign-up.html"
                     class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white"
                   >
                     Sign Up</a
@@ -1279,7 +1278,9 @@
               </ul>
             </div>
 
-            <div class="col-span-6 lg:col-span-2 text-end space-y-3">
+            <div
+              class="col-span-6 md:col-span-3 lg:col-span-2 text-end space-y-3"
+            >
               <p
                 class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white"
               >
@@ -1319,19 +1320,231 @@
           </div>
           <div class="bg-white h-[1px]"></div>
 
-          <div class="flex flex-col md:flex-row justify-between gap-4 items-center py-8">
+          <div
+            class="flex flex-col md:flex-row justify-between gap-4 items-center py-8"
+          >
             <div>
-              <p class="font-Poppins text-xs lg:text-sm leading-[21px] text-white">© 2000-2021, All Rights Reserved</p>
+              <p
+                class="font-Poppins text-xs lg:text-sm leading-[21px] text-white"
+              >
+                © 2000-2021, All Rights Reserved
+              </p>
             </div>
             <ul class="flex space-x-6">
-              <li class="font-Roboto text-xs lg:text-sm leading-[18px] lg:leading-[21px] text-white"><a href="#">Privacy Policy</a></li>
-              <li class="font-Roboto text-xs lg:text-sm leading-[18px] lg:leading-[21px] text-white"><a href="#">Terms of Service</a></li>
+              <li
+                class="font-Roboto text-xs lg:text-sm leading-[18px] lg:leading-[21px] text-white"
+              >
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li
+                class="font-Roboto text-xs lg:text-sm leading-[18px] lg:leading-[21px] text-white"
+              >
+                <a href="#">Terms of Service</a>
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </footer>
     <!-- Footer end -->
+
+    <!-- Bottom Navigation started  -->
+    <section id="mobile-bottom-nav" class="w-full fixed bottom-0 left-0 z-10 md:hidden block">
+      <div class="bg-[#F8F9F3] py-2 px-4">
+        <div class="grid grid-cols-4">
+          <div class="flex flex-col justify-center items-center gap-1">
+            <span
+              ><svg
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.2"
+                  d="M14.25 20.0009V15.5009C14.25 15.302 14.171 15.1113 14.0303 14.9706C13.8897 14.83 13.6989 14.7509 13.5 14.7509H10.5C10.3011 14.7509 10.1103 14.83 9.96967 14.9706C9.82902 15.1113 9.75 15.302 9.75 15.5009V20.0009C9.75 20.1998 9.67098 20.3906 9.53033 20.5313C9.38968 20.6719 9.19891 20.7509 9 20.7509H4.5C4.30109 20.7509 4.11032 20.6719 3.96967 20.5313C3.82902 20.3906 3.75 20.1998 3.75 20.0009V11.3291C3.75168 11.2253 3.77411 11.1229 3.81597 11.0279C3.85783 10.9329 3.91828 10.8472 3.99375 10.7759L11.4937 3.96031C11.632 3.83382 11.8126 3.76367 12 3.76367C12.1874 3.76367 12.368 3.83382 12.5062 3.96031L20.0062 10.7759C20.0817 10.8472 20.1422 10.9329 20.184 11.0279C20.2259 11.1229 20.2483 11.2253 20.25 11.3291V20.0009C20.25 20.1998 20.171 20.3906 20.0303 20.5313C19.8897 20.6719 19.6989 20.7509 19.5 20.7509H15C14.8011 20.7509 14.6103 20.6719 14.4697 20.5313C14.329 20.3906 14.25 20.1998 14.25 20.0009Z"
+                  fill="#070707"
+                  fill-opacity="0.4"
+                />
+                <path
+                  d="M14.25 20.0009V15.5009C14.25 15.302 14.171 15.1113 14.0303 14.9706C13.8897 14.83 13.6989 14.7509 13.5 14.7509H10.5C10.3011 14.7509 10.1103 14.83 9.96967 14.9706C9.82902 15.1113 9.75 15.302 9.75 15.5009V20.0009C9.75 20.1998 9.67098 20.3906 9.53033 20.5313C9.38968 20.6719 9.19891 20.7509 9 20.7509H4.5C4.30109 20.7509 4.11032 20.6719 3.96967 20.5313C3.82902 20.3906 3.75 20.1998 3.75 20.0009V11.3291C3.75168 11.2253 3.77411 11.1229 3.81597 11.0279C3.85783 10.9329 3.91828 10.8472 3.99375 10.7759L11.4937 3.96031C11.632 3.83382 11.8126 3.76367 12 3.76367C12.1874 3.76367 12.368 3.83382 12.5062 3.96031L20.0062 10.7759C20.0817 10.8472 20.1422 10.9329 20.184 11.0279C20.2259 11.1229 20.2483 11.2253 20.25 11.3291V20.0009C20.25 20.1998 20.171 20.3906 20.0303 20.5313C19.8897 20.6719 19.6989 20.7509 19.5 20.7509H15C14.8011 20.7509 14.6103 20.6719 14.4697 20.5313C14.329 20.3906 14.25 20.1998 14.25 20.0009Z"
+                  stroke="#070707"
+                  stroke-opacity="0.4"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <p class="font-Raleway font-semibold text-[10px] text-primary/40">
+              Home
+            </p>
+          </div>
+
+          <div class="flex flex-col justify-center items-center gap-1">
+            <a href="./pages/shop.html">
+            <span>
+              <svg
+                width="25"
+                height="25"
+                viewBox="0 0 25 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.2"
+                  d="M11.7999 3.28215L9.10846 5.97358C8.81556 6.26647 8.81556 6.74134 9.10846 7.03424L11.7979 9.72367C12.0908 10.0166 12.5657 10.0166 12.8586 9.72367L15.55 7.03225C15.8429 6.73935 15.8429 6.26448 15.55 5.97159L12.8605 3.28215C12.5676 2.98926 12.0928 2.98926 11.7999 3.28215Z"
+                  fill="#070707"
+                  fill-opacity="0.4"
+                />
+                <g opacity="0.2">
+                  <path
+                    d="M17.7999 9.28215L15.1085 11.9736C14.8156 12.2665 14.8156 12.7413 15.1085 13.0342L17.7979 15.7237C18.0908 16.0166 18.5657 16.0166 18.8586 15.7237L21.55 13.0322C21.8429 12.7394 21.8429 12.2645 21.55 11.9716L18.8605 9.28215C18.5676 8.98926 18.0928 8.98926 17.7999 9.28215Z"
+                    fill="#070707"
+                    fill-opacity="0.4"
+                  />
+                  <path
+                    d="M15.6388 12.5039L18.3302 9.81248L21.0196 12.5019L18.3282 15.1933L15.6388 12.5039Z"
+                    stroke="#070707"
+                    stroke-opacity="0.4"
+                    stroke-width="1.5"
+                  />
+                </g>
+                <g opacity="0.2">
+                  <path
+                    d="M5.79988 9.27434L3.10846 11.9658C2.81556 12.2587 2.81556 12.7335 3.10846 13.0264L5.79789 15.7159C6.09079 16.0088 6.56566 16.0088 6.85855 15.7159L9.54998 13.0244C9.84287 12.7315 9.84287 12.2567 9.54998 11.9638L6.86054 9.27434C6.56765 8.98145 6.09277 8.98145 5.79988 9.27434Z"
+                    fill="#070707"
+                    fill-opacity="0.4"
+                  />
+                  <path
+                    d="M3.63879 12.4961L6.33021 9.80467L9.01965 12.4941L6.32822 15.1855L3.63879 12.4961Z"
+                    stroke="#070707"
+                    stroke-opacity="0.4"
+                    stroke-width="1.5"
+                  />
+                </g>
+                <path
+                  opacity="0.2"
+                  d="M11.7999 15.2743L9.10846 17.9658C8.81556 18.2587 8.81556 18.7335 9.10846 19.0264L11.7979 21.7159C12.0908 22.0088 12.5657 22.0088 12.8586 21.7159L15.55 19.0244C15.8429 18.7315 15.8429 18.2567 15.55 17.9638L12.8605 15.2743C12.5676 14.9814 12.0928 14.9814 11.7999 15.2743Z"
+                  fill="#070707"
+                  fill-opacity="0.4"
+                />
+                <path
+                  d="M11.7999 3.28215L9.10846 5.97358C8.81556 6.26647 8.81556 6.74134 9.10846 7.03424L11.7979 9.72367C12.0908 10.0166 12.5657 10.0166 12.8586 9.72367L15.55 7.03225C15.8429 6.73935 15.8429 6.26448 15.55 5.97159L12.8605 3.28215C12.5676 2.98926 12.0928 2.98926 11.7999 3.28215Z"
+                  stroke="#070707"
+                  stroke-opacity="0.4"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M17.7999 9.28215L15.1085 11.9736C14.8156 12.2665 14.8156 12.7413 15.1085 13.0342L17.7979 15.7237C18.0908 16.0166 18.5657 16.0166 18.8586 15.7237L21.55 13.0322C21.8429 12.7394 21.8429 12.2645 21.55 11.9716L18.8605 9.28215C18.5676 8.98926 18.0928 8.98926 17.7999 9.28215Z"
+                  stroke="#070707"
+                  stroke-opacity="0.4"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5.79988 9.27434L3.10846 11.9658C2.81556 12.2587 2.81556 12.7335 3.10846 13.0264L5.79789 15.7159C6.09079 16.0088 6.56566 16.0088 6.85855 15.7159L9.54998 13.0244C9.84287 12.7315 9.84287 12.2567 9.54998 11.9638L6.86054 9.27434C6.56765 8.98145 6.09277 8.98145 5.79988 9.27434Z"
+                  stroke="#070707"
+                  stroke-opacity="0.4"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M11.7999 15.2743L9.10846 17.9658C8.81556 18.2587 8.81556 18.7335 9.10846 19.0264L11.7979 21.7159C12.0908 22.0088 12.5657 22.0088 12.8586 21.7159L15.55 19.0244C15.8429 18.7315 15.8429 18.2567 15.55 17.9638L12.8605 15.2743C12.5676 14.9814 12.0928 14.9814 11.7999 15.2743Z"
+                  stroke="#070707"
+                  stroke-opacity="0.4"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <p class="font-Raleway font-semibold text-[10px] text-primary/40">
+              Shop
+            </p>
+            </a>
+          </div>
+
+          <div class="flex flex-col justify-center items-center gap-1">
+            <span
+              ><svg
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.2"
+                  d="M14.25 20.0009V15.5009C14.25 15.302 14.171 15.1113 14.0303 14.9706C13.8897 14.83 13.6989 14.7509 13.5 14.7509H10.5C10.3011 14.7509 10.1103 14.83 9.96967 14.9706C9.82902 15.1113 9.75 15.302 9.75 15.5009V20.0009C9.75 20.1998 9.67098 20.3906 9.53033 20.5313C9.38968 20.6719 9.19891 20.7509 9 20.7509H4.5C4.30109 20.7509 4.11032 20.6719 3.96967 20.5313C3.82902 20.3906 3.75 20.1998 3.75 20.0009V11.3291C3.75168 11.2253 3.77411 11.1229 3.81597 11.0279C3.85783 10.9329 3.91828 10.8472 3.99375 10.7759L11.4937 3.96031C11.632 3.83382 11.8126 3.76367 12 3.76367C12.1874 3.76367 12.368 3.83382 12.5062 3.96031L20.0062 10.7759C20.0817 10.8472 20.1422 10.9329 20.184 11.0279C20.2259 11.1229 20.2483 11.2253 20.25 11.3291V20.0009C20.25 20.1998 20.171 20.3906 20.0303 20.5313C19.8897 20.6719 19.6989 20.7509 19.5 20.7509H15C14.8011 20.7509 14.6103 20.6719 14.4697 20.5313C14.329 20.3906 14.25 20.1998 14.25 20.0009Z"
+                  fill="#070707"
+                  fill-opacity="0.4"
+                />
+                <path
+                  d="M14.25 20.0009V15.5009C14.25 15.302 14.171 15.1113 14.0303 14.9706C13.8897 14.83 13.6989 14.7509 13.5 14.7509H10.5C10.3011 14.7509 10.1103 14.83 9.96967 14.9706C9.82902 15.1113 9.75 15.302 9.75 15.5009V20.0009C9.75 20.1998 9.67098 20.3906 9.53033 20.5313C9.38968 20.6719 9.19891 20.7509 9 20.7509H4.5C4.30109 20.7509 4.11032 20.6719 3.96967 20.5313C3.82902 20.3906 3.75 20.1998 3.75 20.0009V11.3291C3.75168 11.2253 3.77411 11.1229 3.81597 11.0279C3.85783 10.9329 3.91828 10.8472 3.99375 10.7759L11.4937 3.96031C11.632 3.83382 11.8126 3.76367 12 3.76367C12.1874 3.76367 12.368 3.83382 12.5062 3.96031L20.0062 10.7759C20.0817 10.8472 20.1422 10.9329 20.184 11.0279C20.2259 11.1229 20.2483 11.2253 20.25 11.3291V20.0009C20.25 20.1998 20.171 20.3906 20.0303 20.5313C19.8897 20.6719 19.6989 20.7509 19.5 20.7509H15C14.8011 20.7509 14.6103 20.6719 14.4697 20.5313C14.329 20.3906 14.25 20.1998 14.25 20.0009Z"
+                  stroke="#070707"
+                  stroke-opacity="0.4"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <p class="font-Raleway font-semibold text-[10px] text-primary/40">
+              Shop
+            </p>
+          </div>
+
+          <div class="flex flex-col justify-center items-center gap-1">
+            <span>
+              <svg
+                width="24"
+                height="25"
+                viewBox="0 0 24 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.2"
+                  d="M11.9987 3.5C10.1776 3.49947 8.3992 4.05141 6.89839 5.0829C5.39757 6.1144 4.24499 7.57692 3.59288 9.27726C2.94078 10.9776 2.81984 12.8358 3.24604 14.6063C3.67224 16.3768 4.62553 17.9764 5.97998 19.1937V19.1937C6.54434 18.0824 7.40543 17.149 8.46778 16.497C9.53013 15.845 10.7523 15.4999 11.9987 15.5C11.257 15.5 10.532 15.2801 9.91534 14.868C9.29865 14.456 8.81801 13.8703 8.53418 13.1851C8.25035 12.4998 8.17609 11.7458 8.32078 11.0184C8.46547 10.291 8.82263 9.6228 9.34707 9.09835C9.87152 8.5739 10.5397 8.21675 11.2671 8.07206C11.9946 7.92736 12.7486 8.00162 13.4338 8.28545C14.119 8.56928 14.7047 9.04993 15.1167 9.66661C15.5288 10.2833 15.7487 11.0083 15.7487 11.75C15.7487 12.7446 15.3536 13.6984 14.6504 14.4017C13.9471 15.1049 12.9933 15.5 11.9987 15.5C13.2452 15.4999 14.4673 15.845 15.5297 16.497C16.592 17.149 17.4531 18.0824 18.0175 19.1937C19.3719 17.9764 20.3252 16.3768 20.7514 14.6063C21.1776 12.8358 21.0567 10.9776 20.4046 9.27726C19.7525 7.57692 18.5999 6.1144 17.0991 5.0829C15.5983 4.05141 13.8198 3.49947 11.9987 3.5Z"
+                  fill="#070707"
+                />
+                <path
+                  d="M12 21.5C16.9706 21.5 21 17.4706 21 12.5C21 7.52944 16.9706 3.5 12 3.5C7.02944 3.5 3 7.52944 3 12.5C3 17.4706 7.02944 21.5 12 21.5Z"
+                  stroke="#070707"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12 15.5C14.0711 15.5 15.75 13.8211 15.75 11.75C15.75 9.67893 14.0711 8 12 8C9.92893 8 8.25 9.67893 8.25 11.75C8.25 13.8211 9.92893 15.5 12 15.5Z"
+                  stroke="#004738"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5.98047 19.1943C6.54476 18.0828 7.40581 17.1493 8.46816 16.4972C9.53052 15.8452 10.7527 15.5 11.9992 15.5C13.2457 15.5 14.4679 15.8452 15.5303 16.4972C16.5926 17.1493 17.4537 18.0828 18.018 19.1943"
+                  stroke="#004738"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <p class="font-Raleway font-semibold text-[10px] text-primary/40">
+              Profile
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Bottom Navigation  end  -->
   </body>
 
   <script src="./assets/js/jquery-3.6.3.min.js"></script>

@@ -5,8 +5,10 @@
 
 @font-face {
   font-family: "edwardian_script_itcregular";
-  src: url("./assets/fonts/itcedscr-webfont.woff2") format("woff2"),
-    url("./assets/fonts/itcedscr-webfont.woff") format("woff");
+  /* src: url("./assets/fonts/itcedscr-webfont.woff2") format("woff2"),
+    url("./assets/fonts/itcedscr-webfont.woff") format("woff"); */
+  src: url("../assets/fonts/itcedscr-webfont.woff2") format("woff2"),
+    url("../assets/fonts/itcedscr-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -56,7 +58,7 @@
 .not-found {
   background-image: url("./../assets/image/not-found/not-found.webp");
 }
-/* background images started  */
+/* background images end  */
 
 .add-to-cart-btn::before {
   content: "";

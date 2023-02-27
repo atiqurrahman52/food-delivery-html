@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Step</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <link
+      href="//db.onlinewebfonts.com/c/84ae358e627d67d90bd613fcedc20c10?family=Edwardian+Script+ITC"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="./../dist/main.css" />
+  </head>
+  <body>
+    <!-- Header started  -->
+    <header id="navbar" class="sticky top-0 z-10 w-full bg-white">
+      <div class="container">
+        <nav
+          class="flex flex-wrap items-center justify-between py-4 md:py-0 px-4 text-lg text-gray-700"
+        >
+          <div class="flex justify-center items-center">
+            <a href="../index.html">
+              <img src="../assets/image/logo/logo.webp" alt="" />
+            </a>
+
+            <ul
+              class="pt-4 text-base text-gray-700 hidden md:flex md:justify-between md:pt-0"
+            >
+              <li>
+                <a
+                  class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
+                  href="../index.html"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
+                  href="./about.html"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
+                  href="./recipes.html"
+                  >Recipes</a
+                >
+              </li>
+              <li>
+                <a
+                  class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
+                  href="./shop.html"
+                  >Shop</a
+                >
+              </li>
+              <li>
+                <a
+                  class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
+                  href="./blog.html"
+                  >Blog</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <svg
+            id="menu-button"
+            class="h-6 w-6 cursor-pointer md:hidden block"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5.9375 5H14.0625"
+              stroke="#004738"
+              stroke-width="1.5"
+              stroke-linecap="square"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M3.125 10H16.875"
+              stroke="#004738"
+              stroke-width="1.5"
+              stroke-linecap="square"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M5.9375 15H14.0625"
+              stroke="#004738"
+              stroke-width="1.5"
+              stroke-linecap="square"
+              stroke-linejoin="round"
+            />
+          </svg>
+
+          <div
+            class="hidden w-full md:flex md:items-center md:w-auto"
+            id="menu"
+          >
+            <ul
+              class="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0"
+            >
+              <li class="md:p-4 py-2 block">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.2"
+                    d="M14.5 25C20.299 25 25 20.299 25 14.5C25 8.70101 20.299 4 14.5 4C8.70101 4 4 8.70101 4 14.5C4 20.299 8.70101 25 14.5 25Z"
+                    fill="#070707"
+                  />
+                  <path
+                    d="M14.5 25C20.299 25 25 20.299 25 14.5C25 8.70101 20.299 4 14.5 4C8.70101 4 4 8.70101 4 14.5C4 20.299 8.70101 25 14.5 25Z"
+                    stroke="#070707"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M21.9248 21.9248L27.9998 27.9998"
+                    stroke="#070707"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </li>
+              <li class="md:p-4 py-2 block">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.2"
+                    d="M16.0001 4C13.572 3.99929 11.2007 4.73521 9.19964 6.11053C7.19856 7.48586 5.66178 9.43589 4.7923 11.703C3.92283 13.9701 3.76158 16.4477 4.32984 18.8084C4.89811 21.1691 6.16916 23.3019 7.97509 24.925C8.72758 23.4432 9.87569 22.1986 11.2922 21.3293C12.7086 20.46 14.3381 19.9999 16.0001 20C15.0112 20 14.0445 19.7068 13.2222 19.1573C12.4 18.6079 11.7591 17.827 11.3807 16.9134C11.0023 15.9998 10.9032 14.9945 11.0962 14.0245C11.2891 13.0546 11.7653 12.1637 12.4646 11.4645C13.1638 10.7652 14.0547 10.289 15.0246 10.0961C15.9945 9.90315 16.9999 10.0022 17.9135 10.3806C18.8271 10.759 19.608 11.3999 20.1574 12.2221C20.7068 13.0444 21.0001 14.0111 21.0001 15C21.0001 16.3261 20.4733 17.5979 19.5356 18.5355C18.5979 19.4732 17.3262 20 16.0001 20C17.662 19.9999 19.2916 20.46 20.708 21.3293C22.1245 22.1986 23.2726 23.4432 24.0251 24.925C25.831 23.3019 27.1021 21.1691 27.6703 18.8084C28.2386 16.4477 28.0774 13.9701 27.2079 11.703C26.3384 9.43589 24.8016 7.48586 22.8005 6.11053C20.7995 4.73521 18.4282 3.99929 16.0001 4Z"
+                    fill="#070707"
+                  />
+                  <path
+                    d="M16 28C22.6274 28 28 22.6274 28 16C28 9.37258 22.6274 4 16 4C9.37258 4 4 9.37258 4 16C4 22.6274 9.37258 28 16 28Z"
+                    stroke="#070707"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M16 20C18.7614 20 21 17.7614 21 15C21 12.2386 18.7614 10 16 10C13.2386 10 11 12.2386 11 15C11 17.7614 13.2386 20 16 20Z"
+                    stroke="#070707"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M7.9751 24.9248C8.72749 23.4428 9.87555 22.1981 11.292 21.3287C12.7085 20.4592 14.3381 19.999 16.0001 19.999C17.6621 19.999 19.2917 20.4592 20.7082 21.3287C22.1246 22.1981 23.2727 23.4428 24.0251 24.9248"
+                    stroke="#070707"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </li>
+
+              <li class="md:p-4 py-2 block">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.2"
+                    d="M27 9H5C4.44772 9 4 9.44772 4 10V26C4 26.5523 4.44772 27 5 27H27C27.5523 27 28 26.5523 28 26V10C28 9.44772 27.5523 9 27 9Z"
+                    fill="#070707"
+                  />
+                  <path
+                    d="M27 9H5C4.44772 9 4 9.44772 4 10V26C4 26.5523 4.44772 27 5 27H27C27.5523 27 28 26.5523 28 26V10C28 9.44772 27.5523 9 27 9Z"
+                    stroke="#070707"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M11 13V9C11 7.67392 11.5268 6.40215 12.4645 5.46447C13.4021 4.52678 14.6739 4 16 4C17.3261 4 18.5979 4.52678 19.5355 5.46447C20.4732 6.40215 21 7.67392 21 9V13"
+                    stroke="#070707"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Header end  -->
+
+    <form class="p-4 sm:p-10 bg-white w-full flex flex-col items-center rounded-md sm:rounded-2xl shadow" id="msform">
+
+        <!-- progressbar -->
+        <ul class="w-full" id="progressbar">  
+            <li class="active">
+                <span class="mx-auto w-4 sm:w-6 h-4 sm:h-6 checkmark mt-1 sm:mt-0 mb-2 sm:mb-0">
+                    <svg class="w-4 sm:w-6 h-4 sm:h-6" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.7351 18.0009C10.4579 18 10.1936 17.8841 10.0051 17.6809L5.14509 12.5109C4.76677 12.1077 4.78692 11.4742 5.19009 11.0959C5.59326 10.7176 6.22677 10.7377 6.60509 11.1409L10.7251 15.5309L19.1351 6.33092C19.3676 6.04133 19.7415 5.90448 20.1061 5.97552C20.4706 6.04656 20.7658 6.31379 20.8726 6.66951C20.9794 7.02522 20.8802 7.41083 20.6151 7.67092L11.4751 17.6709C11.2884 17.8778 11.0238 17.9975 10.7451 18.0009H10.7351Z" fill="#228FF3"/>
+                    </svg>
+                </span>
+                <span class="dot h-6 w-6 flex items-center justify-center"></span>
+                <span class="block mt-1 sm:mt-6 text-[10px] sm:text-base">Product Info</span>
+            </li>
+            <li>
+                <span class="mx-auto w-4 sm:w-6 h-4 sm:h-6 checkmark mt-1 sm:mt-0 mb-2 sm:mb-0">
+                    <svg class="w-4 sm:w-6 h-4 sm:h-6" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.7351 18.0009C10.4579 18 10.1936 17.8841 10.0051 17.6809L5.14509 12.5109C4.76677 12.1077 4.78692 11.4742 5.19009 11.0959C5.59326 10.7176 6.22677 10.7377 6.60509 11.1409L10.7251 15.5309L19.1351 6.33092C19.3676 6.04133 19.7415 5.90448 20.1061 5.97552C20.4706 6.04656 20.7658 6.31379 20.8726 6.66951C20.9794 7.02522 20.8802 7.41083 20.6151 7.67092L11.4751 17.6709C11.2884 17.8778 11.0238 17.9975 10.7451 18.0009H10.7351Z" fill="#228FF3"/>
+                    </svg>
+                </span>
+                <span class="dot h-6 w-6 flex items-center justify-center"></span>
+                <span class="block mt-1 sm:mt-6 text-[10px] sm:text-base">Media</span>
+            </li>
+            <li>
+                <span class="mx-auto w-4 sm:w-6 h-4 sm:h-6 checkmark mt-1 sm:mt-0 mb-2 sm:mb-0">
+                    <svg class="w-4 sm:w-6 h-4 sm:h-6" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.7351 18.0009C10.4579 18 10.1936 17.8841 10.0051 17.6809L5.14509 12.5109C4.76677 12.1077 4.78692 11.4742 5.19009 11.0959C5.59326 10.7176 6.22677 10.7377 6.60509 11.1409L10.7251 15.5309L19.1351 6.33092C19.3676 6.04133 19.7415 5.90448 20.1061 5.97552C20.4706 6.04656 20.7658 6.31379 20.8726 6.66951C20.9794 7.02522 20.8802 7.41083 20.6151 7.67092L11.4751 17.6709C11.2884 17.8778 11.0238 17.9975 10.7451 18.0009H10.7351Z" fill="#228FF3"/>
+                    </svg>
+                </span>
+                <span class="dot h-6 w-6 flex items-center justify-center"></span>
+                <span class="block mt-1 sm:mt-6 text-[10px] sm:text-base">Social</span>
+            </li>
+            <li>
+                <span class="mx-auto w-4 sm:w-6 h-4 sm:h-6 checkmark mt-1 sm:mt-0 mb-2 sm:mb-0">
+                    <svg class="w-4 sm:w-6 h-4 sm:h-6" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.7351 18.0009C10.4579 18 10.1936 17.8841 10.0051 17.6809L5.14509 12.5109C4.76677 12.1077 4.78692 11.4742 5.19009 11.0959C5.59326 10.7176 6.22677 10.7377 6.60509 11.1409L10.7251 15.5309L19.1351 6.33092C19.3676 6.04133 19.7415 5.90448 20.1061 5.97552C20.4706 6.04656 20.7658 6.31379 20.8726 6.66951C20.9794 7.02522 20.8802 7.41083 20.6151 7.67092L11.4751 17.6709C11.2884 17.8778 11.0238 17.9975 10.7451 18.0009H10.7351Z" fill="#228FF3"/>
+                    </svg>
+                </span>
+                <span class="dot h-6 w-6 flex items-center justify-center"></span>
+                <span class="block mt-1 sm:mt-6 text-[10px] sm:text-base">Pricing</span>
+            </li>
+        </ul>
+
+        <!-- Product Information -->
+        <fieldset class="w-full">
+            <h3 class="text-base sm:text-[24px] font-semibold text-text-300 text-left">Product Information</h3>
+            <div class="mt-6 flex flex-col lg:flex-row gap-x-6 mb-3">
+                <div class="flex items-center gap-x-6 w-full lg:w-1/2 flex-col">
+                    <div class="new-user-input w-full">
+                        <input class="w-full h-10 sm:h-[48px] outline-none border p-4 text-sm" type="text" required>
+                        <label class="text-xs sm:text-sm text-text-100">Product Name</label>
+                    </div>
+                    <div class="w-full">
+                        <h3 class="text-text-300 font-normal text-sm text-left">Description (optional) </h3>
+                    
+                        <div class="h-[112px] mt-3">
+                            <textarea class="h-[112px] scroll-0 border" id="basic-example" name="content" placeholder="Write product description... "> </textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-1/2 flex flex-col gap-y-3 mt-8 lg:mt-0">
+                    <!-- weight - collection  -->
+                    <div class="product-add-input w-full">
+                        <input class="w-full h-10 sm:h-[56px] outline-none border p-4 text-xs sm:text-sm rounded-[4px]"
+                            type="number" placeholder="80">
+                        <label class="text-xs sm:text-sm text-text-100">Weight</label>
+                    </div>
+
+                    <div class="product-select-input px-3 border border-[#BFBFBF] h-10 sm:h-[56px] flex items-center relative rounded-[4px] w-full">
+                        <select class="w-full bg-white text-text-300 text-xs sm:text-sm h-9 sm:h-[45px] !border-0 mt-2" name="" id="">
+                            <option value="">Woman Collection</option>
+                            <option value="">Men Collection </option>
+                            <option value="">Baby Collections</option>
+                        </select>
+                        <label class="text-xs text-text-100 bg-white">Category</label>
+                    </div>
+
+                    <div class="product-select-input px-3 border border-[#BFBFBF] h-10 sm:h-[56px] flex items-center relative rounded-[4px] w-full mt-2">
+                        <select class="w-full bg-white text-text-300 text-xs sm:text-sm h-9 sm:h-[45px] !border-0 mt-2" name="" id="">
+                            <option value="">L</option>
+                            <option value="">XL</option>
+                            <option value="">XXL</option>
+                        </select>
+                        <label class="text-xs text-text-100 bg-white">Size</label>
+                    </div>
+                </div>
+
+             
+            </div>
+
+            <input type="button" name="next" class="next action-button float-right" value="Next" />
+           
+
+        </fieldset>
+       
+        <!-- Product Image -->
+        <fieldset class="w-full">
+            <h3 class="text-[24px] font-semibold text-text-300 text-left">Product Image</h3>
+            <div class="flex flex-col gap-y-3 mt-5 mb-4">
+                <div class="border rounded-[6px]">
+                    <label class="flex items-center gap-x-3 justify-center py-[70px]" for="upload-photo">
+                        <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 26.5H9C7.14348 26.5 5.36301 25.7625 4.05025 24.4497C2.7375 23.137 2 21.3565 2 19.5C2 17.6435 2.7375 15.863 4.05025 14.5503C5.36301 13.2375 7.14348 12.5 9 12.5C9.58566 12.4998 10.1692 12.5711 10.7375 12.7125" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10 16.5C10 14.9155 10.3765 13.3536 11.0986 11.9432C11.8206 10.5327 12.8675 9.31406 14.1529 8.38758C15.4383 7.46109 16.9255 6.85333 18.4919 6.61437C20.0583 6.37541 21.6591 6.5121 23.1623 7.01317C24.6655 7.51424 26.0281 8.36534 27.1378 9.49635C28.2476 10.6274 29.0727 12.0059 29.5451 13.5183C30.0176 15.0308 30.1239 16.6338 29.8552 18.1954C29.5866 19.757 28.9507 21.2324 28 22.5" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14.7627 20.7375L19.0002 16.5L23.2377 20.7375" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19 26.5V16.5" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="text-xs sm:text-sm font-normal text-text-300">Upload your product image</span>
+                    </label>
+                    <input class="opacity-0 absolute -z-[10]" type="file" name="photo" id="upload-photo" />
+                </div>
+            </div>
+          
+            <input type="button" name="next" class="next action-button float-right ml-4" value="Next" />
+            <input type="button" name="previous" class="previous action-button float-right !text-primary !bg-primary/10 !border-0" value="Back" />
+        </fieldset>
+        
+        <!-- social media  -->
+        <fieldset class="w-full">
+            <h3 class="text-[24px] font-semibold text-text-300 text-left">Social Media</h3>
+            <div class="flex flex-col gap-y-3 mt-5 mb-4">
+                <div class="new-user-input">
+                    <input class="w-full h-10 sm:h-[48px] outline-none border p-4 text-xs sm:text-sm" type="text" required>
+                    <label class="text-xs sm:text-sm text-text-100">Facebook Link</label>
+                </div>
+                <div class="new-user-input">
+                    <input class="w-full h-10 sm:h-[48px] outline-none border p-4 text-xs sm:text-sm" type="text" required>
+                    <label class="text-xs sm:text-sm text-text-100">Linkedin Link</label>
+                </div>
+                <div class="new-user-input">
+                    <input class="w-full h-10 sm:h-[48px] outline-none border p-4 text-xs sm:text-sm" type="text" required>
+                    <label class="text-xs sm:text-sm text-text-100">Twitter Link</label>
+                </div>
+                <div class="new-user-input">
+                    <input class="w-full h-10 sm:h-[48px] outline-none border p-4 text-xs sm:text-sm" type="text" required>
+                    <label class="text-xs sm:text-sm text-text-100">Youtube Link</label>
+                </div>
+            </div>
+            <input type="button" name="next" class="next action-button float-right ml-4" value="Next" />
+            <input type="button" name="previous" class="previous action-button float-right !text-primary !bg-primary/10 !border-0" value="Back" />
+        </fieldset>
+
+        <!-- Pricing -->
+        <fieldset class="w-full">
+            <h3 class="text-[24px] font-semibold text-text-300 text-left">Pricing</h3>
+
+            <div class="!w-full">
+                <h4 class="text-text-400 font-bold text-base pb-2 border-b border-b-slate-100">Pricing</h4>
+
+                <div class="flex flex-col gap-y-6 mt-4 mb-4">
+
+                    <div class="w-full flex flex-col lg:flex-row items-center justify-between gap-6">
+                        
+                        <div class="product-add-input w-full lg:w-1/3">
+                            <input class="w-full h-10 sm:h-[56px] outline-none border-[#A3A3A3] p-4 text-sm rounded-[4px]"
+                                type="number" placeholder="Enter your price">
+                            <label class="text-xs sm:text-sm text-text-100">Price</label>
+                        </div>
+
+                        <div class="product-select-input w-full lg:w-1/3 px-3 border border-[#BFBFBF] h-10 sm:h-[56px] flex items-center relative rounded-[4px] -mt-2">
+                            <select class="w-full bg-white text-text-300 text-sm h-9 sm:h-[50px] !border-0 mt-2" name="" id="">
+                                <option value="">USD</option>
+                                <option value="">TAKA </option>
+                                <option value="">EURO</option>
+                            </select>
+                            <label class="text-xs sm:text-sm text-text-100 bg-white">Currency</label>
+                        </div>
+
+                        <div class="product-add-input w-full lg:w-1/3">
+                            <input class="w-full h-10 sm:h-[56px] outline-none border p-4 text-sm rounded-[4px]"
+                                type="text" placeholder="125545">
+                            <label class="text-xs sm:text-sm text-text-100">SKU</label>
+                        </div>
+                    </div>
+
+                    <div class="w-full -mt-3 sm:mt-0">
+                        <div class="w-full">
+                            <div class="form-group border !border-[#dadada] h-10 sm:h-[56px] pr-5 flex items-center pt-1 sm:pt-3 overflow-hidden">
+                                <select class="form-control select2-multi w-full border-0 !bg-white h-8 sm:h-fit" name="tags" multiple="multiple" placeholder="Tags">
+                                    <option value='tag1'>Sales</option>
+                                    <option value='tag2'>In Stock</option>
+                                    <option value='tag3'>New Arrival</option>
+                                    <option value='tag3'>Black Friday</option>
+                                </select>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <input type="submit" name="submit" class="submit action-button float-right ml-4" value="Publish" id="form-submit" />
+            <input type="button" name="previous" class="previous action-button float-right !text-primary !bg-primary/10 !border-0" value="Back" />
+        </fieldset>
+
+    </form>
+
+     <!-- Footer started  -->
+     <footer id="footer mb-14">
+      <div class="footer-background">
+        <div class="container">
+          <div class="grid grid-cols-12 py-10 xl:py-20">
+
+            <div class="col-span-12 md:col-span-6 lg:col-span-8 mb-5 md:mb-0 text-center md:text-left">
+              <div class="mb-8 flex justify-center md:justify-start">
+                <a href="../index.html" class="inline-block w-fit">
+                  <img src="../assets/image/footer/footer-logo.webp" alt="" />
+                </a>
+              </div>
+              <div class="mb-4 lg:mb-6">
+                <h3
+                  class="font-Raleway font-medium text-base text-yellow leading-6"
+                >
+                  Address:
+                </h3>
+                <p class="text-white">Level 1, 12 Sample St, Sydney NSW 2000</p>
+              </div>
+
+              <div class="mb-4 lg:mb-6">
+                <h3
+                  class="font-Raleway font-medium text-base text-yellow leading-6 mb-1"
+                >
+                  Contact:
+                </h3>
+                <div class="flex flex-col">
+                  <a
+                    href="tel:1800 123 4567"
+                    class="font-Raleway font-medium text-sm leading-[21pxpx] text-white"
+                    >1800 123 4567</a
+                  >
+                  <a
+                    href="mailto:info@relume.io"
+                    class="font-Raleway font-medium text-sm leading-[21pxpx] text-white"
+                    >info@relume.io</a
+                  >
+                </div>
+              </div>
+
+              <div class="flex items-center justify-center md:justify-start space-x-3">
+                <a href="#">
+                  <img src="../assets/image/footer/facebook.webp" alt="" />
+                </a>
+                <a href="#">
+                  <img src="../assets/image/footer/instagram.webp" alt="" />
+                </a>
+                <a href="#">
+                  <img src="../assets/image/footer/twitter.webp" alt="" />
+                </a>
+                <a href="#">
+                  <img src="../assets/image/footer/linkedin.webp" alt="" />
+                </a>
+              </div>
+            </div>
+
+            <div class="col-span-6 md:col-span-3 lg:col-span-2">
+              <ul class="space-y-3">
+                <li>
+                  <a
+                    href="../index.html"
+                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white"
+                  >
+                    Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../pages/about.html"
+                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white"
+                  >
+                    About</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../pages/recipes.html"
+                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white"
+                  >
+                    Recipes</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../pages/shop.html"
+                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white"
+                  >
+                    Shop</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="../pages/blog.html"
+                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white"
+                  >
+                    Blog</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="../pages/sign-up.html"
+                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white"
+                  >
+                    Sign Up</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-span-6 md:col-span-3 lg:col-span-2 text-end space-y-3">
+              <p
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white"
+              >
+                Open Hour
+              </p>
+              <p
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white"
+              >
+                Monday: 12-6PM
+              </p>
+              <p
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white"
+              >
+                Tuesday: 12-6PM
+              </p>
+              <p
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white"
+              >
+                Wednesday: 12-6PM
+              </p>
+              <p
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white"
+              >
+                Thursday: 12-6PM
+              </p>
+              <p
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white"
+              >
+                Friday: 12-6PM
+              </p>
+              <p
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white"
+              >
+                Sunday: 12-6PM
+              </p>
+            </div>
+          </div>
+          <div class="bg-white h-[1px]"></div>
+
+          <div
+            class="flex flex-col md:flex-row justify-between gap-4 items-center py-8"
+          >
+            <div>
+              <p
+                class="font-Poppins text-xs lg:text-sm leading-[21px] text-white"
+              >
+                © 2000-2021, All Rights Reserved
+              </p>
+            </div>
+            <ul class="flex space-x-6">
+              <li
+                class="font-Roboto text-xs lg:text-sm leading-[18px] lg:leading-[21px] text-white"
+              >
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li
+                class="font-Roboto text-xs lg:text-sm leading-[18px] lg:leading-[21px] text-white"
+              >
+                <a href="#">Terms of Service</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer end -->
+  </body>
+
+  <script src="../assets/js/jquery-3.6.3.min.js"></script>
+  <script src="../assets/js/swiper-bundle.min.js"></script>
+  <script src="../assets/js/common.js"></script>
+</html>
