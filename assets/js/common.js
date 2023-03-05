@@ -6,10 +6,33 @@ const closeMenu = document.querySelector('#close-button');
 button.addEventListener('click', () => {
   menu.classList.toggle('hidden');
 });
-closeMenu.addEventListener('click', () => {
-  menu.classList.toggle('hidden');
-});
+if(closeMenu){
 
+  closeMenu.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+}
+
+// cart button started 
+const cartButton = document.querySelector('#cart-button');
+const cartMenu = document.querySelector('#cart-menu');
+const cartCloseMenu = document.querySelector('#cart-close-button');
+
+
+cartButton.addEventListener('click', () => {
+  cartMenu.classList.toggle('hidden');
+});
+if(cartCloseMenu){
+  cartCloseMenu.addEventListener('click', () => {
+    cartMenu.classList.toggle('hidden');
+  });
+}
+
+
+// cart button end
+
+
+// Filter started 
 $('.filter-btn').click(function(){
   $(this).toggleClass('active');
   $('.filter-dropdown').toggleClass('hidden');
@@ -20,6 +43,7 @@ $('.categories-btn').click(function(){
   $('.categories-dropdown').toggleClass('hidden');
 })
 
+// Filter end
 
 
 // Image gallery started 
@@ -36,6 +60,22 @@ if(grid){
 
 
 // Swiper Js Started 
+
+// hero section started 
+var swiperHero = new Swiper(".heroSlider", {
+  spaceBetween: 20,
+  slidesPerView: 1,
+  loop: true,
+  autoplay: {
+    delay: 5000,
+  },
+  pagination: {
+    el: ".heroSliderPage",
+    clickable: true,
+  },
+ 
+});
+// hero section  end
 
 // babyPotato started
 var swiper1 = new Swiper(".babyPotato", {
@@ -175,7 +215,7 @@ var swiper1 = new Swiper(".babyPotato", {
   // Related product end
 
   // Recipes Details Product started
-  var swiper4 = new Swiper(".recipesDetailsProduct", {
+  var swiper5 = new Swiper(".recipesDetailsProduct", {
     spaceBetween: 20,
     slidesPerView: 1,
     loop: true,
@@ -216,8 +256,6 @@ var swiper1 = new Swiper(".babyPotato", {
 
 $(document).ready(function() {
     
-
-
 $('.outlets a').click(function(){
 
    $('.outlet').hide();
@@ -232,6 +270,21 @@ $('.outlets a').click(function(){
 });  // end click 
 
    $('.outlets li:first a').click();
+
+
+  //  search modal started 
+  // Remove card modal started
+$(".search").click(function () {
+  $(".modal").addClass("flex").removeClass("hidden");
+  $("body").addClass("overflow-hidden");
+  $(".navbar").addClass("border-b border-red-500");
+});
+$(".modal-overlay, .search-cancel").click(function () {
+  $(".modal").removeClass("flex").addClass("hidden");
+  $("body").removeClass("overflow-hidden");
+});
+//  Remove card modal end
+  //  search modal end 
 
 
   //  shop filter and categories dropdown started 
