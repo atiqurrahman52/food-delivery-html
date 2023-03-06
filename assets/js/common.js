@@ -103,6 +103,7 @@ const cartMenu = document.querySelector("#cart-menu");
 const cartCloseMenu = document.querySelector("#cart-close-button");
 const mobCartButton = document.querySelector("#mob-cart-button");
 const mobCartMenu = document.querySelector("#mob-cart-menu");
+const mobCartCloseMenu = document.querySelector("#mob-cart-close-button");
 
 if (cartButton) {
   cartButton.addEventListener("click", () => {
@@ -121,7 +122,7 @@ if (mobCartButton) {
   });
 }
 if (mobCartButton) {
-  cartCloseMenu.addEventListener("click", () => {
+  mobCartCloseMenu.addEventListener("click", () => {
     mobCartMenu.classList.addClass("hidden");
   });
 }
