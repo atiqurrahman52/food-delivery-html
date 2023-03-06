@@ -100,9 +100,9 @@ if (closeMenu) {
 
 const cartButton = document.querySelector("#cart-button");
 const cartMenu = document.querySelector("#cart-menu");
+const cartCloseMenu = document.querySelector("#cart-close-button");
 const mobCartButton = document.querySelector("#mob-cart-button");
 const mobCartMenu = document.querySelector("#mob-cart-menu");
-const cartCloseMenu = document.querySelector("#cart-close-button");
 
 if (cartButton) {
   cartButton.addEventListener("click", () => {

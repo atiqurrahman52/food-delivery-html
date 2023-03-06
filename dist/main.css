@@ -2774,6 +2774,10 @@ input[type="number"]::-webkit-outer-spin-button {
     justify-content: flex-start;
   }
 
+  .md\:justify-end{
+    justify-content: flex-end;
+  }
+
   .md\:justify-between{
     justify-content: space-between;
   }
@@ -2984,6 +2988,14 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 76px;
   }
 
+  .lg\:w-6{
+    width: 1.5rem;
+  }
+
+  .lg\:w-\[26px\]{
+    width: 26px;
+  }
+
   .lg\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -3006,6 +3018,10 @@ input[type="number"]::-webkit-outer-spin-button {
 
   .lg\:items-center{
     align-items: center;
+  }
+
+  .lg\:justify-end{
+    justify-content: flex-end;
   }
 
   .lg\:gap-2{
