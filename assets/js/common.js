@@ -1,3 +1,4 @@
+
 const button = document.querySelector('#menu-button');
 const menu = document.querySelector('#menu');
 const closeMenu = document.querySelector('#close-button');
@@ -13,23 +14,26 @@ if(closeMenu){
   });
 }
 
+
 // cart button started 
+
 const cartButton = document.querySelector('#cart-button');
 const cartMenu = document.querySelector('#cart-menu');
 const cartCloseMenu = document.querySelector('#cart-close-button');
 
-
-cartButton.addEventListener('click', () => {
-  cartMenu.classList.toggle('hidden');
-});
-if(cartCloseMenu){
-  cartCloseMenu.addEventListener('click', () => {
+if(cartButton){
+  cartButton.addEventListener('click', () => {
     cartMenu.classList.toggle('hidden');
   });
 }
-
+if(cartCloseMenu && cartMenu){
+  cartCloseMenu.addEventListener('click', () => {
+    cartMenu.classList.add('hidden');
+  });
+}
 
 // cart button end
+
 
 
 // Filter started 

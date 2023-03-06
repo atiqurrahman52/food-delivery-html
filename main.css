@@ -154,7 +154,7 @@
 } */
 
 .swiper-pagination-bullets {
-  /* bottom: -5% !important; */
+  bottom: -5% !important;
 }
 .swiper-pagination-bullets .swiper-pagination-bullet {
   @apply bg-success rounded-full;
@@ -166,7 +166,7 @@
   text-decoration: none;
   color: black;
   font-weight: bold;
-  padding: 8px;
+  /* padding: 8px; */
   margin-right: 4px;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
@@ -175,11 +175,12 @@
 
 .outlets a.active {
   /* border-bottom: 2px solid white; */
-  background-color: #fff;
-  color: #000;
+  padding: 0 20px;
+  color: #004738;
   font-weight: bold;
   background-color: #f4f4f4;
   border-left: 2px solid #febb41;
+  /* border-left: 2px solid green; */
 }
 
 .filter-btn.active,
@@ -206,114 +207,4 @@ input[type="number"]::-webkit-outer-spin-button {
 
 /* input custom design end  */
 
-/* step started */
-#notComplete, #submitGood, #dbError {
-  display:none;
-}
-
-
-#msform {
-  text-align: center;
-  position: relative;
-}
-
-#msform fieldset {
-  @apply border-0  bg-white py-5 px-0 sm:px-8;
-}
-
-/*Hide all except first fieldset*/
-#msform fieldset:not(:first-of-type) {
-  display: none;
-}
-
-/*inputs*/
-#msform input, #msform textarea, #msform select {
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  margin-bottom: 10px;
-  width: 100%;
-  box-sizing: border-box;
-  font-size: 13px;
-}
-
-/*buttons*/
-#msform .action-button {
-  @apply bg-success w-[120px] sm:w-[160px] md:w-[127px] text-white text-xs sm:text-sm h-10 flex rounded-[4px] justify-center cursor-pointer;
-}
-
-
-.fs-title {
-  font-size: 15px;
-  color: #222;
-  margin-bottom: 10px;
-}
-
-.fs-subtitle {
-  font-weight: normal;
-  font-size: 13px;
-  color: #666;
-  margin-bottom: 20px;
-}
-
-
-#progressbar {
-    overflow: hidden;
-    counter-reset: step;
-    @apply py-5 sm:py-10  sm:mb-10;
-
-    
-}
-
-#progressbar li {
-  list-style-type: none;
-  color: rgb(87, 86, 86);
-  font-size: 14px;
-  width: 25%;
-  float: left;
-  position: relative;
-}
-#progressbar li .dot{
-  margin: 0 auto;
-}
-#progressbar li .dot:before {
-  @apply bg-success;
-  content: "";
-  /* counter-increment: step; */
-  width: 8px;
-  height: 8px;
-  line-height: 20px;
-  display: block;
-  font-size: 10px;
-  color: #FFF;
-  background: rgb(143, 141, 141);
-  border-radius: 50%;
-}
-#progressbar li.complete .dot{
-  display: none;
-}
-
-#progressbar li:after {
-  content: '';
-  width: 72%;
-  height: 2px;
-  background: rgb(143, 141, 141);
-  position: absolute;
-  left: -36%;
-  top: 10px;
-}
-#progressbar li:first-child:after {
-  content: none; 
-}
-
-#progressbar li.active .dot:before,  #progressbar li.active:after{
-  @apply bg-success text-white;
-}
-
-#progressbar li .checkmark{
-  display: none;
-}
-#progressbar li.complete .checkmark{
-  display: block;
-}
-
-/* step end */
+/*

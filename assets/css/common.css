@@ -1,0 +1,7 @@
+.show{
+    display: block;
+}
+
+.step0.active{
+    color: red !important;
+}
