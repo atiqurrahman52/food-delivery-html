@@ -16,97 +16,57 @@
   </head>
   <body>
     <!-- Header started  -->
-    <header id="navbar" class="sticky top-0 z-10 w-full bg-white">
-      <div class="container">
-        <nav
-          class="flex flex-wrap items-center justify-between  py-4 md:py-0 px-4 text-lg text-gray-700"
-        >
+    <header id="navbar" class="sticky top-0 z-50 w-full navbar">
+      <!-- Large screen started -->
+      <div class="w-full backdrop-blur-[2px] bg-[rgba(255,255,255,0.5)]">
+        <nav class="container flex items-center justify-between py-1">
           <div class="flex justify-center items-center">
-            <a href="../index.html">
+            <a href="../index.html" class="hidden md:flex">
               <img src="../assets/image/logo/logo.webp" alt="" />
             </a>
 
-            <ul
-              class="pt-4 text-base text-gray-700 hidden md:flex md:justify-between md:pt-0"
-            >
+            <ul class="hidden md:flex items-center gap-6 pl-8">
               <li>
                 <a
-                  class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
+                  class="font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
                   href="../index.html"
                   >Home</a
                 >
               </li>
               <li>
                 <a
-                  class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
-                  href="./about.html"
+                  class="font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
+                  href="../pages/about.html"
                   >About</a
                 >
               </li>
               <li>
                 <a
-                  class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
-                  href="./recipes.html"
+                  class="font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
+                  href="../pages/recipes.html"
                   >Recipes</a
                 >
               </li>
               <li>
                 <a
-                  class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
-                  href="./shop.html"
+                  class="font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
+                  href="../pages/shop.html"
                   >Shop</a
                 >
               </li>
               <li>
                 <a
-                  class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
-                  href="./blog.html"
+                  class="font-Raleway font-semibold text-primary text-sm md:text-base leading-6 activePage"
+                  href="../pages/blog.html"
                   >Blog</a
                 >
               </li>
             </ul>
           </div>
 
-          <svg
-            id="menu-button"
-            class="h-6 w-6 cursor-pointer md:hidden block"
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M5.9375 5H14.0625"
-              stroke="#004738"
-              stroke-width="1.5"
-              stroke-linecap="square"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M3.125 10H16.875"
-              stroke="#004738"
-              stroke-width="1.5"
-              stroke-linecap="square"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M5.9375 15H14.0625"
-              stroke="#004738"
-              stroke-width="1.5"
-              stroke-linecap="square"
-              stroke-linejoin="round"
-            />
-          </svg>
-
-          <div
-            class="hidden w-full md:flex md:items-center md:w-auto"
-            id="menu"
-          >
-            <ul
-              class="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0"
-            >
-              <li class="md:p-4 py-2 block">
+          <ul class="hidden md:flex items-center gap-6">
+            <li class="">
+              <button type="" class="search">
                 <svg
                   width="32"
                   height="32"
@@ -134,45 +94,52 @@
                     stroke-linejoin="round"
                   />
                 </svg>
-              </li>
-              <li class="md:p-4 py-2 block">
-                <svg
-                  width="32"
-                  height="32"
-                  viewBox="0 0 32 32"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    opacity="0.2"
-                    d="M16.0001 4C13.572 3.99929 11.2007 4.73521 9.19964 6.11053C7.19856 7.48586 5.66178 9.43589 4.7923 11.703C3.92283 13.9701 3.76158 16.4477 4.32984 18.8084C4.89811 21.1691 6.16916 23.3019 7.97509 24.925C8.72758 23.4432 9.87569 22.1986 11.2922 21.3293C12.7086 20.46 14.3381 19.9999 16.0001 20C15.0112 20 14.0445 19.7068 13.2222 19.1573C12.4 18.6079 11.7591 17.827 11.3807 16.9134C11.0023 15.9998 10.9032 14.9945 11.0962 14.0245C11.2891 13.0546 11.7653 12.1637 12.4646 11.4645C13.1638 10.7652 14.0547 10.289 15.0246 10.0961C15.9945 9.90315 16.9999 10.0022 17.9135 10.3806C18.8271 10.759 19.608 11.3999 20.1574 12.2221C20.7068 13.0444 21.0001 14.0111 21.0001 15C21.0001 16.3261 20.4733 17.5979 19.5356 18.5355C18.5979 19.4732 17.3262 20 16.0001 20C17.662 19.9999 19.2916 20.46 20.708 21.3293C22.1245 22.1986 23.2726 23.4432 24.0251 24.925C25.831 23.3019 27.1021 21.1691 27.6703 18.8084C28.2386 16.4477 28.0774 13.9701 27.2079 11.703C26.3384 9.43589 24.8016 7.48586 22.8005 6.11053C20.7995 4.73521 18.4282 3.99929 16.0001 4Z"
-                    fill="#070707"
-                  />
-                  <path
-                    d="M16 28C22.6274 28 28 22.6274 28 16C28 9.37258 22.6274 4 16 4C9.37258 4 4 9.37258 4 16C4 22.6274 9.37258 28 16 28Z"
-                    stroke="#070707"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M16 20C18.7614 20 21 17.7614 21 15C21 12.2386 18.7614 10 16 10C13.2386 10 11 12.2386 11 15C11 17.7614 13.2386 20 16 20Z"
-                    stroke="#070707"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M7.9751 24.9248C8.72749 23.4428 9.87555 22.1981 11.292 21.3287C12.7085 20.4592 14.3381 19.999 16.0001 19.999C17.6621 19.999 19.2917 20.4592 20.7082 21.3287C22.1246 22.1981 23.2727 23.4428 24.0251 24.9248"
-                    stroke="#070707"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </li>
+              </button>
+            </li>
 
-              <li class="md:p-4 py-2 block">
+            <li class="">
+              <button type="" class="">
+                <a href="./pages/profile.html">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      opacity="0.2"
+                      d="M16.0001 4C13.572 3.99929 11.2007 4.73521 9.19964 6.11053C7.19856 7.48586 5.66178 9.43589 4.7923 11.703C3.92283 13.9701 3.76158 16.4477 4.32984 18.8084C4.89811 21.1691 6.16916 23.3019 7.97509 24.925C8.72758 23.4432 9.87569 22.1986 11.2922 21.3293C12.7086 20.46 14.3381 19.9999 16.0001 20C15.0112 20 14.0445 19.7068 13.2222 19.1573C12.4 18.6079 11.7591 17.827 11.3807 16.9134C11.0023 15.9998 10.9032 14.9945 11.0962 14.0245C11.2891 13.0546 11.7653 12.1637 12.4646 11.4645C13.1638 10.7652 14.0547 10.289 15.0246 10.0961C15.9945 9.90315 16.9999 10.0022 17.9135 10.3806C18.8271 10.759 19.608 11.3999 20.1574 12.2221C20.7068 13.0444 21.0001 14.0111 21.0001 15C21.0001 16.3261 20.4733 17.5979 19.5356 18.5355C18.5979 19.4732 17.3262 20 16.0001 20C17.662 19.9999 19.2916 20.46 20.708 21.3293C22.1245 22.1986 23.2726 23.4432 24.0251 24.925C25.831 23.3019 27.1021 21.1691 27.6703 18.8084C28.2386 16.4477 28.0774 13.9701 27.2079 11.703C26.3384 9.43589 24.8016 7.48586 22.8005 6.11053C20.7995 4.73521 18.4282 3.99929 16.0001 4Z"
+                      fill="#070707"
+                    />
+                    <path
+                      d="M16 28C22.6274 28 28 22.6274 28 16C28 9.37258 22.6274 4 16 4C9.37258 4 4 9.37258 4 16C4 22.6274 9.37258 28 16 28Z"
+                      stroke="#070707"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M16 20C18.7614 20 21 17.7614 21 15C21 12.2386 18.7614 10 16 10C13.2386 10 11 12.2386 11 15C11 17.7614 13.2386 20 16 20Z"
+                      stroke="#070707"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M7.9751 24.9248C8.72749 23.4428 9.87555 22.1981 11.292 21.3287C12.7085 20.4592 14.3381 19.999 16.0001 19.999C17.6621 19.999 19.2917 20.4592 20.7082 21.3287C22.1246 22.1981 23.2727 23.4428 24.0251 24.9248"
+                      stroke="#070707"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </button>
+            </li>
+
+            <li id="cart-button" class="relative">
+              <button type="">
                 <svg
                   width="32"
                   height="32"
@@ -200,9 +167,470 @@
                     stroke-linejoin="round"
                   />
                 </svg>
-              </li>
-            </ul>
+              </button>
+
+              <p
+                class="bg-[#FF0000] rounded-full w-5 h-5 absolute -top-2.5 -right-1.5 shadow-[0px_2px_16px_1px_#FFB5B5] flex justify-center items-center font-Raleway font-medium text-xs text-white"
+              >
+                2
+              </p>
+
+              <div
+                id="cart-menu"
+                class="hidden absolute z-50 top-full right-0 pt-10"
+              >
+                <div
+                  class="relative bg-[#F9F6F1] max-w-[425px] h-[564px] shadow-[0_24px_48px_-12px_rgba(0,0,0,0.18)] rounded-lg p-4 lg:p-6"
+                >
+                  <p
+                    class="font-Playfair font-bold text-base lg:text-xl text-primary mb-4 pt-5"
+                  >
+                    Your Cart
+                  </p>
+
+                  <div class="">
+                    <div
+                      class="flex justify-between items-start py-3 border-b border-[#E5E2DE]"
+                    >
+                      <div class="flex gap-3">
+                        <div class="w-12 h-12">
+                          <img src="../assets/image/food/food-8.webp" alt="" />
+                        </div>
+                        <div class="space-y-1">
+                          <p
+                            class="font-Raleway font-bold text-sm text-primary"
+                          >
+                            Best Fresh Tasting <br />
+                            Avocado
+                          </p>
+                          <p
+                            class="font-Raleway font-medium text-sm text-primary opacity-60"
+                          >
+                            $15.66
+                          </p>
+                        </div>
+                      </div>
+                      <button type="">
+                        <i class="ph-x"></i>
+                      </button>
+                    </div>
+
+                    <div
+                      class="flex justify-between items-start py-3 border-b border-[#E5E2DE]"
+                    >
+                      <div class="flex gap-3">
+                        <div class="w-12 h-12">
+                          <img src="../assets/image/food/food-6.webp" alt="" />
+                        </div>
+                        <div class="space-y-1">
+                          <p
+                            class="font-Raleway font-bold text-sm text-primary"
+                          >
+                            Best Fresh Tasting <br />
+                            Avocado
+                          </p>
+                          <p
+                            class="font-Raleway font-medium text-sm text-primary opacity-60"
+                          >
+                            $15.66
+                          </p>
+                        </div>
+                      </div>
+                      <button type="">
+                        <i class="ph-x"></i>
+                      </button>
+                    </div>
+
+                    <div
+                      class="flex justify-between items-start py-3 border-b border-[#E5E2DE]"
+                    >
+                      <div class="flex gap-3">
+                        <div class="w-12 h-12">
+                          <img src="../assets/image/food/food-3.webp" alt="" />
+                        </div>
+                        <div class="space-y-1">
+                          <p
+                            class="font-Raleway font-bold text-sm text-primary"
+                          >
+                            Best Fresh Tasting <br />
+                            Avocado
+                          </p>
+                          <p
+                            class="font-Raleway font-medium text-sm text-primary opacity-60"
+                          >
+                            $15.66
+                          </p>
+                        </div>
+                      </div>
+                      <button type="">
+                        <i class="ph-x"></i>
+                      </button>
+                    </div>
+
+                    <div
+                      class="flex justify-between items-start py-3 border-b border-[#E5E2DE]"
+                    >
+                      <div class="flex gap-3">
+                        <div class="w-12 h-12">
+                          <img src="../assets/image/food/food-1.webp" alt="" />
+                        </div>
+                        <div class="space-y-1">
+                          <p
+                            class="font-Raleway font-bold text-sm text-primary"
+                          >
+                            Best Fresh Tasting <br />
+                            Avocado
+                          </p>
+                          <p
+                            class="font-Raleway font-medium text-sm text-primary opacity-60"
+                          >
+                            $15.66
+                          </p>
+                        </div>
+                      </div>
+                      <button type="">
+                        <i class="ph-x"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flex justify-between py-3">
+                    <p class="font-Raleway font-bold text-sm text-primary">
+                      Subtotal :
+                    </p>
+                    <p
+                      class="font-Raleway font-semibold text-sm text-primary opacity-60"
+                    >
+                      $115.66
+                    </p>
+                  </div>
+
+                  <div class="flex space-x-2 pt-4">
+                    <button
+                      type=""
+                      class="font-Raleway font-semibold text-sm text-primary w-[126px] lg:w-[184px] h-[45px] bg-primary/12 border border-[#E1E1E1]"
+                    >
+                      <a href="./pages/cart.html">VIEW CART</a>
+                    </button>
+                    <button
+                      type=""
+                      class="font-Raleway font-semibold text-sm text-white w-[126px] lg:w-[184px] h-[45px] bg-success"
+                    >
+                      <a href="./pages/cart.html">CHECKOUT</a>
+                    </button>
+                  </div>
+                  <button
+                    id="cart-close-button"
+                    type=""
+                    class="absolute top-3 right-6 w-6 h-6 bg-yellow rounded-full text-white flex justify-center items-center"
+                  >
+                    <i class="ph-x"></i>
+                  </button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Large screen end -->
+
+      <!-- Mobile screen started  -->
+      <div class="w-full backdrop-blur-[2px] bg-[rgba(255,255,255,0.5)]">
+        <nav class="px-4 py-2 md:py-0">
+          <div class="flex justify-between">
+            <div class="flex justify-center items-center">
+              <a href="../index.html" class="md:hidden block w-8 h-8">
+                <img src="../assets/image/logo/logo.webp" alt="" />
+              </a>
+            </div>
+
+            <div class="flex gap-2.5 items-center">
+           
+              <div id="mob-cart-button" class="relative md:hidden block">
+                <button>
+
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.2" d="M16.875 5.625H3.125C2.77982 5.625 2.5 5.90482 2.5 6.25V16.25C2.5 16.5952 2.77982 16.875 3.125 16.875H16.875C17.2202 16.875 17.5 16.5952 17.5 16.25V6.25C17.5 5.90482 17.2202 5.625 16.875 5.625Z" fill="#070707"/>
+                    <path d="M16.875 5.625H3.125C2.77982 5.625 2.5 5.90482 2.5 6.25V16.25C2.5 16.5952 2.77982 16.875 3.125 16.875H16.875C17.2202 16.875 17.5 16.5952 17.5 16.25V6.25C17.5 5.90482 17.2202 5.625 16.875 5.625Z" stroke="#070707" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.875 8.125V5.625C6.875 4.7962 7.20424 4.00134 7.79029 3.41529C8.37634 2.82924 9.1712 2.5 10 2.5C10.8288 2.5 11.6237 2.82924 12.2097 3.41529C12.7958 4.00134 13.125 4.7962 13.125 5.625V8.125" stroke="#070707" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    
+                  
+                </button>
+
+                <p
+                  class="bg-[#FF0000] rounded-full w-4 h-4 absolute -top-2.5 -right-1.5 shadow-[0px_2px_16px_1px_#FFB5B5] flex justify-center items-center font-Raleway font-medium text-xs text-white"
+                >
+                  2
+                </p>
+              </div>
+              <div
+                  id="mob-cart-menu"
+                  class="hidden absolute z-50 top-7 left-0 right-0 pt-10 mx-2"
+                >
+                  <div
+                    class="relative bg-[#F9F6F1] max-w-[425px] h-[564px] shadow-[0_24px_48px_-12px_rgba(0,0,0,0.18)] rounded-lg p-4 lg:p-6"
+                  >
+                    <p
+                      class="font-Playfair font-bold text-base lg:text-xl text-primary mb-4 pt-5"
+                    >
+                      Your Cart
+                    </p>
+
+                    <div class="">
+                      <div
+                        class="flex justify-between items-start py-3 border-b border-[#E5E2DE]"
+                      >
+                        <div class="flex gap-3">
+                          <div class="w-12 h-12">
+                            <img
+                              src="../assets/image/food/food-8.webp"
+                              alt=""
+                            />
+                          </div>
+                          <div class="space-y-1">
+                            <p
+                              class="font-Raleway font-bold text-sm text-primary"
+                            >
+                              Best Fresh Tasting <br />
+                              Avocado
+                            </p>
+                            <p
+                              class="font-Raleway font-medium text-sm text-primary opacity-60"
+                            >
+                              $15.66
+                            </p>
+                          </div>
+                        </div>
+                        <button type="">
+                          <i class="ph-x"></i>
+                        </button>
+                      </div>
+
+                      <div
+                        class="flex justify-between items-start py-3 border-b border-[#E5E2DE]"
+                      >
+                        <div class="flex gap-3">
+                          <div class="w-12 h-12">
+                            <img
+                              src="../assets/image/food/food-6.webp"
+                              alt=""
+                            />
+                          </div>
+                          <div class="space-y-1">
+                            <p
+                              class="font-Raleway font-bold text-sm text-primary"
+                            >
+                              Best Fresh Tasting <br />
+                              Avocado
+                            </p>
+                            <p
+                              class="font-Raleway font-medium text-sm text-primary opacity-60"
+                            >
+                              $15.66
+                            </p>
+                          </div>
+                        </div>
+                        <button type="">
+                          <i class="ph-x"></i>
+                        </button>
+                      </div>
+
+                      <div
+                        class="flex justify-between items-start py-3 border-b border-[#E5E2DE]"
+                      >
+                        <div class="flex gap-3">
+                          <div class="w-12 h-12">
+                            <img
+                              src="../assets/image/food/food-3.webp"
+                              alt=""
+                            />
+                          </div>
+                          <div class="space-y-1">
+                            <p
+                              class="font-Raleway font-bold text-sm text-primary"
+                            >
+                              Best Fresh Tasting <br />
+                              Avocado
+                            </p>
+                            <p
+                              class="font-Raleway font-medium text-sm text-primary opacity-60"
+                            >
+                              $15.66
+                            </p>
+                          </div>
+                        </div>
+                        <button type="">
+                          <i class="ph-x"></i>
+                        </button>
+                      </div>
+
+                      <div
+                        class="flex justify-between items-start py-3 border-b border-[#E5E2DE]"
+                      >
+                        <div class="flex gap-3">
+                          <div class="w-12 h-12">
+                            <img
+                              src="../assets/image/food/food-1.webp"
+                              alt=""
+                            />
+                          </div>
+                          <div class="space-y-1">
+                            <p
+                              class="font-Raleway font-bold text-sm text-primary"
+                            >
+                              Best Fresh Tasting <br />
+                              Avocado
+                            </p>
+                            <p
+                              class="font-Raleway font-medium text-sm text-primary opacity-60"
+                            >
+                              $15.66
+                            </p>
+                          </div>
+                        </div>
+                        <button type="">
+                          <i class="ph-x"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="flex justify-between py-3">
+                      <p class="font-Raleway font-bold text-sm text-primary">
+                        Subtotal :
+                      </p>
+                      <p
+                        class="font-Raleway font-semibold text-sm text-primary opacity-60"
+                      >
+                        $115.66
+                      </p>
+                    </div>
+
+                    <div class="flex space-x-2 pt-4">
+                      <button
+                        type=""
+                        class="font-Raleway font-semibold text-sm text-primary w-[126px] lg:w-[184px] h-[45px] bg-primary/12 border border-[#E1E1E1]"
+                      >
+                        <a href="./pages/cart.html">VIEW CART</a>
+                      </button>
+                      <button
+                        type=""
+                        class="font-Raleway font-semibold text-sm text-white w-[126px] lg:w-[184px] h-[45px] bg-success"
+                      >
+                        <a href="./pages/cart.html">CHECKOUT</a>
+                      </button>
+                    </div>
+                    <button
+                      id="cart-close-button"
+                      type=""
+                      class="absolute top-3 right-6 w-6 h-6 bg-yellow rounded-full text-white flex justify-center items-center"
+                    >
+                      <i class="ph-x"></i>
+                    </button>
+                  </div>
+                </div>
+
+              <button class="md:hidden block" type="">
+                <svg
+                  id="menu-button"
+                  class="h-6 w-6 cursor-pointer"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.9375 5H14.0625"
+                    stroke="#004738"
+                    stroke-width="1.5"
+                    stroke-linecap="square"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M3.125 10H16.875"
+                    stroke="#004738"
+                    stroke-width="1.5"
+                    stroke-linecap="square"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M5.9375 15H14.0625"
+                    stroke="#004738"
+                    stroke-width="1.5"
+                    stroke-linecap="square"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
+
+          <div
+            id="menu"
+            class="fixed z-50 top-0 left-0 flex items-center justify-center w-full h-screen hidden"
+          >
+            <div class="relative bg-white rounded-lg w-[265px] h-[350px] pt-6">
+              <div class="text-center mb-10">
+                <p class="font-Playfair font-semibold text-sm text-primary">
+                  Menu
+                </p>
+              </div>
+              <div class="mobile-menu">
+                <ul class="flex flex-col justify-center items-center px-[34px]">
+                  <li
+                    class="font-Raleway font-medium text-sm text-primary/60 py-3 border-b border-[#EBEBEB] w-full text-center"
+                  >
+                    <a href="../index.html">Home</a>
+                  </li>
+                  <li
+                    class="font-Raleway font-medium text-sm text-primary/60 py-3 border-b border-[#EBEBEB] w-full text-center"
+                  >
+                    <a href="../pages/about.html">About</a>
+                  </li>
+                  <li
+                    class="font-Raleway font-medium text-sm text-primary/60 py-3 border-b border-[#EBEBEB] w-full text-center"
+                  >
+                    <a href="../pages/recipes.html">Recipes</a>
+                  </li>
+                  <li
+                    class="font-Raleway font-medium text-sm text-primary/60 py-3 border-b border-[#EBEBEB] w-full text-center"
+                  >
+                    <a href="../pages/shop.html">Shop</a>
+                  </li>
+                  <li
+                    class="font-Raleway font-medium text-sm text-primary/60 py-3 w-full text-center activePage"
+                  >
+                    <a href="../pages/blog.html">Blog</a>
+                  </li>
+                </ul>
+              </div>
+              <button id="close-button" class="absolute -top-4 -right-4">
+                <svg
+                  width="36"
+                  height="36"
+                  viewBox="0 0 36 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect width="36" height="36" rx="18" fill="#FEBB41" />
+                  <path
+                    d="M23.625 12.375L12.375 23.625"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M23.625 23.625L12.375 12.375"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <!-- Mobile screen end -->
         </nav>
       </div>
     </header>
@@ -758,184 +1186,417 @@
     </section>
     <!-- Blog details product  end -->
 
-     <!-- Footer started  -->
-     <footer id="footer mb-14">
-      <div class="footer-background">
-        <div class="container">
-          <div class="grid grid-cols-12 py-10 xl:py-20">
+      <!-- Footer started  -->
+ <footer id="footer mb-14">
+  <div class="footer-background">
+    <div class="container">
+      <div class="grid grid-cols-12 py-10 xl:py-20">
+        <div
+          class="col-span-12 md:col-span-6 lg:col-span-4 mb-5 md:mb-0 text-center md:text-left"
+        >
+          <div class="mb-8 flex justify-center md:justify-start">
+            <a href="#" class="inline-block w-fit">
+              <img src=".../assets/image/footer/footer-logo.webp" alt="" />
+            </a>
+          </div>
+          <div class="mb-4 lg:mb-6">
+            <h3
+              class="font-Raleway font-medium text-base text-yellow leading-6"
+            >
+              Address:
+            </h3>
+            <p class="text-white">Level 1, 12 Sample St, Sydney NSW 2000</p>
+          </div>
 
-            <div class="col-span-12 md:col-span-6 lg:col-span-8 mb-5 md:mb-0 text-center md:text-left">
-              <div class="mb-8 flex justify-center md:justify-start">
-                <a href="../index.html" class="inline-block w-fit">
-                  <img src="../assets/image/footer/footer-logo.webp" alt="" />
-                </a>
-              </div>
-              <div class="mb-4 lg:mb-6">
-                <h3
-                  class="font-Raleway font-medium text-base text-yellow leading-6"
-                >
-                  Address:
-                </h3>
-                <p class="text-white">Level 1, 12 Sample St, Sydney NSW 2000</p>
-              </div>
-
-              <div class="mb-4 lg:mb-6">
-                <h3
-                  class="font-Raleway font-medium text-base text-yellow leading-6 mb-1"
-                >
-                  Contact:
-                </h3>
-                <div class="flex flex-col">
-                  <a
-                    href="tel:1800 123 4567"
-                    class="font-Raleway font-medium text-sm leading-[21pxpx] text-white"
-                    >1800 123 4567</a
-                  >
-                  <a
-                    href="mailto:info@relume.io"
-                    class="font-Raleway font-medium text-sm leading-[21pxpx] text-white"
-                    >info@relume.io</a
-                  >
-                </div>
-              </div>
-
-              <div class="flex items-center justify-center md:justify-start space-x-3">
-                <a href="#">
-                  <img src="../assets/image/footer/facebook.webp" alt="" />
-                </a>
-                <a href="#">
-                  <img src="../assets/image/footer/instagram.webp" alt="" />
-                </a>
-                <a href="#">
-                  <img src="../assets/image/footer/twitter.webp" alt="" />
-                </a>
-                <a href="#">
-                  <img src="../assets/image/footer/linkedin.webp" alt="" />
-                </a>
-              </div>
-            </div>
-
-            <div class="col-span-6 md:col-span-3 lg:col-span-2">
-              <ul class="space-y-3">
-                <li>
-                  <a
-                    href="../index.html"
-                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white"
-                  >
-                    Home</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="../pages/about.html"
-                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white"
-                  >
-                    About</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="../pages/recipes.html"
-                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white"
-                  >
-                    Recipes</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="../pages/shop.html"
-                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white"
-                  >
-                    Shop</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="../pages/blog.html"
-                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white"
-                  >
-                    Blog</a
-                  >
-                </li>
-
-                <li>
-                  <a
-                    href="../pages/sign-up.html"
-                    class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white"
-                  >
-                    Sign Up</a
-                  >
-                </li>
-              </ul>
-            </div>
-
-            <div class="col-span-6 md:col-span-3 lg:col-span-2 text-end space-y-3">
-              <p
-                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white"
+          <div class="mb-4 lg:mb-6">
+            <h3
+              class="font-Raleway font-medium text-base text-yellow leading-6 mb-1"
+            >
+              Contact:
+            </h3>
+            <div class="flex flex-col">
+              <a
+                href="tel:1800 123 4567"
+                class="font-Raleway font-medium text-sm leading-[21pxpx] text-white"
+                >1800 123 4567</a
               >
-                Open Hour
-              </p>
-              <p
-                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white"
+              <a
+                href="mailto:info@relume.io"
+                class="font-Raleway font-medium text-sm leading-[21pxpx] text-white"
+                >info@relume.io</a
               >
-                Monday: 12-6PM
-              </p>
-              <p
-                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white"
-              >
-                Tuesday: 12-6PM
-              </p>
-              <p
-                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white"
-              >
-                Wednesday: 12-6PM
-              </p>
-              <p
-                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white"
-              >
-                Thursday: 12-6PM
-              </p>
-              <p
-                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white"
-              >
-                Friday: 12-6PM
-              </p>
-              <p
-                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white"
-              >
-                Sunday: 12-6PM
-              </p>
             </div>
           </div>
-          <div class="bg-white h-[1px]"></div>
 
           <div
-            class="flex flex-col md:flex-row justify-between gap-4 items-center py-8"
+            class="flex items-center justify-center md:justify-start space-x-3"
           >
-            <div>
-              <p
-                class="font-Poppins text-xs lg:text-sm leading-[21px] text-white"
-              >
-                © 2000-2021, All Rights Reserved
-              </p>
-            </div>
-            <ul class="flex space-x-6">
-              <li
-                class="font-Roboto text-xs lg:text-sm leading-[18px] lg:leading-[21px] text-white"
-              >
-                <a href="#">Privacy Policy</a>
-              </li>
-              <li
-                class="font-Roboto text-xs lg:text-sm leading-[18px] lg:leading-[21px] text-white"
-              >
-                <a href="#">Terms of Service</a>
-              </li>
-            </ul>
+            <a href="#">
+              <img src="../assets/image/footer/facebook.webp" alt="" />
+            </a>
+            <a href="#">
+              <img src="../assets/image/footer/instagram.webp" alt="" />
+            </a>
+            <a href="#">
+              <img src="../assets/image/footer/twitter.webp" alt="" />
+            </a>
+            <a href="#">
+              <img src="../assets/image/footer/linkedin.webp" alt="" />
+            </a>
           </div>
         </div>
+
+        <div class="col-span-6 md:col-span-3 lg:col-span-5">
+          <ul class="space-y-3">
+            <li>
+              <a
+                href="../index.html"
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white block md:text-end"
+              >
+                Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="../pages/about.html"
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white block md:text-end"
+              >
+                About</a
+              >
+            </li>
+            <li>
+              <a
+                href="../pages/recipes.html"
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white block md:text-end"
+              >
+                Recipes</a
+              >
+            </li>
+            <li>
+              <a
+                href="../pages/shop.html"
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white block md:text-end"
+              >
+                Shop</a
+              >
+            </li>
+            <li>
+              <a
+                href="../pages/blog.html"
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white block md:text-end"
+              >
+                Blog</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="../pages/sign-up.html"
+                class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white block md:text-end"
+              >
+                Sign Up</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="col-span-6 md:col-span-3 lg:col-span-3 text-end space-y-3"
+        >
+          <p
+            class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-yellow hover:text-white"
+          >
+            Open Hour
+          </p>
+          <p
+            class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white"
+          >
+            Monday: 12-6PM
+          </p>
+          <p
+            class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white"
+          >
+            Tuesday: 12-6PM
+          </p>
+          <p
+            class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white"
+          >
+            Wednesday: 12-6PM
+          </p>
+          <p
+            class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white"
+          >
+            Thursday: 12-6PM
+          </p>
+          <p
+            class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white"
+          >
+            Friday: 12-6PM
+          </p>
+          <p
+            class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white"
+          >
+            Sunday: 12-6PM
+          </p>
+        </div>
       </div>
-    </footer>
-    <!-- Footer end -->
+      <div class="bg-white h-[1px]"></div>
+
+      <div
+        class="flex flex-col md:flex-row justify-between gap-4 items-center py-8"
+      >
+        <div>
+          <p
+            class="font-Poppins text-xs lg:text-sm leading-[21px] text-white"
+          >
+            © 2000-2021, All Rights Reserved
+          </p>
+        </div>
+        <ul class="flex space-x-6">
+          <li
+            class="font-Roboto text-xs lg:text-sm leading-[18px] lg:leading-[21px] text-white"
+          >
+            <a href="#">Privacy Policy</a>
+          </li>
+          <li
+            class="font-Roboto text-xs lg:text-sm leading-[18px] lg:leading-[21px] text-white"
+          >
+            <a href="#">Terms of Service</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Footer end -->
+
+<!-- Bottom Navigation started  -->
+<section
+  id="mobile-bottom-nav"
+  class="w-full fixed bottom-0 left-0 z-10 md:hidden block"
+>
+  <div class="bg-[#F8F9F3] py-2 px-4">
+    <div class="grid grid-cols-4">
+      <div>
+        <a
+          href="../index.html"
+          class="flex flex-col justify-center items-center gap-1"
+        >
+          <span>
+            <svg
+              width="24"
+              height="25"
+              viewBox="0 0 24 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                opacity="0.2"
+                d="M14.25 20.0009V15.5009C14.25 15.302 14.171 15.1113 14.0303 14.9706C13.8897 14.83 13.6989 14.7509 13.5 14.7509H10.5C10.3011 14.7509 10.1103 14.83 9.96967 14.9706C9.82902 15.1113 9.75 15.302 9.75 15.5009V20.0009C9.75 20.1998 9.67098 20.3906 9.53033 20.5313C9.38968 20.6719 9.19891 20.7509 9 20.7509H4.5C4.30109 20.7509 4.11032 20.6719 3.96967 20.5313C3.82902 20.3906 3.75 20.1998 3.75 20.0009V11.3291C3.75168 11.2253 3.77411 11.1229 3.81597 11.0279C3.85783 10.9329 3.91828 10.8472 3.99375 10.7759L11.4937 3.96031C11.632 3.83382 11.8126 3.76367 12 3.76367C12.1874 3.76367 12.368 3.83382 12.5062 3.96031L20.0062 10.7759C20.0817 10.8472 20.1422 10.9329 20.184 11.0279C20.2259 11.1229 20.2483 11.2253 20.25 11.3291V20.0009C20.25 20.1998 20.171 20.3906 20.0303 20.5313C19.8897 20.6719 19.6989 20.7509 19.5 20.7509H15C14.8011 20.7509 14.6103 20.6719 14.4697 20.5313C14.329 20.3906 14.25 20.1998 14.25 20.0009Z"
+                fill="#070707"
+                fill-opacity="0.4"
+              />
+              <path
+                d="M14.25 20.0009V15.5009C14.25 15.302 14.171 15.1113 14.0303 14.9706C13.8897 14.83 13.6989 14.7509 13.5 14.7509H10.5C10.3011 14.7509 10.1103 14.83 9.96967 14.9706C9.82902 15.1113 9.75 15.302 9.75 15.5009V20.0009C9.75 20.1998 9.67098 20.3906 9.53033 20.5313C9.38968 20.6719 9.19891 20.7509 9 20.7509H4.5C4.30109 20.7509 4.11032 20.6719 3.96967 20.5313C3.82902 20.3906 3.75 20.1998 3.75 20.0009V11.3291C3.75168 11.2253 3.77411 11.1229 3.81597 11.0279C3.85783 10.9329 3.91828 10.8472 3.99375 10.7759L11.4937 3.96031C11.632 3.83382 11.8126 3.76367 12 3.76367C12.1874 3.76367 12.368 3.83382 12.5062 3.96031L20.0062 10.7759C20.0817 10.8472 20.1422 10.9329 20.184 11.0279C20.2259 11.1229 20.2483 11.2253 20.25 11.3291V20.0009C20.25 20.1998 20.171 20.3906 20.0303 20.5313C19.8897 20.6719 19.6989 20.7509 19.5 20.7509H15C14.8011 20.7509 14.6103 20.6719 14.4697 20.5313C14.329 20.3906 14.25 20.1998 14.25 20.0009Z"
+                stroke="#070707"
+                stroke-opacity="0.4"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+          <p class="font-Raleway font-semibold text-[10px] text-primary/40">
+            Home
+          </p>
+        </a>
+      </div>
+
+      <div>
+        <a
+          href="../pages/shop.html"
+          class="flex flex-col justify-center items-center gap-1"
+        >
+          <span>
+            <svg
+              width="25"
+              height="25"
+              viewBox="0 0 25 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                opacity="0.2"
+                d="M11.7999 3.28215L9.10846 5.97358C8.81556 6.26647 8.81556 6.74134 9.10846 7.03424L11.7979 9.72367C12.0908 10.0166 12.5657 10.0166 12.8586 9.72367L15.55 7.03225C15.8429 6.73935 15.8429 6.26448 15.55 5.97159L12.8605 3.28215C12.5676 2.98926 12.0928 2.98926 11.7999 3.28215Z"
+                fill="#070707"
+                fill-opacity="0.4"
+              />
+              <g opacity="0.2">
+                <path
+                  d="M17.7999 9.28215L15.1085 11.9736C14.8156 12.2665 14.8156 12.7413 15.1085 13.0342L17.7979 15.7237C18.0908 16.0166 18.5657 16.0166 18.8586 15.7237L21.55 13.0322C21.8429 12.7394 21.8429 12.2645 21.55 11.9716L18.8605 9.28215C18.5676 8.98926 18.0928 8.98926 17.7999 9.28215Z"
+                  fill="#070707"
+                  fill-opacity="0.4"
+                />
+                <path
+                  d="M15.6388 12.5039L18.3302 9.81248L21.0196 12.5019L18.3282 15.1933L15.6388 12.5039Z"
+                  stroke="#070707"
+                  stroke-opacity="0.4"
+                  stroke-width="1.5"
+                />
+              </g>
+              <g opacity="0.2">
+                <path
+                  d="M5.79988 9.27434L3.10846 11.9658C2.81556 12.2587 2.81556 12.7335 3.10846 13.0264L5.79789 15.7159C6.09079 16.0088 6.56566 16.0088 6.85855 15.7159L9.54998 13.0244C9.84287 12.7315 9.84287 12.2567 9.54998 11.9638L6.86054 9.27434C6.56765 8.98145 6.09277 8.98145 5.79988 9.27434Z"
+                  fill="#070707"
+                  fill-opacity="0.4"
+                />
+                <path
+                  d="M3.63879 12.4961L6.33021 9.80467L9.01965 12.4941L6.32822 15.1855L3.63879 12.4961Z"
+                  stroke="#070707"
+                  stroke-opacity="0.4"
+                  stroke-width="1.5"
+                />
+              </g>
+              <path
+                opacity="0.2"
+                d="M11.7999 15.2743L9.10846 17.9658C8.81556 18.2587 8.81556 18.7335 9.10846 19.0264L11.7979 21.7159C12.0908 22.0088 12.5657 22.0088 12.8586 21.7159L15.55 19.0244C15.8429 18.7315 15.8429 18.2567 15.55 17.9638L12.8605 15.2743C12.5676 14.9814 12.0928 14.9814 11.7999 15.2743Z"
+                fill="#070707"
+                fill-opacity="0.4"
+              />
+              <path
+                d="M11.7999 3.28215L9.10846 5.97358C8.81556 6.26647 8.81556 6.74134 9.10846 7.03424L11.7979 9.72367C12.0908 10.0166 12.5657 10.0166 12.8586 9.72367L15.55 7.03225C15.8429 6.73935 15.8429 6.26448 15.55 5.97159L12.8605 3.28215C12.5676 2.98926 12.0928 2.98926 11.7999 3.28215Z"
+                stroke="#070707"
+                stroke-opacity="0.4"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M17.7999 9.28215L15.1085 11.9736C14.8156 12.2665 14.8156 12.7413 15.1085 13.0342L17.7979 15.7237C18.0908 16.0166 18.5657 16.0166 18.8586 15.7237L21.55 13.0322C21.8429 12.7394 21.8429 12.2645 21.55 11.9716L18.8605 9.28215C18.5676 8.98926 18.0928 8.98926 17.7999 9.28215Z"
+                stroke="#070707"
+                stroke-opacity="0.4"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M5.79988 9.27434L3.10846 11.9658C2.81556 12.2587 2.81556 12.7335 3.10846 13.0264L5.79789 15.7159C6.09079 16.0088 6.56566 16.0088 6.85855 15.7159L9.54998 13.0244C9.84287 12.7315 9.84287 12.2567 9.54998 11.9638L6.86054 9.27434C6.56765 8.98145 6.09277 8.98145 5.79988 9.27434Z"
+                stroke="#070707"
+                stroke-opacity="0.4"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M11.7999 15.2743L9.10846 17.9658C8.81556 18.2587 8.81556 18.7335 9.10846 19.0264L11.7979 21.7159C12.0908 22.0088 12.5657 22.0088 12.8586 21.7159L15.55 19.0244C15.8429 18.7315 15.8429 18.2567 15.55 17.9638L12.8605 15.2743C12.5676 14.9814 12.0928 14.9814 11.7999 15.2743Z"
+                stroke="#070707"
+                stroke-opacity="0.4"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+          <p class="font-Raleway font-semibold text-[10px] text-primary/40">
+            Shop
+          </p>
+        </a>
+      </div>
+
+      <div class="search">
+        <a href="#" class="flex flex-col justify-center items-center gap-1">
+          <span>
+            <svg
+              width="25"
+              height="25"
+              viewBox="0 0 25 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                opacity="0.2"
+                d="M11.543 19.25C15.8922 19.25 19.418 15.7242 19.418 11.375C19.418 7.02576 15.8922 3.5 11.543 3.5C7.19373 3.5 3.66797 7.02576 3.66797 11.375C3.66797 15.7242 7.19373 19.25 11.543 19.25Z"
+                fill="#070707"
+                fill-opacity="0.4"
+              />
+              <path
+                d="M11.543 19.25C15.8922 19.25 19.418 15.7242 19.418 11.375C19.418 7.02576 15.8922 3.5 11.543 3.5C7.19373 3.5 3.66797 7.02576 3.66797 11.375C3.66797 15.7242 7.19373 19.25 11.543 19.25Z"
+                stroke="#070707"
+                stroke-opacity="0.4"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M17.1133 16.9434L21.6695 21.4996"
+                stroke="#070707"
+                stroke-opacity="0.4"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+          <p class="font-Raleway font-semibold text-[10px] text-primary/40">
+            Search
+          </p>
+        </a>
+      </div>
+
+      <div>
+        <a
+          href="../pages/profile.html"
+          class="flex flex-col justify-center items-center gap-1"
+        >
+          <span class="">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                opacity="0.2"
+                d="M11.9987 3C10.1776 2.99947 8.3992 3.55141 6.89839 4.5829C5.39757 5.6144 4.24499 7.07692 3.59288 8.77726C2.94078 10.4776 2.81984 12.3358 3.24604 14.1063C3.67224 15.8768 4.62553 17.4764 5.97998 18.6937C6.54434 17.5824 7.40543 16.649 8.46778 15.997C9.53013 15.345 10.7523 14.9999 11.9987 15C11.257 15 10.532 14.7801 9.91534 14.368C9.29865 13.956 8.81801 13.3703 8.53418 12.6851C8.25035 11.9998 8.17609 11.2458 8.32078 10.5184C8.46548 9.79098 8.82263 9.1228 9.34707 8.59835C9.87152 8.0739 10.5397 7.71675 11.2671 7.57206C11.9946 7.42736 12.7486 7.50162 13.4338 7.78545C14.119 8.06928 14.7047 8.54993 15.1167 9.16661C15.5288 9.7833 15.7487 10.5083 15.7487 11.25C15.7487 12.2446 15.3536 13.1984 14.6504 13.9017C13.9471 14.6049 12.9933 15 11.9987 15C13.2452 14.9999 14.4673 15.345 15.5297 15.997C16.592 16.649 17.4531 17.5824 18.0175 18.6937C19.3719 17.4764 20.3252 15.8768 20.7514 14.1063C21.1776 12.3358 21.0567 10.4776 20.4046 8.77726C19.7525 7.07692 18.5999 5.6144 17.0991 4.5829C15.5983 3.55141 13.8198 2.99947 11.9987 3Z"
+                fill="#070707"
+                fill-opacity="0.4"
+              />
+              <path
+                d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z"
+                stroke="#070707"
+                stroke-opacity="0.4"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12 15C14.0711 15 15.75 13.3211 15.75 11.25C15.75 9.17893 14.0711 7.5 12 7.5C9.92893 7.5 8.25 9.17893 8.25 11.25C8.25 13.3211 9.92893 15 12 15Z"
+                stroke="#070707"
+                stroke-opacity="0.4"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M5.98047 18.6943C6.54476 17.5828 7.40581 16.6493 8.46816 15.9972C9.53052 15.3452 10.7527 15 11.9992 15C13.2457 15 14.4679 15.3452 15.5303 15.9972C16.5926 16.6493 17.4537 17.5828 18.018 18.6943"
+                stroke="#070707"
+                stroke-opacity="0.4"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+          <p class="font-Raleway font-semibold text-[10px] text-primary/40">
+            Profile
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Bottom Navigation  end  -->
   </body>
 
   <script src="../assets/js/jquery-3.6.3.min.js"></script>
