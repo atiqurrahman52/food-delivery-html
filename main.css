@@ -232,20 +232,27 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .progressbar li.current{
-  color: red;
+  color: #004738;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 150%;
 }
 .progressbar li:not(:first-child):after{
   content: '';
   height: 2px;
   width: 100%;
-  background: #000;
+  /* background: #000; */
+  background: #E5E8EB;
   position: absolute;
   top: 18px;
   right: 50%;
 }
 
 .progressbar li.current:after{
-  background: red;
+  /* background: red; */
+  background: #004738;
 }
 .progressbar li i{
   display: none;
@@ -270,7 +277,8 @@ input[type="number"]::-webkit-outer-spin-button {
   content: '';
   height: 8px;
   width: 8px;
-  background: #000;
+  /* background: #000; */
+  background: #919EAB;
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -280,6 +288,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .progressbar li.active .icon:after{
   display: none;
+ 
 }
 /* step end  */
 
