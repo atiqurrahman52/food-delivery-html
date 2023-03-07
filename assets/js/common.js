@@ -16,7 +16,7 @@ $(document).ready(function () {
     next_fs = $(this).parent().parent().parent().parent().next();
 
     $(".prev").css({
-      display: "block",
+      display: "flex",
     });
 
     $(current_fs).removeClass("show");
@@ -35,7 +35,8 @@ $(document).ready(function () {
           });
 
           next_fs.css({
-            display: "block",
+            // display: "block",
+            display: "flex",
           });
         },
       }
@@ -51,7 +52,8 @@ $(document).ready(function () {
     $(previous_fs).addClass("show");
 
     $(".prev").css({
-      display: "block",
+      // display: "block",
+      display: "flex",
     });
 
     if ($(".show").hasClass("first-screen")) {
@@ -73,7 +75,8 @@ $(document).ready(function () {
           });
 
           previous_fs.css({
-            display: "block",
+            // display: "block",
+            display: "flex",
           });
         },
       }
