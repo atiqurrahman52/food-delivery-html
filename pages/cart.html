@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Step 2</title>
+    <title>Checkout</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="css/style.css" rel="stylesheet" />
@@ -17,23 +17,38 @@
    <link rel="stylesheet" href="./../assets/css/common.css">
   </head>
   <body>
-    <div>
-      
-        <a href="../index.html">
-          <button type=""><i class="ph-arrow-left text-2xl text-primary p-6"></i></button>
+
+    <div class="flex justify-center items-center mb-4 lg:mb-8 relative">
+        <a href="../index.html" class="absolute top-1/2 -translate-y-1/2 left-0">
+          <i class="ph-arrow-left text-2xl text-primary p-6"></i>
         </a>
       
-        <!-- <div class="">
-           <img src="../assets/image/logo/logo.webp" alt="" />
-         </div> -->
+         <a href="../index.html">
+          <img src="../assets/image/logo/logo.webp" alt="" />
+         </a>
     </div>
 
     
-    <ul id="progressbar" class="text-center flex items-center justify-center">
-      <li class="active step0">step 1 <span class="block">Shopping Cart</span></li>
-      <li class="step0">step 2 <span class="block">Checkout</span></li>
-      <li class="step0">step 3 <span class="block">Payment</span></li>
-    </ul>
+    <div class="container">
+      <ul id="progressbar" class="progressbar text-center flex items-center justify-center">
+        <li class="current step0">
+          <span class="icon">
+            <i class="ph-check"></i>
+          </span>
+          <span class="block whitespace-nowrap">Shopping Cart</span>
+        </li>
+        <li class="step0">
+          <span class="icon">
+            <i class="ph-check"></i>
+          </span><span class="block whitespace-nowrap">Checkout</span>
+        </li>
+        <li class="step0">
+          <span class="icon">
+            <i class="ph-check"></i>
+          </span><span class="block whitespace-nowrap">Payment</span>
+        </li>
+      </ul>
+    </div>
           
 
 
@@ -540,5 +555,5 @@
   <script src="../assets/js/jquery-3.6.3.min.js"></script>
   <script src="../assets/js/swiper-bundle.min.js"></script>
   <script src="../assets/js/common.js"></script>
-  <script src="../assets/js/step.js"></script>
+  <!-- <script src="../assets/js/step.js"></script> -->
 </html>

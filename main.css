@@ -214,21 +214,81 @@ input[type="number"]::-webkit-outer-spin-button {
   display: block;
 }
 
-.step0.active{
-  color: red !important;
-  /* width: 10px;
-  height: 10px;
-  border-radius: 9999px;
-  background-color: red; */
+/* .step0.active{
+  color: red;
+} */
+.progressbar{
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+}
+.progressbar li{
+  position: relative;
+  width: 33.33%;
+  flex-shrink: 0;
+}
+
+.progressbar li.current{
+  color: red;
+}
+.progressbar li:not(:first-child):after{
+  content: '';
+  height: 2px;
+  width: 100%;
+  background: #000;
+  position: absolute;
+  top: 18px;
+  right: 50%;
+}
+
+.progressbar li.current:after{
+  background: red;
+}
+.progressbar li i{
+  display: none;
+}
+.progressbar li .icon{
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: auto;
+  background: #fff;
+  position: relative;
+  z-index: 10;
+}
+
+.progressbar li.active i {
+  display: block;
+}
+.progressbar li .icon:after{
+  content: '';
+  height: 8px;
+  width: 8px;
+  background: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.progressbar li.active .icon:after{
+  display: none;
 }
 /* step end  */
 
 
 /* navbar link active started */
-  .activePage{
-    color: #004738;
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 600;
-  }
+.activePage{
+  color: #004738;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+}
 /* navbar link active  end */

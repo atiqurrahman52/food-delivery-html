@@ -22,7 +22,8 @@ $(document).ready(function () {
     $(current_fs).removeClass("show");
     $(next_fs).addClass("show");
 
-    $("#progressbar li").eq($(".card2").index(next_fs)).addClass("active");
+    $("#progressbar li").eq($(".card2").index(next_fs)).addClass("current");
+    $("#progressbar li").eq($(".card2").index(current_fs)).addClass("active");
 
     current_fs.animate(
       {},
@@ -59,9 +60,8 @@ $(document).ready(function () {
       });
     }
 
-    $("#progressbar li")
-      .eq($(".card2").index(current_fs))
-      .removeClass("active");
+    $("#progressbar li").eq($(".card2").index(current_fs)).removeClass("current");
+    $("#progressbar li").eq($(".card2").index(previous_fs)).removeClass("active");
 
     current_fs.animate(
       {},
@@ -115,6 +115,7 @@ if (cartButton) {
     cartMenu.classList.addClass("hidden");
   });
 }
+
 // }for mobile
 if (mobCartButton) {
   mobCartButton.addEventListener("click", () => {
