@@ -395,3 +395,15 @@ $(document).ready(function () {
 // Custom input design  started
 
 // Custom input design  end
+
+
+// Gallery started 
+
+$('.gallery').isotope({
+  itemSelector: '.grid-item',
+  masonry: {
+    gutter: 24
+  }
+});
+
+// Gallery end 
