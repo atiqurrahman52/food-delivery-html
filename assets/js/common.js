@@ -120,16 +120,17 @@ if (cartButton) {
 }
 
 // }for mobile
-if (mobCartButton) {
-  mobCartButton.addEventListener("click", () => {
-    mobCartMenu.classList.toggle("hidden");
-  });
-}
-if (mobCartButton) {
-  mobCartCloseMenu.addEventListener("click", () => {
-    mobCartMenu.classList.addClass("hidden");
-  });
-}
+// if (mobCartButton) {
+//   mobCartButton.addEventListener("click", () => {
+//     mobCartMenu.classList.toggle("hidden");
+//   });
+// }
+// if (mobCartButton) {
+//   mobCartCloseMenu.addEventListener("click", () => {
+//     mobCartMenu.classList.addClass("hidden");
+//   });
+// }
+
 // if (cartCloseMenu && cartMenu) {
 //   cartCloseMenu.addEventListener("click", () => {
 //     console.log("click");
