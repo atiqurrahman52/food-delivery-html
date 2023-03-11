@@ -15,127 +15,91 @@
     <link rel="stylesheet" href="./../dist/main.css" />
   </head>
   <body>
-    <!-- Header started  -->
-    <header id="navbar" class="sticky top-0 z-10 w-full bg-white">
-      <div class="container">
-        <nav
-          class="flex flex-wrap items-center justify-between py-4 md:py-0 px-4 text-lg text-gray-700"
-        >
-          <div class="flex justify-center items-center">
-            <a href="../index.html">
-              <img src="../assets/image/logo/logo.webp" alt="" />
-            </a>
+   <!-- Header started  -->
+   <header id="navbar" class="sticky top-0 z-50 w-full navbar">
+    <!-- Large screen started -->
+    <div class="w-full backdrop-blur-[2px] bg-[rgba(255,255,255,0.5)]">
+      <nav class="container flex items-center justify-between py-1">
+        <div class="flex justify-center items-center">
+          <a href="../index.html" class="hidden md:flex">
+            <img src="../assets/image/logo/logo.webp" alt="" />
+          </a>
 
-            <ul
-              class="pt-4 text-base text-gray-700 hidden md:flex md:justify-between md:pt-0"
-            >
-              <li>
-                <a
-                  class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
-                  href="../index.html"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a
-                  class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
-                  href="./about.html"
-                  >About</a
-                >
-              </li>
-              <li>
-                <a
-                  class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
-                  href="./recipes.html"
-                  >Recipes</a
-                >
-              </li>
-              <li>
-                <a
-                  class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
-                  href="./shop.html"
-                  >Shop</a
-                >
-              </li>
-              <li>
-                <a
-                  class="md:p-4 py-2 block font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
-                  href="./blog.html"
-                  >Blog</a
-                >
-              </li>
-            </ul>
-          </div>
+          <ul class="hidden md:flex items-center gap-6 pl-8">
+            <li>
+              <a
+                class="font-Raleway font-semibold text-primary text-sm md:text-base leading-6 "
+                href="../index.html"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
+                href="../pages/about.html"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
+                href="../pages/recipes.html"
+                >Recipes</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
+                href="../pages/shop.html"
+                >Shop</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
+                href="../pages/blog.html"
+                >Blog</a
+              >
+            </li>
+          </ul>
+        </div>
 
-          <svg
-            id="menu-button"
-            class="h-6 w-6 cursor-pointer md:hidden block"
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M5.9375 5H14.0625"
-              stroke="#004738"
-              stroke-width="1.5"
-              stroke-linecap="square"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M3.125 10H16.875"
-              stroke="#004738"
-              stroke-width="1.5"
-              stroke-linecap="square"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M5.9375 15H14.0625"
-              stroke="#004738"
-              stroke-width="1.5"
-              stroke-linecap="square"
-              stroke-linejoin="round"
-            />
-          </svg>
+        <ul class="hidden md:flex items-center gap-6">
+          <li class="">
+            <button type="" class="search">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.2"
+                  d="M14.5 25C20.299 25 25 20.299 25 14.5C25 8.70101 20.299 4 14.5 4C8.70101 4 4 8.70101 4 14.5C4 20.299 8.70101 25 14.5 25Z"
+                  fill="#070707"
+                />
+                <path
+                  d="M14.5 25C20.299 25 25 20.299 25 14.5C25 8.70101 20.299 4 14.5 4C8.70101 4 4 8.70101 4 14.5C4 20.299 8.70101 25 14.5 25Z"
+                  stroke="#070707"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M21.9248 21.9248L27.9998 27.9998"
+                  stroke="#070707"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </li>
 
-          <div
-            class="hidden w-full md:flex md:items-center md:w-auto"
-            id="menu"
-          >
-            <ul
-              class="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0"
-            >
-              <li class="md:p-4 py-2 block">
-                <svg
-                  width="32"
-                  height="32"
-                  viewBox="0 0 32 32"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    opacity="0.2"
-                    d="M14.5 25C20.299 25 25 20.299 25 14.5C25 8.70101 20.299 4 14.5 4C8.70101 4 4 8.70101 4 14.5C4 20.299 8.70101 25 14.5 25Z"
-                    fill="#070707"
-                  />
-                  <path
-                    d="M14.5 25C20.299 25 25 20.299 25 14.5C25 8.70101 20.299 4 14.5 4C8.70101 4 4 8.70101 4 14.5C4 20.299 8.70101 25 14.5 25Z"
-                    stroke="#070707"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M21.9248 21.9248L27.9998 27.9998"
-                    stroke="#070707"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </li>
-              <li class="md:p-4 py-2 block">
+          <li class="">
+            <button type="" class="">
+              <a href="../pages/profile.html">
                 <svg
                   width="32"
                   height="32"
@@ -170,43 +134,549 @@
                     stroke-linejoin="round"
                   />
                 </svg>
-              </li>
+              </a>
+            </button>
+          </li>
 
-              <li class="md:p-4 py-2 block">
+          <li id="cart-button" class="relative">
+            <button type="">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.2"
+                  d="M27 9H5C4.44772 9 4 9.44772 4 10V26C4 26.5523 4.44772 27 5 27H27C27.5523 27 28 26.5523 28 26V10C28 9.44772 27.5523 9 27 9Z"
+                  fill="#070707"
+                />
+                <path
+                  d="M27 9H5C4.44772 9 4 9.44772 4 10V26C4 26.5523 4.44772 27 5 27H27C27.5523 27 28 26.5523 28 26V10C28 9.44772 27.5523 9 27 9Z"
+                  stroke="#070707"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M11 13V9C11 7.67392 11.5268 6.40215 12.4645 5.46447C13.4021 4.52678 14.6739 4 16 4C17.3261 4 18.5979 4.52678 19.5355 5.46447C20.4732 6.40215 21 7.67392 21 9V13"
+                  stroke="#070707"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+
+            <p
+              class="bg-[#FF0000] rounded-full w-5 h-5 absolute -top-2.5 -right-1.5 shadow-[0px_2px_16px_1px_#FFB5B5] flex justify-center items-center font-Raleway font-medium text-xs text-white"
+            >
+              2
+            </p>
+
+            <div
+              id="cart-menu"
+              class="hidden absolute z-50 top-full right-0 pt-10"
+            >
+              <div
+                class="relative bg-[#F9F6F1] max-w-[425px] h-[564px] shadow-[0_24px_48px_-12px_rgba(0,0,0,0.18)] rounded-lg p-4 lg:p-6"
+              >
+                <p
+                  class="font-Playfair font-bold text-base lg:text-xl text-primary mb-4 pt-5"
+                >
+                  Your Cart
+                </p>
+
+                <div class="">
+                  <div
+                    class="flex justify-between items-start py-3 border-b border-[#E5E2DE]"
+                  >
+                    <div class="flex gap-3">
+                      <div class="w-12 h-12">
+                        <img src="../assets/image/food/food-8.webp" alt="" />
+                      </div>
+                      <div class="space-y-1">
+                        <p
+                          class="font-Raleway font-bold text-sm text-primary"
+                        >
+                          Best Fresh Tasting <br />
+                          Avocado
+                        </p>
+                        <p
+                          class="font-Raleway font-medium text-sm text-primary opacity-60"
+                        >
+                          $15.66
+                        </p>
+                      </div>
+                    </div>
+                    <button type="">
+                      <i class="ph-x"></i>
+                    </button>
+                  </div>
+
+                  <div
+                    class="flex justify-between items-start py-3 border-b border-[#E5E2DE]"
+                  >
+                    <div class="flex gap-3">
+                      <div class="w-12 h-12">
+                        <img src="../assets/image/food/food-6.webp" alt="" />
+                      </div>
+                      <div class="space-y-1">
+                        <p
+                          class="font-Raleway font-bold text-sm text-primary"
+                        >
+                          Best Fresh Tasting <br />
+                          Avocado
+                        </p>
+                        <p
+                          class="font-Raleway font-medium text-sm text-primary opacity-60"
+                        >
+                          $15.66
+                        </p>
+                      </div>
+                    </div>
+                    <button type="">
+                      <i class="ph-x"></i>
+                    </button>
+                  </div>
+
+                  <div
+                    class="flex justify-between items-start py-3 border-b border-[#E5E2DE]"
+                  >
+                    <div class="flex gap-3">
+                      <div class="w-12 h-12">
+                        <img src="../assets/image/food/food-3.webp" alt="" />
+                      </div>
+                      <div class="space-y-1">
+                        <p
+                          class="font-Raleway font-bold text-sm text-primary"
+                        >
+                          Best Fresh Tasting <br />
+                          Avocado
+                        </p>
+                        <p
+                          class="font-Raleway font-medium text-sm text-primary opacity-60"
+                        >
+                          $15.66
+                        </p>
+                      </div>
+                    </div>
+                    <button type="">
+                      <i class="ph-x"></i>
+                    </button>
+                  </div>
+
+                  <div
+                    class="flex justify-between items-start py-3 border-b border-[#E5E2DE]"
+                  >
+                    <div class="flex gap-3">
+                      <div class="w-12 h-12">
+                        <img src="../assets/image/food/food-1.webp" alt="" />
+                      </div>
+                      <div class="space-y-1">
+                        <p
+                          class="font-Raleway font-bold text-sm text-primary"
+                        >
+                          Best Fresh Tasting <br />
+                          Avocado
+                        </p>
+                        <p
+                          class="font-Raleway font-medium text-sm text-primary opacity-60"
+                        >
+                          $15.66
+                        </p>
+                      </div>
+                    </div>
+                    <button type="">
+                      <i class="ph-x"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="flex justify-between py-3">
+                  <p class="font-Raleway font-bold text-sm text-primary">
+                    Subtotal :
+                  </p>
+                  <p
+                    class="font-Raleway font-semibold text-sm text-primary opacity-60"
+                  >
+                    $115.66
+                  </p>
+                </div>
+
+                <div class="flex space-x-2 pt-4">
+                  <button
+                    type=""
+                    class="font-Raleway font-semibold text-sm text-primary w-[126px] lg:w-[184px] h-[45px] bg-primary/12 border border-[#E1E1E1]"
+                  >
+                    <a href="./pages/cart.html">VIEW CART</a>
+                  </button>
+                  <button
+                    type=""
+                    class="font-Raleway font-semibold text-sm text-white w-[126px] lg:w-[184px] h-[45px] bg-success"
+                  >
+                    <a href="./pages/cart.html">CHECKOUT</a>
+                  </button>
+                </div>
+                <button
+                  id="cart-close-button"
+                  type=""
+                  class="absolute top-3 right-6 w-6 h-6 bg-yellow rounded-full text-white flex justify-center items-center"
+                >
+                  <i class="ph-x"></i>
+                </button>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+    <!-- Large screen end -->
+
+    <!-- Mobile screen started  -->
+    <div class="w-full backdrop-blur-[2px] bg-[rgba(255,255,255,0.5)]">
+      <nav class="px-4 py-2 md:py-0">
+        <div class="flex justify-between">
+          <div class="flex justify-center items-center">
+            <a href="../index.html" class="md:hidden block w-8 h-8">
+              <img src="../assets/image/logo/logo.webp" alt="" />
+            </a>
+          </div>
+
+          <div class="flex gap-2.5 items-center">
+            <div class="relative md:hidden">
+              <button id="mob-cart-button">
                 <svg
-                  width="32"
-                  height="32"
-                  viewBox="0 0 32 32"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     opacity="0.2"
-                    d="M27 9H5C4.44772 9 4 9.44772 4 10V26C4 26.5523 4.44772 27 5 27H27C27.5523 27 28 26.5523 28 26V10C28 9.44772 27.5523 9 27 9Z"
+                    d="M16.875 5.625H3.125C2.77982 5.625 2.5 5.90482 2.5 6.25V16.25C2.5 16.5952 2.77982 16.875 3.125 16.875H16.875C17.2202 16.875 17.5 16.5952 17.5 16.25V6.25C17.5 5.90482 17.2202 5.625 16.875 5.625Z"
                     fill="#070707"
                   />
                   <path
-                    d="M27 9H5C4.44772 9 4 9.44772 4 10V26C4 26.5523 4.44772 27 5 27H27C27.5523 27 28 26.5523 28 26V10C28 9.44772 27.5523 9 27 9Z"
+                    d="M16.875 5.625H3.125C2.77982 5.625 2.5 5.90482 2.5 6.25V16.25C2.5 16.5952 2.77982 16.875 3.125 16.875H16.875C17.2202 16.875 17.5 16.5952 17.5 16.25V6.25C17.5 5.90482 17.2202 5.625 16.875 5.625Z"
                     stroke="#070707"
-                    stroke-width="2"
+                    stroke-width="1.5"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
                   <path
-                    d="M11 13V9C11 7.67392 11.5268 6.40215 12.4645 5.46447C13.4021 4.52678 14.6739 4 16 4C17.3261 4 18.5979 4.52678 19.5355 5.46447C20.4732 6.40215 21 7.67392 21 9V13"
+                    d="M6.875 8.125V5.625C6.875 4.7962 7.20424 4.00134 7.79029 3.41529C8.37634 2.82924 9.1712 2.5 10 2.5C10.8288 2.5 11.6237 2.82924 12.2097 3.41529C12.7958 4.00134 13.125 4.7962 13.125 5.625V8.125"
                     stroke="#070707"
-                    stroke-width="2"
+                    stroke-width="1.5"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
                 </svg>
-              </li>
-            </ul>
+              </button>
+
+              <p
+                class="bg-[#FF0000] rounded-full w-4 h-4 absolute -top-2.5 -right-1.5 shadow-[0px_2px_16px_1px_#FFB5B5] flex justify-center items-center font-Raleway font-medium text-xs text-white"
+              >
+                2
+              </p>
+            </div>
+            <div
+              id="mob-cart-menu"
+              class="hidden absolute z-50 top-7 left-0 right-0 pt-10 mx-2"
+            >
+              <div
+                class="relative bg-[#F9F6F1] max-w-[425px] h-[564px] shadow-[0_24px_48px_-12px_rgba(0,0,0,0.18)] rounded-lg p-4 lg:p-6"
+              >
+                <p
+                  class="font-Playfair font-bold text-base lg:text-xl text-primary mb-4 pt-5"
+                >
+                  Your Cart
+                </p>
+
+                <div class="">
+                  <div
+                    class="flex justify-between items-start py-3 border-b border-[#E5E2DE]"
+                  >
+                    <div class="flex gap-3">
+                      <div class="w-12 h-12">
+                        <img src="../assets/image/food/food-8.webp" alt="" />
+                      </div>
+                      <div class="space-y-1">
+                        <p
+                          class="font-Raleway font-bold text-sm text-primary"
+                        >
+                          Best Fresh Tasting <br />
+                          Avocado
+                        </p>
+                        <p
+                          class="font-Raleway font-medium text-sm text-primary opacity-60"
+                        >
+                          $15.66
+                        </p>
+                      </div>
+                    </div>
+                    <button type="">
+                      <i class="ph-x"></i>
+                    </button>
+                  </div>
+
+                  <div
+                    class="flex justify-between items-start py-3 border-b border-[#E5E2DE]"
+                  >
+                    <div class="flex gap-3">
+                      <div class="w-12 h-12">
+                        <img src="../assets/image/food/food-6.webp" alt="" />
+                      </div>
+                      <div class="space-y-1">
+                        <p
+                          class="font-Raleway font-bold text-sm text-primary"
+                        >
+                          Best Fresh Tasting <br />
+                          Avocado
+                        </p>
+                        <p
+                          class="font-Raleway font-medium text-sm text-primary opacity-60"
+                        >
+                          $15.66
+                        </p>
+                      </div>
+                    </div>
+                    <button type="">
+                      <i class="ph-x"></i>
+                    </button>
+                  </div>
+
+                  <div
+                    class="flex justify-between items-start py-3 border-b border-[#E5E2DE]"
+                  >
+                    <div class="flex gap-3">
+                      <div class="w-12 h-12">
+                        <img src="../assets/image/food/food-3.webp" alt="" />
+                      </div>
+                      <div class="space-y-1">
+                        <p
+                          class="font-Raleway font-bold text-sm text-primary"
+                        >
+                          Best Fresh Tasting <br />
+                          Avocado
+                        </p>
+                        <p
+                          class="font-Raleway font-medium text-sm text-primary opacity-60"
+                        >
+                          $15.66
+                        </p>
+                      </div>
+                    </div>
+                    <button type="">
+                      <i class="ph-x"></i>
+                    </button>
+                  </div>
+
+                  <div
+                    class="flex justify-between items-start py-3 border-b border-[#E5E2DE]"
+                  >
+                    <div class="flex gap-3">
+                      <div class="w-12 h-12">
+                        <img src="../assets/image/food/food-1.webp" alt="" />
+                      </div>
+                      <div class="space-y-1">
+                        <p
+                          class="font-Raleway font-bold text-sm text-primary"
+                        >
+                          Best Fresh Tasting <br />
+                          Avocado
+                        </p>
+                        <p
+                          class="font-Raleway font-medium text-sm text-primary opacity-60"
+                        >
+                          $15.66
+                        </p>
+                      </div>
+                    </div>
+                    <button type="">
+                      <i class="ph-x"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="flex justify-between py-3">
+                  <p class="font-Raleway font-bold text-sm text-primary">
+                    Subtotal :
+                  </p>
+                  <p
+                    class="font-Raleway font-semibold text-sm text-primary opacity-60"
+                  >
+                    $115.66
+                  </p>
+                </div>
+
+                <div class="flex space-x-2 pt-4">
+                  <button
+                    type=""
+                    class="font-Raleway font-semibold text-sm text-primary w-[126px] lg:w-[184px] h-[45px] bg-primary/12 border border-[#E1E1E1]"
+                  >
+                    <a href="./pages/cart.html">VIEW CART</a>
+                  </button>
+                  <button
+                    type=""
+                    class="font-Raleway font-semibold text-sm text-white w-[126px] lg:w-[184px] h-[45px] bg-success"
+                  >
+                    <a href="./pages/cart.html">CHECKOUT</a>
+                  </button>
+                </div>
+                <button
+                  id="mob-cart-close-button"
+                  type=""
+                  class="absolute top-3 right-6 w-6 h-6 bg-yellow rounded-full text-white flex justify-center items-center"
+                >
+                  <i class="ph-x"></i>
+                </button>
+              </div>
+            </div>
+
+            <button class="md:hidden block" type="">
+              <svg
+                id="menu-button"
+                class="h-6 w-6 cursor-pointer"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.9375 5H14.0625"
+                  stroke="#004738"
+                  stroke-width="1.5"
+                  stroke-linecap="square"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M3.125 10H16.875"
+                  stroke="#004738"
+                  stroke-width="1.5"
+                  stroke-linecap="square"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5.9375 15H14.0625"
+                  stroke="#004738"
+                  stroke-width="1.5"
+                  stroke-linecap="square"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
           </div>
-        </nav>
+        </div>
+
+        <div
+          id="menu"
+          class="fixed z-50 top-0 left-0 flex items-center justify-center w-full h-screen hidden"
+        >
+          <div class="relative bg-white rounded-lg w-[265px] h-[350px] pt-6">
+            <div class="text-center mb-10">
+              <p class="font-Playfair font-semibold text-sm text-primary">
+                Menu
+              </p>
+            </div>
+            <div class="mobile-menu">
+              <ul class="flex flex-col justify-center items-center px-[34px]">
+                <li
+                  class="font-Raleway font-medium text-sm text-primary/60 py-3 border-b border-[#EBEBEB] w-full text-center"
+                >
+                  <a href="../index.html">Home</a>
+                </li>
+                <li
+                  class="font-Raleway font-medium text-sm text-primary/60 py-3 border-b border-[#EBEBEB] w-full text-center"
+                >
+                  <a href="../pages/about.html">About</a>
+                </li>
+                <li
+                  class="font-Raleway font-medium text-sm text-primary/60 py-3 border-b border-[#EBEBEB] w-full text-center"
+                >
+                  <a href="../pages/recipes.html">Recipes</a>
+                </li>
+                <li
+                  class="font-Raleway font-medium text-sm text-primary/60 py-3 border-b border-[#EBEBEB] w-full text-center"
+                >
+                  <a href="../pages/shop.html">Shop</a>
+                </li>
+                <li
+                  class="font-Raleway font-medium text-sm text-primary/60 py-3 w-full text-center"
+                >
+                  <a href="../pages/blog.html">Blog</a>
+                </li>
+              </ul>
+            </div>
+            <button id="close-button" class="absolute -top-4 -right-4">
+              <svg
+                width="36"
+                height="36"
+                viewBox="0 0 36 36"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="36" height="36" rx="18" fill="#FEBB41" />
+                <path
+                  d="M23.625 12.375L12.375 23.625"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M23.625 23.625L12.375 12.375"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <!-- Mobile screen end -->
+      </nav>
+    </div>
+  </header>
+  <!-- Header end  -->
+
+  <!-- Modal start  -->
+  <div
+    class="modal fixed z-10 inset-0 w-full hidden justify-center px-4 h-full bg-[rgba(255,255,255,0.74)] backdrop-blur-[2px]"
+  >
+    <div
+      class="modal-overlay fixed inset-0 bg-white/74 h-screen w-full z-30"
+    ></div>
+    <div class="w-full md:w-[641px] mt-40 relative z-40">
+      <div class="flex justify-end mb-[125px]">
+        <button type="" class="search-cancel">
+          <i class="ph-x text-2xl md:text-[40px] text-success text-end"></i>
+        </button>
       </div>
-    </header>
-    <!-- Header end  -->
+      <div>
+        <label for="" class="relative h-[50px] lg:h-20">
+          <span
+            class="absolute top-1/2 -translate-y-1/2 right-3 cursor-pointer"
+          >
+            <i
+              class="ph-magnifying-glass text-2xl lg:text-[40px] text-primary"
+            ></i
+          ></span>
+          <input
+            type=""
+            name=""
+            value=""
+            placeholder="Search..."
+            class="font-Raleway font-medium text-sm lg:text-base w-full h-[50px] lg:h-20 block px-6 text-[#938F99] outline-none border border-success"
+          />
+        </label>
+      </div>
+    </div>
+  </div>
+  <!-- Modal end  -->
 
     <!-- Profile started  -->
     <section id="profile">
@@ -266,7 +736,7 @@
                 <p class="flex gap-1 font-Raleway font-medium text-sm leading-[21px] text-primary/40 mb-2 lg:mb-4">Account <span> /</span> Billing Address</p>
               </div>
               <div class="mb-8 lg:mb-10">
-                <p class="font-Playfair font-bold text-2xl lg:text-[32px] leading-[29px] lg:leading-[42px] text-primary mb-1">Profile</p>
+                <p class="font-Playfair font-bold text-2xl lg:text-[32px] leading-[29px] lg:leading-[42px] text-primary mb-1">Billing Address</p>
                 <p class="font-Raleway font-medium text-sm lg:text-base leading-[21px] lg:leading-6 text-primary/60">View and update your account details, profile and more.</p>
               </div>
 
