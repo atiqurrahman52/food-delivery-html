@@ -160,6 +160,9 @@
   @apply bg-success rounded-full;
 }
 
+.swiper-pagination-bullets .hero {
+  /* bottom: -5% !important; */
+}
 /* all formatting goes inside 'a' */
 .outlets a {
   display: block;
