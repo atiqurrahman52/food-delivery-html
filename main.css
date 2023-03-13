@@ -20,6 +20,11 @@
 }
 /* navbar end */
 
+.sale{
+  background: linear-gradient(125.47deg, #248C80 37.4%, #105C53 85.68%);
+  box-shadow: 0px 20px 24px -4px rgba(0, 0, 0, 0.08), 0px 8px 8px -4px rgba(0, 0, 0, 0.03);
+}
+
 /* background images started  */
 .background-hero {
   background: url("./../assets/image/hero/herosection.webp") no-repeat center;
@@ -57,6 +62,10 @@
 }
 .blog-banner {
   background-image: url("./../assets/image/blog/blog-banner.webp");
+}
+.blog-mobile-banner {
+  /* background-image: url("./../assets/images/blog/blog-mobile-banner.webp"); */
+  background-image: url("./../assets/image/blog/blog-mobile-banner.webp");
 }
 .not-found {
   background-image: url("./../assets/image/not-found/not-found.webp");

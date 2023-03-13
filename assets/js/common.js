@@ -175,9 +175,9 @@ var swiperHero = new Swiper(".heroSlider", {
   spaceBetween: 20,
   slidesPerView: 1,
   loop: true,
-  autoplay: {
-    delay: 5000,
-  },
+  // autoplay: {
+  //   delay: 5000,
+  // },
   pagination: {
     el: ".heroSliderPage",
     clickable: true,
