@@ -411,3 +411,30 @@ $('.gallery').isotope({
 });
 
 // Gallery end 
+
+
+// Password visibility start 
+
+$(function(){
+  
+  $('#eye').click(function(){
+       
+        if($(this).hasClass('ph-eye-slash')){
+           
+          $(this).removeClass('ph-eye-slash');
+          
+          $(this).addClass('ph-eye');
+          
+          $('#password').attr('type','text');
+            
+        }else{
+         
+          $(this).removeClass('ph-eye');
+          
+          $(this).addClass('ph-eye-slash');  
+          
+          $('#password').attr('type','password');
+        }
+    });
+});
+// Password visibility end
