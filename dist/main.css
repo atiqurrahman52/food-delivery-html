@@ -698,6 +698,10 @@ video {
   z-index: 1;
 }
 
+.z-20{
+  z-index: 20;
+}
+
 .col-span-12{
   grid-column: span 12 / span 12;
 }
@@ -800,6 +804,10 @@ video {
   margin-top: 0.25rem;
 }
 
+.mt-10{
+  margin-top: 2.5rem;
+}
+
 .mt-3{
   margin-top: 0.75rem;
 }
@@ -886,6 +894,10 @@ video {
 
 .h-\[264px\]{
   height: 264px;
+}
+
+.h-\[294px\]{
+  height: 294px;
 }
 
 .h-\[29px\]{
@@ -976,24 +988,8 @@ video {
   height: 100vh;
 }
 
-.h-\[400px\]{
-  height: 400px;
-}
-
-.h-\[340px\]{
-  height: 340px;
-}
-
 .max-h-\[480px\]{
   max-height: 480px;
-}
-
-.max-h-\[300px\]{
-  max-height: 300px;
-}
-
-.max-h-\[500px\]{
-  max-height: 500px;
 }
 
 .\!w-full{
@@ -1056,8 +1052,16 @@ video {
   width: 138px;
 }
 
+.w-\[146px\]{
+  width: 146px;
+}
+
 .w-\[157px\]{
   width: 157px;
+}
+
+.w-\[162px\]{
+  width: 162px;
 }
 
 .w-\[166px\]{
@@ -1128,6 +1132,18 @@ video {
 .w-max{
   width: -moz-max-content;
   width: max-content;
+}
+
+.w-\[\]{
+  width: ;
+}
+
+.w-\[200px\]{
+  width: 200px;
+}
+
+.w-\[100px\]{
+  width: 100px;
 }
 
 .max-w-\[425px\]{
@@ -1666,6 +1682,11 @@ video {
   background-color: rgb(255 245 216 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#FFF7E3\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 247 227 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#FFFBF4\]{
   --tw-bg-opacity: 1;
   background-color: rgb(255 251 244 / var(--tw-bg-opacity));
@@ -1796,11 +1817,6 @@ video {
   padding-bottom: 0.625rem;
 }
 
-.py-20{
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
 .py-3{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -1922,14 +1938,6 @@ video {
 
 .pt-\[92px\]{
   padding-top: 92px;
-}
-
-.pt-20{
-  padding-top: 5rem;
-}
-
-.pt-0{
-  padding-top: 0px;
 }
 
 .text-left{
@@ -2137,16 +2145,17 @@ video {
   line-height: 42px;
 }
 
-.leading-\[48px\]{
-  line-height: 48px;
-}
-
 .leading-\[58px\]{
   line-height: 58px;
 }
 
 .leading-\[96px\]{
   line-height: 96px;
+}
+
+.text-\[\#004738\]{
+  --tw-text-opacity: 1;
+  color: rgb(0 71 56 / var(--tw-text-opacity));
 }
 
 .text-\[\#012232\]{
@@ -2181,6 +2190,11 @@ video {
 .text-\[\#456170\]{
   --tw-text-opacity: 1;
   color: rgb(69 97 112 / var(--tw-text-opacity));
+}
+
+.text-\[\#6FB400\]{
+  --tw-text-opacity: 1;
+  color: rgb(111 180 0 / var(--tw-text-opacity));
 }
 
 .text-\[\#938F99\]{
@@ -2247,11 +2261,6 @@ video {
 
 .text-primary\/90{
   color: rgb(7 7 7 / 0.9);
-}
-
-.text-red-600{
-  --tw-text-opacity: 1;
-  color: rgb(220 38 38 / var(--tw-text-opacity));
 }
 
 .text-success{
@@ -2374,6 +2383,16 @@ video {
   transition-duration: 150ms;
 }
 
+.transition-all{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-300{
+  transition-duration: 300ms;
+}
+
 .duration-500{
   transition-duration: 500ms;
 }
@@ -2403,6 +2422,11 @@ video {
 
 /* navbar end */
 
+.load_more{
+  background: linear-gradient(125.47deg, #248C80 37.4%, #105C53 85.68%);
+  box-shadow: 0px 20px 24px -4px rgba(0, 0, 0, 0.08), 0px 8px 8px -4px rgba(0, 0, 0, 0.03);
+}
+
 .sale{
   background: linear-gradient(125.47deg, #248C80 37.4%, #105C53 85.68%);
   box-shadow: 0px 20px 24px -4px rgba(0, 0, 0, 0.08), 0px 8px 8px -4px rgba(0, 0, 0, 0.03);
@@ -2428,7 +2452,11 @@ video {
 }
 
 .banner-shop {
-  background-image: url("./../assets/image/shop/shop-banner.svg");
+  background-image: url("./../assets/image/shop/shop-banner-large.webp");
+}
+
+.banner-shop-mobile{
+  background-image: url("./../assets/image/shop/shop-banner-mobile.webp");
 }
 
 .subscribe-banner {
@@ -2460,12 +2488,16 @@ video {
 }
 
 .blog-mobile-banner {
-  /* background-image: url("./../assets/images/blog/blog-mobile-banner.webp"); */
   background-image: url("./../assets/image/blog/blog-mobile-banner.webp");
 }
 
 .not-found {
-  background-image: url("./../assets/image/not-found/not-found.webp");
+  background-image: url("../../assets/image/not-found/not-found-large-screen.webp");
+}
+
+.not-found-mobile {
+  background-image: url("../../assets/image/not-found/not-found-mobile-screen.webp");
+  /* background-image: url("./../assets/image/not-found/not-found.webp"); */
 }
 
 /* background images end  */
@@ -2587,16 +2619,16 @@ video {
   text-decoration: none;
   color: black;
   font-weight: bold;
-  /* padding: 8px; */
+  padding: 16px 16px 16px 32px;
   margin-right: 4px;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
+  /* border-top-right-radius: 5px;
+  border-top-left-radius: 5px; */
   margin-bottom: -2px;
 }
 
 .outlets a.active {
   /* border-bottom: 2px solid white; */
-  padding: 0 20px;
+  /* padding: 0 20px; */
   color: #004738;
   font-weight: bold;
   background-color: #f4f4f4;
@@ -2738,6 +2770,18 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 /* navbar link active  end */
+
+/* Profile active start  */
+
+.activeProfile{
+  padding: 10px 30px;
+  background: #FFFFFF;
+  border: 1px solid #004738;
+  border-radius: 4px;
+  color: #004738;
+}
+
+/* Profile active end  */
 
 /* Gallery started  */
 
@@ -2945,6 +2989,10 @@ input[type="number"]::-webkit-outer-spin-button {
     flex-direction: row;
   }
 
+  .md\:flex-col{
+    flex-direction: column;
+  }
+
   .md\:items-center{
     align-items: center;
   }
@@ -2963,6 +3011,10 @@ input[type="number"]::-webkit-outer-spin-button {
 
   .md\:gap-6{
     gap: 1.5rem;
+  }
+
+  .md\:overflow-x-hidden{
+    overflow-x: hidden;
   }
 
   .md\:p-4{
@@ -2998,6 +3050,15 @@ input[type="number"]::-webkit-outer-spin-button {
 
   .md\:text-end{
     text-align: end;
+  }
+
+  .md\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .md\:text-\[32px\]{
+    font-size: 32px;
   }
 
   .md\:text-\[40px\]{
@@ -3107,6 +3168,10 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-bottom: 2rem;
   }
 
+  .lg\:mt-\[47px\]{
+    margin-top: 47px;
+  }
+
   .lg\:block{
     display: block;
   }
@@ -3121,6 +3186,10 @@ input[type="number"]::-webkit-outer-spin-button {
 
   .lg\:h-12{
     height: 3rem;
+  }
+
+  .lg\:h-14{
+    height: 3.5rem;
   }
 
   .lg\:h-16{
@@ -3197,6 +3266,10 @@ input[type="number"]::-webkit-outer-spin-button {
 
   .lg\:w-\[calc\(33\.33\%-24px\)\]{
     width: calc(33.33% - 24px);
+  }
+
+  .lg\:w-auto{
+    width: auto;
   }
 
   .lg\:grid-cols-2{

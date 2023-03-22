@@ -8,32 +8,40 @@
         <link rel="stylesheet" href="./../dist/main.css" />
     </head>
     <body>
-        <section id="not-found">
-            <div class="not-found bg-cover bg-no-repeat bg-center h-screen">
+        <section id="not-found" class="relative">
+            <img src="../assets/image/not-found/strawberry.png" class="absolute top-0 right-0 z-20 w-[100px] lg:w-auto" alt="">
+            <img src="../assets/image/not-found/orange.png" class="absolute bottom-0 left-0 z-20 w-[100px] lg:w-auto" alt="">
+            <div class="not-found bg-cover bg-no-repeat bg-center">
                 <div class="container">
-                     <div class="flex flex-col md:flex-row justify-center items-center h-screen">
+                    <div class="flex justify-center items-center h-screen w-full">
                         <div>
-                            <img src="../assets/image/not-found/four.webp" alt="">
-                         </div>
-                         <div>
-                            <img src="../assets/image/not-found/zero.webp" alt="">
-                         </div>
-                         <div>
-                            <img src="../assets/image/not-found/four.webp" alt="">
-                         </div>
-                     </div>
-                     <div class="flex flex-col justify-center items-center">
-                        <p>Ooops...</p>
-                        <p>Page not found</p>
-                        <div class="product-card">
-                            <button
-                            type=""
-                            class="font-Raleway font-medium text-sm w-[308px] lg:text-base leading-[21pxpx] lg:leading-6 py-2 text-success md:py-3 border border-success rounded-[5px] z-[1] relative overflow-hidden add-to-cart-btn"
-                          >
-                            Add to cart
-                          </button>
+                            
+                        
+                            <div class="flex flex-col md:flex-row justify-center items-center">
+                                <div>
+                                    <img src="../assets/image/not-found/four.webp" alt="">
+                                </div>
+                                <div>
+                                    <img src="../assets/image/not-found/zero.webp" alt="">
+                                </div>
+                                <div>
+                                    <img src="../assets/image/not-found/four.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="flex flex-col justify-center items-center">
+                                <p class="font-Poppins font-bold text-xl md:text-[32px] text-[#6FB400]">Ooops...</p>
+                                <p class="font-Poppins text-sm md:text-2xl text-[#6FB400]">Page not found</p>
+                                <div class="product-card mt-10 lg:mt-[47px]">
+                                    <button
+                                    type=""
+                                    class="font-Raleway font-medium text-sm w-[308px] lg:text-base leading-[21pxpx] lg:leading-6 py-2 text-success md:py-3 border border-success rounded-[5px] z-[1] relative overflow-hidden add-to-cart-btn"
+                                >
+                                    Add to cart
+                                </button>
+                                </div>
+                            </div>
                         </div>
-                     </div>
+                    </div>
                 </div>
             </div>
             

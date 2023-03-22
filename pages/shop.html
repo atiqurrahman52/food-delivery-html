@@ -682,11 +682,11 @@
 
     <!-- Banner Header started  -->
     <section id="banner-header">
-      <div class="banner-shop bg-center bg-no-repeat bg-cover h-[300px]">
+      <div class="banner-shop bg-center bg-no-repeat bg-cover h-[300px] md:block hidden">
         <div class="container">
           <div class="flex flex-col space-y-2 pt-[104px]">
             <h3
-              class="font-Playfair font-bold text-5xl leading-[48px] text-black"
+              class="font-Playfair font-bold text-5xl mb-2 text-black"
             >
               Shop
             </h3>
@@ -698,11 +698,29 @@
           </div>
         </div>
       </div>
+       <!-- For Mobile  -->
+      <div class="banner-shop-mobile bg-center bg-no-repeat bg-cover h-[294px] md:hidden">
+        <div class="container">
+          <div class="flex flex-col space-y-2 pt-[104px]">
+            <h3
+              class="font-Playfair font-bold text-2xl  text-black"
+            >
+              Shop
+            </h3>
+            <p
+              class="font-Raleway font-medium text-base  text-primary opacity-60"
+            >
+              From Home Cooks to Professional Chefs
+            </p>
+          </div>
+        </div>
+      </div>
+      
     </section>
     <!-- Banner Header end  -->
 
-    <!-- Customer Favorites started  -->
-    <section id="customer-favorites">
+    <!-- product started  -->
+    <section id="product">
       <div class="bg-[#F3F4EF]">
         <div class="container">
           <div class="py-10">
@@ -716,7 +734,6 @@
               </div>
 
               <div class="flex justify-center items-center gap-3">
-
                 <div class="relative">
                   <div
                     class="filter-btn flex justify-center items-center gap-2 border-[1.5px] border-success rounded p-2"
@@ -1251,27 +1268,21 @@
                 </div>
               </a>
             </div>
+
             <div class="flex justify-center pt-6 lg:pt-8">
-              <button
-                class="flex items-center gap-2 py-3 px-4 w-[120px] h-[52px] rounded-[48px] bg-[#248C80]"
-              >
-                <p
-                  class="font-Raleway font-semibold text-sm lg:text-base leading-[21pxpx] lg:leading-6 text-white"
-                >
-                  See all
+              <button class="py-3 px-4 w-[120px] h-[52px] rounded-[48px] bg-[#248C80] load_more" >
+                <p class="font-Raleway font-semibold text-sm lg:text-base leading-[21px] lg:leading-6 text-white">
+                Load more
                 </p>
-                <span
-                  class="bg-white rounded-full w-7 h-7 flex justify-center items-center"
-                >
-                  <i class="ph-caret-right-bold text-success"></i
-                ></span>
               </button>
             </div>
+
+
           </div>
         </div>
       </div>
     </section>
-    <!-- Customer Favorites end  -->
+    <!-- product end  -->
 
      <!-- Subscribe Newsletter started -->
      <section id="subscribe">
