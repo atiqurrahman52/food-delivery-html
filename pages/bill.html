@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Profile</title>
+    <title>Bill</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="css/style.css" rel="stylesheet" />
@@ -14,6 +14,7 @@
 
     <link rel="stylesheet" href="./../dist/main.css" />
   </head>
+
   <body>
     <!-- Header started  -->
     <header id="navbar" class="sticky top-0 z-50 w-full navbar">
@@ -56,7 +57,7 @@
               </li>
               <li>
                 <a
-                  class="font-Raleway font-semibold text-primary text-sm md:text-base leading-6"
+                  class="font-Raleway font-semibold text-primary text-sm md:text-base leading-6 activePage"
                   href="../pages/blog.html"
                   >Blog</a
                 >
@@ -603,7 +604,7 @@
                     <a href="../pages/shop.html">Shop</a>
                   </li>
                   <li
-                    class="font-Raleway font-medium text-sm text-primary/60 py-3 w-full text-center"
+                    class="font-Raleway font-medium text-sm text-primary/60 py-3 w-full text-center activePage"
                   >
                     <a href="../pages/blog.html">Blog</a>
                   </li>
@@ -677,8 +678,8 @@
     </div>
     <!-- Modal end  -->
 
-    <!-- Profile started  -->
-    <section id="profile">
+    <!-- Payment options started  -->
+    <section id="payment">
       <div class="container">
         <div class="py-4 lg:py-8">
           <div class="grid grid-cols-12 gap-6">
@@ -705,14 +706,14 @@
                 <ul
                   class="scrollbar-hidden flex flex-row md:flex-col items-center md:items-start justify-start lg:space-y-4 overflow-x-auto md:overflow-x-hidden overflow-y-clip whitespace-nowrap py-3"
                 >
-                  <li class="dashboard-menu activeProfile">
+                  <li class="dashboard-menu">
                     <a
-                      href="../pages/profile.html"
+                      href="./profile.html"
                       class="flex items-center gap-1 lg:gap-2.5"
                     >
-                      <i class="ph-user text-lg"></i>
+                      <i class="ph-user text-[#016A78] text-lg"></i>
                       <p
-                        class="font-Overpass font-semibold text-sm leading-[21px]"
+                        class="font-Overpass font-semibold text-sm text-[#016A78] leading-[21px]"
                       >
                         Profile
                       </p>
@@ -720,7 +721,7 @@
                   </li>
                   <li class="dashboard-menu">
                     <a
-                      href="../pages/billing-address.html"
+                      href="./billing-address.html"
                       class="flex items-center gap-1 lg:gap-2.5"
                     >
                       <i class="ph-map-pin text-lg"></i>
@@ -731,9 +732,9 @@
                       </p>
                     </a>
                   </li>
-                  <li class="dashboard-menu">
+                  <li class="dashboard-menu activeProfile">
                     <a
-                      href="../pages/payment-options.html"
+                      href="./payment-options.html"
                       class="flex items-center gap-1 lg:gap-2.5"
                     >
                       <i class="ph-cardholder text-lg"></i>
@@ -745,149 +746,79 @@
                     </a>
                   </li>
                 </ul>
-
-                
               </div>
             </div>
 
             <div class="col-span-12 md:col-span-7">
+
               <div>
                 <p
-                  class="flex gap-1 font-Raleway font-medium text-sm leading-[21px] text-primary/40 mb-2 lg:mb-4"
+                  class="fle gap-10 font-Raleway font-medium text-sm leading-[21px] text-primary/40 mb-4"
                 >
-                  Account <span> /</span> Profile
+                  Account <span> /</span> Payment Options
                 </p>
               </div>
               <div class="mb-8 lg:mb-10">
                 <p
                   class="font-Playfair font-bold text-2xl lg:text-[32px] leading-[29px] lg:leading-[42px] text-primary mb-1"
                 >
-                  Profile
+                Billing Address
                 </p>
                 <p
                   class="font-Raleway font-medium text-sm lg:text-base leading-[21px] lg:leading-6 text-primary/60"
                 >
-                  View and update your account details, profile and more.
+                  Add or view current payment options
                 </p>
               </div>
 
-              <div class="flex flex-row gap-3 lg:gap-6 mb-4">
-                <div class="flex flex-col">
-                  <label
-                    class="font-Raleway font-semibold text-xs lg:text-base text-[#222329] leading-6 mb-1"
-                    for="fname"
-                    >First Name</label
-                  >
-                  <input
-                    class="inputs f-inputs border border-[#A3A3A5] text-success font-Raleway font-semibold text-sm rounded w-[138px] lg:w-[356px] h-10 lg:h-12 outline-success px-4 py-[13px]"
-                    type="text"
-                    id="fname"
-                    value="Atiq"
-                    readonly
-                    name="fname"
-                  />
+                <div class="space-y-3 md:space-y-4">
+                    <div>
+                        <label for="name" class="font-Raleway font-semibold text-xs md:text-base text-[#222329] outline-none mb-1">Name</label> <br>
+                        <input class="border border-primary/40 rounded w-full px-4 py-2" type="text" id="name" name="name">
+                    </div>
+                    <div class="flex flex-col lg:flex-row gap-6">
+                        <div>
+                            <label for="name" class="font-Raleway font-semibold text-xs md:text-base text-[#222329] outline-none mb-1">Country</label> <br>
+                            <input class="border border-primary/40 rounded w-full px-4 py-2" type="text" id="name" name="name">
+                        </div>
+                        <div>
+                            <label for="name" class="font-Raleway font-semibold text-xs md:text-base text-[#222329] outline-none mb-1">City</label> <br>
+                            <input class="border border-primary/40 rounded w-full  px-4 py-2" type="text" id="name" name="name">
+                        </div>
+                    </div>
+    
+                    <div class="flex flex-col lg:flex-row gap-6">
+                        <div>
+                            <label for="name" class="font-Raleway font-semibold text-xs md:text-base text-[#222329] outline-none mb-1">Province</label> <br>
+                            <input class="border border-primary/40 rounded w-full px-4 py-2" type="text" id="name" name="name">
+                        </div>
+                        <div>
+                            <label for="name" class="font-Raleway font-semibold text-xs md:text-base text-[#222329] outline-none mb-1">Zip Code</label> <br>
+                            <input class="border border-primary/40 rounded w-full  px-4 py-2" type="number" id="name" name="name">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="name" class="font-Raleway font-semibold text-xs md:text-base text-[#222329] outline-none mb-1">Phone Number</label> <br>
+                        <input class="border border-primary/40 rounded w-full px-4 py-2" type="number" id="name" name="name">
+                    </div>
+                    <div>
+                        <input class="accent-success" type="checkbox" id="demoCheckbox" name="checkbox" value="1">
+                        <label for="demoCheckbox"> Mark this address Default</label>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 pt-4 lg:pt-12">
+                    <button class="bg-success px-[51px] py-2 font-Raleway font-semibold text-sm text-white rounded-lg">Save</button>
+                    <button class="border border-success rounded-lg px-[51px] py-2 font-Raleway font-semibold text-sm text-success">Cancel</button>
                 </div>
 
-                <div class="flex flex-col">
-                  <label
-                    class="font-Raleway font-semibold text-xs lg:text-base text-[#222329] leading-6 mb-1"
-                    for="fname"
-                    >Last Name</label
-                  >
-                  <input
-                    class="inputs border border-[#A3A3A5] text-success font-Raleway font-semibold text-sm rounded w-[138px] lg:w-[356px] h-10 lg:h-12 outline-success px-4 py-[13px]"
-                    type="text"
-                    id="fname"
-                    value="Atiq"
-                    readonly
-                    name="lname"
-                  />
-                </div>
-              </div>
-
-              <div class="flex flex-row gap-3 lg:gap-6">
-                <div class="flex flex-col">
-                  <label
-                    class="font-Raleway font-semibold text-xs lg:text-base text-[#222329] leading-6 mb-1"
-                    for="fname"
-                    >Your Email</label
-                  >
-                  <input
-                    class="inputs border border-[#A3A3A5] text-success font-Raleway font-semibold text-sm rounded w-[138px] lg:w-[356px] h-10 lg:h-12 outline-success px-4 py-[13px]"
-                    type="email"
-                    id="fname"
-                    value="atiq@gmail.com"
-                    readonly
-                    name="fname"
-                  />
-                </div>
-
-                <div class="flex flex-col">
-                  <label
-                    class="font-Raleway font-semibold text-xs lg:text-base text-[#222329] leading-6 mb-1"
-                    for="fname"
-                    >Password</label
-                  >
-                  <div for="" class="relative">
-                    <span
-                      class="absolute top-1/2 -translate-y-1/2 right-2 py-3 cursor-pointer"
-                    >
-                      <i class="ph-eye-slash"></i>
-                    </span>
-
-                    <input
-                      class="inputs border border-[#A3A3A5] text-success font-Raleway font-semibold text-sm rounded w-[138px] lg:w-[356px] h-10 lg:h-12 outline-success px-4 py-[13px]"
-                      type="password"
-                      value="Atiq"
-                      readonly
-                      id=""
-                      name=""
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div class="flex items-center gap-2 pt-4 mb-4 md:mb-12">
-                <input
-                  class="accent-success"
-                  type="checkbox"
-                  id="accept"
-                  name="accept"
-                  value="accept"
-                />
-                <label
-                  for="accept"
-                  class="font-Raleway font-medium text-xs lg:text-sm leading-[21px] text-primary/80"
-                  >Subscribe to our Newsletter</label
-                ><br />
-              </div>
-              <div class="save-btn flex-col md:flex-row gap-4 md:gap-6 hidden">
-                <button
-                type=""
-                class="saved bg-success w-[288px] md:w-[261px] h-10 md:h-11 rounded-lg font-Raleway font-semibold text-sm text-white"
-              >
-              Save
-              </button>
-              <button
-                type=""
-                class="saved border border-success w-[288px] md:w-[261px] h-10 md:h-11 rounded-lg font-Raleway font-semibold text-sm text-success"
-              >
-              Cancel
-              </button>
             </div>
 
-              <button
-                type=""
-                class="edit-profile bg-success w-[288px] md:w-[261px] h-10 md:h-11 rounded-lg font-Raleway font-semibold text-sm text-white"
-              >
-                Edit Profile
-              </button>
-            </div>
+            
           </div>
         </div>
       </div>
     </section>
-    <!-- Profile end  -->
+    <!-- Payment Options end  -->
 
     <!-- Footer started  -->
     <footer id="footer mb-14">
@@ -1303,5 +1234,6 @@
   </body>
 
   <script src="../assets/js/jquery-3.6.3.min.js"></script>
+
   <script src="../assets/js/common.js"></script>
 </html>

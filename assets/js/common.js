@@ -1,4 +1,52 @@
+// profile started
+
+$(".edit-profile").on("click", function () {
+  $(".inputs").removeAttr("readonly");
+  $(".f-inputs").focus();
+  $(".save-btn").removeClass("hidden").addClass("flex");
+  $(this).addClass("hidden");
+});
+
+$(".saved").on("click", function () {
+  $(".inputs").attr("readonly", "true");
+
+  $(".save-btn").addClass("hidden");
+  $(".edit-profile").removeClass("hidden");
+});
+
+// profile end
+
+// payment started
+
+$(".edit-payment").on("click", function () {
+  $(".save-payment").removeClass("hidden").addClass("flex");
+  $(this).addClass("hidden");
+});
+
+$(".save-pay").on("click", function () {
+  $(".save-payment").addClass("hidden");
+  $(".edit-payment").removeClass("hidden");
+});
+
+// // payment end
+
+// billing stared 
+$(".edit-billing").on("click", function () {
+  $(".billing").removeClass("hidden").addClass("flex");
+  $(this).addClass("hidden");
+});
+
+$(".save-bill").on("click", function () {
+  $(".billing").addClass("hidden");
+  $(".edit-billing").removeClass("hidden");
+});
+// billing end 
+
 // Step started
+$(".action-btn").click(function () {
+  // $(this).parent().find('.action').toggle();
+  $(this).parent().find(".action").toggle();
+});
 
 $(document).ready(function () {
   var current_fs, next_fs, previous_fs;
@@ -62,8 +110,12 @@ $(document).ready(function () {
       });
     }
 
-    $("#progressbar li").eq($(".card2").index(current_fs)).removeClass("current");
-    $("#progressbar li").eq($(".card2").index(previous_fs)).removeClass("active");
+    $("#progressbar li")
+      .eq($(".card2").index(current_fs))
+      .removeClass("current");
+    $("#progressbar li")
+      .eq($(".card2").index(previous_fs))
+      .removeClass("active");
 
     current_fs.animate(
       {},
@@ -400,41 +452,40 @@ $(document).ready(function () {
 
 // Custom input design  end
 
+// Gallery started
 
-// Gallery started 
-
-$('.gallery').isotope({
-  itemSelector: '.grid-item',
+$(".gallery").isotope({
+  itemSelector: ".grid-item",
   masonry: {
-    gutter: 24
-  }
+    gutter: 24,
+  },
 });
 
-// Gallery end 
+// Gallery end
 
+// Password visibility start
 
-// Password visibility start 
+$(function () {
+  $("#eye").click(function () {
+    if ($(this).hasClass("ph-eye-slash")) {
+      $(this).removeClass("ph-eye-slash");
 
-$(function(){
-  
-  $('#eye').click(function(){
-       
-        if($(this).hasClass('ph-eye-slash')){
-           
-          $(this).removeClass('ph-eye-slash');
-          
-          $(this).addClass('ph-eye');
-          
-          $('#password').attr('type','text');
-            
-        }else{
-         
-          $(this).removeClass('ph-eye');
-          
-          $(this).addClass('ph-eye-slash');  
-          
-          $('#password').attr('type','password');
-        }
-    });
+      $(this).addClass("ph-eye");
+
+      $("#password").attr("type", "text");
+    } else {
+      $(this).removeClass("ph-eye");
+
+      $(this).addClass("ph-eye-slash");
+
+      $("#password").attr("type", "password");
+    }
+  });
 });
 // Password visibility end
+
+// payment option started
+
+// payment option end
+
+// Profile started
