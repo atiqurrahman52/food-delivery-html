@@ -722,6 +722,11 @@ video {
   float: right;
 }
 
+.-mx-3{
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+
 .mx-2{
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -1054,10 +1059,6 @@ video {
 
 .w-\[126px\]{
   width: 126px;
-}
-
-.w-\[138px\]{
-  width: 138px;
 }
 
 .w-\[146px\]{
@@ -2931,6 +2932,15 @@ input[type="number"]::-webkit-outer-spin-button {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
+.focus\:outline-none:focus{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.focus\:outline:focus{
+  outline-style: solid;
+}
+
 @media (min-width: 375px){
   .sm\:mb-0{
     margin-bottom: 0px;
@@ -3367,10 +3377,6 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 26px;
   }
 
-  .lg\:w-\[356px\]{
-    width: 356px;
-  }
-
   .lg\:w-\[514px\]{
     width: 514px;
   }
@@ -3417,6 +3423,10 @@ input[type="number"]::-webkit-outer-spin-button {
 
   .lg\:gap-4{
     gap: 1rem;
+  }
+
+  .lg\:gap-5{
+    gap: 1.25rem;
   }
 
   .lg\:gap-6{
