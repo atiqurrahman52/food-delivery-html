@@ -18,27 +18,27 @@ $(".saved").on("click", function () {
 
 // payment started
 
-$(".edit-payment").on("click", function () {
-  $(".save-payment").removeClass("hidden").addClass("flex");
-  $(this).addClass("hidden");
+$(".add-payment").on("click", function () {
+  $(".save-payment").removeClass("hidden");
+  $(".payment-option").addClass("hidden");
 });
 
 $(".save-pay").on("click", function () {
   $(".save-payment").addClass("hidden");
-  $(".edit-payment").removeClass("hidden");
+  $(".payment-option").removeClass("hidden");
 });
 
 // // payment end
 
 // billing stared 
 $(".edit-billing").on("click", function () {
-  $(".billing").removeClass("hidden").addClass("flex");
-  $(this).addClass("hidden");
+  $(".billing").removeClass("hidden");
+  $(".edit-div").addClass("hidden");
 });
 
 $(".save-bill").on("click", function () {
   $(".billing").addClass("hidden");
-  $(".edit-billing").removeClass("hidden");
+  $(".edit-div").removeClass("hidden");
 });
 // billing end 
 
