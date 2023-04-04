@@ -1,3 +1,31 @@
+let searchText = document.querySelector('.search-input');
+let suggestion = document.querySelector('.search-suggestion')
+let items = ['One', 'Two', 'Three','Four','Five', 'Six','Seven','Eight','Nine','Ten', 'Eleven','Twelve','Thirteen','Fourteen','Fifteen'];
+let filterItems = []
+
+document.addEventListener('keyup', () => {
+  let inputText = searchText.value.toLowerCase();
+  let singleItem;
+  let para = document.createElement('p')
+  if(inputText.length > 0){
+    filterItems.push(items.filter(val => val.toLowerCase().match(inputText)));
+    for(let i = 0; i < filterItems.length; i++){
+      singleItem = filterItems[i]
+      para.innerText = singleItem
+      suggestion.appendChild(para)
+    }
+  }
+
+})
+
+
+
+
+
+
+
+
+
 // profile started
 
 $(".edit-profile").on("click", function () {
