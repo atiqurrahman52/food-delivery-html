@@ -1001,6 +1001,10 @@ video {
   height: 100vh;
 }
 
+.h-\[\]{
+  height: ;
+}
+
 .max-h-\[480px\]{
   max-height: 480px;
 }
@@ -1896,6 +1900,11 @@ video {
 .py-\[5px\]{
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+.px-8{
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .pb-12{
@@ -3456,12 +3465,6 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
-  .lg\:space-x-5 > :not([hidden]) ~ :not([hidden]){
-    --tw-space-x-reverse: 0;
-    margin-right: calc(1.25rem * var(--tw-space-x-reverse));
-    margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
   .lg\:space-y-4 > :not([hidden]) ~ :not([hidden]){
     --tw-space-y-reverse: 0;
     margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
@@ -3687,6 +3690,10 @@ input[type="number"]::-webkit-outer-spin-button {
 
   .xl\:w-\[920px\]{
     width: 920px;
+  }
+
+  .xl\:gap-5{
+    gap: 1.25rem;
   }
 
   .xl\:py-20{
