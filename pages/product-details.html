@@ -843,13 +843,13 @@
                   cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
                   commodo diam libero vitae erat.
                 </p>
-                <div class="space-x-3 mb-10 lg:mb-20">
+                <div class="flex items-center space-x-3 mb-10 lg:mb-20">
                   <label
                     for="quantity"
                     class="font-Raleway font-semibold text-base leading-6 text-primary/60"
                     >Quantity :</label
                   >
-                  <input
+                  <!-- <input
                     class="border border-success rounded text-center"
                     type="number"
                     id="quantity"
@@ -857,7 +857,23 @@
                     min="1"
                     max="50"
                     value="2"
-                  />
+                  /> -->
+                  <div class="container-quantity flex items-center px-2 pt-2 rounded border border-[#E1E1E1]">
+                    <input type="text" name="qty" class="qty w-[25px] h-[20px]  text-base font-Roboto font-medium text-primary" maxlength="12" value="0" class="input-text qty" />
+
+                    <div class="button-container">
+                        <button class="cart-qty-plus flex flex-col " type="button" value="+">
+                          <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.614053 4.17605L4.06739 0.722721C4.58739 0.202721 5.42739 0.202721 5.94739 0.722721L9.40072 4.17605C10.2407 5.01605 9.64072 6.45605 8.45405 6.45605H1.54739C0.36072 6.45605 -0.225947 5.01605 0.614053 4.17605Z" fill="#070707"/>
+                            </svg>
+                        </button>
+                        <button class="cart-qty-minus" type="button" value="-">
+                          <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.614053 2.61301L4.06739 6.06634C4.58739 6.58634 5.42739 6.58634 5.94739 6.06634L9.40072 2.61301C10.2407 1.77301 9.64072 0.333008 8.45405 0.333008H1.54739C0.36072 0.333008 -0.225947 1.77301 0.614053 2.61301Z" fill="#070707"/>
+                            </svg>
+                        </button>
+                    </div>
+                    </div>
                   <span
                     class="font-Raleway font-semibold text-sm leading-[21px] text-primary"
                     >kg</span

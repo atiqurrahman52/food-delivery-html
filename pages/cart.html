@@ -10,7 +10,7 @@
   <link href="//db.onlinewebfonts.com/c/84ae358e627d67d90bd613fcedc20c10?family=Edwardian+Script+ITC" rel="stylesheet"
     type="text/css" />
   <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css" />
-
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="./../dist/main.css" />
   <link rel="stylesheet" href="./../assets/css/common.css" />
 </head>
@@ -714,6 +714,32 @@
 
   <section id="shopping-cart" class="first-screen show hidden card2">
     <div class="container">
+      
+     
+
+      <!-- <div class="flex space-x-3">
+        <div>
+          <p class="font-Raleway font-medium text-xs leading-[18px] text-primary/60 mb-1">
+            valid Date<span class="text-[#FF0000] text-xs pl-1"><i class="ph-asterisk-simple-bold"></i></span>
+          </p>
+          <label for="datepicker" class="dateInputInitial flex items-center gap-2 border border-[#D0D1D3] rounded-md py-2.5 px-4 ">
+            <span class="font-Raleway font-semibold text-xs md:text-sm text-primary">MM</span>
+
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.61405 8.11301L7.06739 11.5663C7.58739 12.0863 8.42739 12.0863 8.94739 11.5663L12.4007 8.11301C13.2407 7.27301 12.6407 5.83301 11.4541 5.83301H4.54739C3.36072 5.83301 2.77405 7.27301 3.61405 8.11301Z" fill="#070707"/>
+              </svg>
+
+              <span class="font-Raleway font-semibold text-xs md:text-sm text-primary">YYYY</span>
+
+             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.61405 8.11301L7.06739 11.5663C7.58739 12.0863 8.42739 12.0863 8.94739 11.5663L12.4007 8.11301C13.2407 7.27301 12.6407 5.83301 11.4541 5.83301H4.54739C3.36072 5.83301 2.77405 7.27301 3.61405 8.11301Z" fill="#070707"/>
+             </svg> 
+          </label>
+          <input id="datepicker" class="dateInput">
+         
+        </div>
+      </div> -->
+
       <div class="grid grid-cols-12 gap-3 lg:gap-4">
         <div class="col-span-12 md:col-span-8">
           <div class="border border-[#EBEBEB] p-4 lg:p-6 rounded-xl mb-8">
@@ -761,8 +787,26 @@
               </div>
               <div class="lg:w-1/2 flex flex-row-reverse lg:flex-row justify-between">
                 <div class="flex items-center lg:w-1/2">
-                  <input class="border border-success rounded text-center" type="number" id="quantity" name="quantity"
-                    min="1" max="5" />
+
+                  
+                    <div class="container-quantity flex items-center px-2 pt-2 rounded border border-[#E1E1E1]">
+                      <input type="text" name="qty" class="qty w-[25px] h-[20px]  text-base font-Roboto font-medium text-primary" maxlength="12" value="0" class="input-text qty" />
+
+                      <div class="button-container">
+                          <button class="cart-qty-plus flex flex-col " type="button" value="+">
+                            <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0.614053 4.17605L4.06739 0.722721C4.58739 0.202721 5.42739 0.202721 5.94739 0.722721L9.40072 4.17605C10.2407 5.01605 9.64072 6.45605 8.45405 6.45605H1.54739C0.36072 6.45605 -0.225947 5.01605 0.614053 4.17605Z" fill="#070707"/>
+                              </svg>
+                          </button>
+                          <button class="cart-qty-minus" type="button" value="-">
+                            <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0.614053 2.61301L4.06739 6.06634C4.58739 6.58634 5.42739 6.58634 5.94739 6.06634L9.40072 2.61301C10.2407 1.77301 9.64072 0.333008 8.45405 0.333008H1.54739C0.36072 0.333008 -0.225947 1.77301 0.614053 2.61301Z" fill="#070707"/>
+                              </svg>
+                          </button>
+                      </div>
+                      </div>
+
+
                 </div>
 
                 <div class="flex items-center space-x-4">
@@ -794,8 +838,22 @@
               </div>
               <div class="lg:w-1/2 flex flex-row-reverse lg:flex-row justify-between">
                 <div class="flex items-center lg:w-1/2">
-                  <input class="border border-success rounded text-center" type="number" id="quantity" name="quantity"
-                    min="1" max="5" />
+                  <div class="container-quantity flex items-center px-2 pt-2 rounded border border-[#E1E1E1]">
+                    <input type="text" name="qty" class="qty w-[25px] h-[20px]  text-base font-Roboto font-medium text-primary" maxlength="12" value="0" class="input-text qty" />
+
+                    <div class="button-container">
+                        <button class="cart-qty-plus flex flex-col " type="button" value="+">
+                          <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.614053 4.17605L4.06739 0.722721C4.58739 0.202721 5.42739 0.202721 5.94739 0.722721L9.40072 4.17605C10.2407 5.01605 9.64072 6.45605 8.45405 6.45605H1.54739C0.36072 6.45605 -0.225947 5.01605 0.614053 4.17605Z" fill="#070707"/>
+                            </svg>
+                        </button>
+                        <button class="cart-qty-minus" type="button" value="-">
+                          <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.614053 2.61301L4.06739 6.06634C4.58739 6.58634 5.42739 6.58634 5.94739 6.06634L9.40072 2.61301C10.2407 1.77301 9.64072 0.333008 8.45405 0.333008H1.54739C0.36072 0.333008 -0.225947 1.77301 0.614053 2.61301Z" fill="#070707"/>
+                            </svg>
+                        </button>
+                    </div>
+                    </div>
                 </div>
 
                 <div class="flex items-center space-x-4">
@@ -827,8 +885,22 @@
               </div>
               <div class="lg:w-1/2 flex flex-row-reverse lg:flex-row justify-between">
                 <div class="flex items-center lg:w-1/2">
-                  <input class="border border-success rounded text-center" type="number" id="quantity" name="quantity"
-                    min="1" max="5" />
+                  <div class="container-quantity flex items-center px-2 pt-2 rounded border border-[#E1E1E1]">
+                    <input type="text" name="qty" class="qty w-[25px] h-[20px]  text-base font-Roboto font-medium text-primary" maxlength="12" value="0" class="input-text qty" />
+
+                    <div class="button-container">
+                        <button class="cart-qty-plus flex flex-col " type="button" value="+">
+                          <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.614053 4.17605L4.06739 0.722721C4.58739 0.202721 5.42739 0.202721 5.94739 0.722721L9.40072 4.17605C10.2407 5.01605 9.64072 6.45605 8.45405 6.45605H1.54739C0.36072 6.45605 -0.225947 5.01605 0.614053 4.17605Z" fill="#070707"/>
+                            </svg>
+                        </button>
+                        <button class="cart-qty-minus" type="button" value="-">
+                          <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.614053 2.61301L4.06739 6.06634C4.58739 6.58634 5.42739 6.58634 5.94739 6.06634L9.40072 2.61301C10.2407 1.77301 9.64072 0.333008 8.45405 0.333008H1.54739C0.36072 0.333008 -0.225947 1.77301 0.614053 2.61301Z" fill="#070707"/>
+                            </svg>
+                        </button>
+                    </div>
+                    </div>
                 </div>
 
                 <div class="flex items-center space-x-4">
@@ -1117,6 +1189,7 @@
                   class="border border-[#D0D1D3] rounded-[5px] outline-none w-full h-10 font-Raleway font-medium text-sm lg:text-base leading-[21px] lg:leading-6 text-primary placeholder:text-primary px-3 lg:px-4"
                   placeholder="Izak Newton" type="text" name="" value="" />
               </div>
+
               <div class="mb-4 lg:mb-6">
                 <p class="font-Raleway font-medium text-xs leading-[18px] text-primary/60 mb-1">
                   Enter Card Number
@@ -1144,7 +1217,9 @@
                     class="border border-[#D0D1D3] outline-none w-[115px] h-10 py-2 px-4 font-Raleway text-base leading-6 text-primary/40 rounded-[5px]"
                     type="text" placeholder="Enter Code" />
                 </div>
+                
               </div>
+
             </div>
 
             <div class="border border-[#EBEBEB] py-4 px-3 lg:px-[60px] rounded-lg mb-3">
@@ -1698,8 +1773,15 @@
 </body>
 
 <script src="../assets/js/jquery-3.6.3.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 <script src="../assets/js/swiper-bundle.min.js"></script>
 <script src="../assets/js/common.js"></script>
 <!-- <script src="../assets/js/step.js"></script> -->
+
+<script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
 
 </html>

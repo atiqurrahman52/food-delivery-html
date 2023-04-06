@@ -1,26 +1,57 @@
-let searchText = document.querySelector('.search-input');
-let suggestion = document.querySelector('.search-suggestion')
-let items = ['One', 'Two', 'Three','Four','Five', 'Six','Seven','Eight','Nine','Ten', 'Eleven','Twelve','Thirteen','Fourteen','Fifteen'];
-let filterItems = []
+// let searchText = document.querySelector('.search-input');
+// let suggestion = document.querySelector('.search-suggestion')
+// let items = ['One', 'Two', 'Three','Four','Five', 'Six','Seven','Eight','Nine','Ten', 'Eleven','Twelve','Thirteen','Fourteen','Fifteen'];
+// let filterItems = []
 
-document.addEventListener('keyup', () => {
-  let inputText = searchText.value.toLowerCase();
-  let singleItem;
-  let para = document.createElement('p')
-  if(inputText.length > 0){
-    filterItems.push(items.filter(val => val.toLowerCase().match(inputText)));
-    for(let i = 0; i < filterItems.length; i++){
-      singleItem = filterItems[i]
-      para.innerText = singleItem
-      suggestion.appendChild(para)
-    }
-  }
+// document.addEventListener('keyup', () => {
+//   let inputText = searchText.value.toLowerCase();
+//   let singleItem;
+//   let para = document.createElement('p')
+//   if(inputText.length > 0){
+//     filterItems.push(items.filter(val => val.toLowerCase().match(inputText)));
+//     for(let i = 0; i < filterItems.length; i++){
+//       singleItem = filterItems[i]
+//       para.innerText = singleItem
+//       suggestion.appendChild(para)
+//     }
+//   }
 
-})
+// })
+
+// Quantity started 
+var incrementPlus;
+var incrementMinus;
+
+var buttonPlus  = $(".cart-qty-plus");
+var buttonMinus = $(".cart-qty-minus");
+
+var incrementPlus = buttonPlus.click(function() {
+	var $n = $(this)
+		.parent(".button-container")
+		.parent(".container-quantity")
+		.find(".qty");
+	$n.val(Number($n.val())+1 );
+});
+
+var incrementMinus = buttonMinus.click(function() {
+		var $n = $(this)
+		.parent(".button-container")
+		.parent(".container-quantity")
+		.find(".qty");
+	var amount = Number($n.val());
+	if (amount > 0) {
+		$n.val(amount-1);
+	}
+});
+// Quantity end 
 
 
 
 
+let dateInit = document.querySelector('.dateInputInitial')
+$( function() {
+  $( "#datepicker" ).datepicker();
+});
 
 
 
