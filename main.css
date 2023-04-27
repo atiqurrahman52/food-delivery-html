@@ -125,6 +125,7 @@
   bottom: -30%;
 }
 
+
 .banner-btn::before {
   content: "";
   height: 28px;
@@ -150,16 +151,16 @@
   z-index: -1;
 }
 
-.product-card:hover .banner-btn {
+.banner:hover .banner-btn {
   color: black;
 }
-.product-card:hover .banner-btn::after {
+.banner:hover .banner-btn::after {
   height: 400px;
   width: 400px;
   right: -40%;
   top: -30%;
 }
-.product-card:hover .banner-btn::before {
+.banner:hover .banner-btn::before {
   height: 400px;
   width: 400px;
   left: -40%;

@@ -612,6 +612,7 @@
                   </li>
                 </ul>
               </div>
+
               <button id="close-button" class="absolute -top-4 -right-4">
                 <svg
                   width="36"
@@ -637,9 +638,9 @@
                   />
                 </svg>
               </button>
+              
             </div>
           
-
           </div>
           <!-- Mobile screen end -->
         </nav>
@@ -1527,34 +1528,7 @@
     <section id="customer-favorites">
       <div class="bg-[#F3F4EF]">
 
-       <!-- <div class="container relative">
-        <div class="">
-          <div class="lg:block hidden absolute -left-24 top-0">
-            <img src="./assets/image/food/lemon.png" alt="" />
-          </div>
-          <div class="mb-10 lg:mb-14">
-            <h3
-              class="font-edwardian text-[32px] lg:text-[80px] leading-[38px] text-primary opacity-[0.2] text-center"
-            >
-              Our Products
-            </h3>
-            <h3
-              class="font-Playfair font-bold text-2xl lg:text-5xl leading-[29px] lg:leading-[58px] text-primary mb-2 text-center"
-            >
-              Customer Favorites
-            </h3>
-            <p
-              class="font-Raleway font-medium text-sm leading-[21pxpx] text-primary/60 text-center"
-            >
-              Lorem ipsum dolor sit amet consectetur. i psum Lorem dolor sit
-              amet consectetur.
-            </p>
-          </div>
-          <div class="lg:block hidden absolute -right-24 -top-6">
-            <img src="./assets/image/food/strawberry.png" alt="" />
-          </div>
-        </div>
-       </div> -->
+      
 
 
         <div class="container">
@@ -2037,10 +2011,11 @@
               eiusmod tempor <br />
               incididunt ut labore et dolore magna aliqut enim ad minim
             </p>
-            <div class="product-card">
+            <!-- <div class="product-card"> -->
+            <div class="banner">
               <button
                 type=""
-                class="font-Raleway font-bold text-sm lg:text-base w-[192px] leading-[21pxpx] lg:leading-6 py-2 text-yellow md:py-3 border border-yellow rounded-[5px] z-[1] relative overflow-hidden banner-btn"
+                class="banner-btn font-Raleway font-bold text-sm lg:text-base w-[192px] leading-[21pxpx] lg:leading-6 py-2 text-yellow md:py-3 border border-yellow rounded-[5px] z-[1] relative overflow-hidden"
               >
                 View
               </button>
@@ -2066,10 +2041,10 @@
             eiusmod tempor <br />
             incididunt ut labore et dolore magna aliqut enim ad minim
           </p>
-          <div class="product-card">
+          <div class="banner">
             <button
               type=""
-              class="font-Raleway font-bold text-sm lg:text-base w-[192px] leading-[21pxpx] lg:leading-6 py-2 text-yellow md:py-3 border border-yellow rounded-[5px] z-[1] relative overflow-hidden banner-btn"
+              class="banner-btn font-Raleway font-bold text-sm lg:text-base w-[192px] leading-[21pxpx] lg:leading-6 py-2 text-yellow md:py-3 border border-yellow rounded-[5px] z-[1] relative overflow-hidden"
             >
               View
             </button>
@@ -2240,12 +2215,12 @@
             </div>
             <div class="flex justify-center pt-6 lg:pt-8">
               <button
-                class="flex items-center gap-2 py-3 px-4 w-[157px] h-[52px] rounded-[48px] bg-[#248C80] load_more"
+                class="flex items-center gap-2 py-3 px-4 w-[120px] h-[52px] rounded-[48px] bg-[#248C80] load_more"
               >
                 <p
                   class="font-Raleway font-semibold text-sm lg:text-base leading-[21px] lg:leading-6 text-white"
                 >
-                  See all Post
+                  See all
                 </p>
                 <span
                   class="bg-white rounded-full w-7 h-7 flex justify-center items-center"
@@ -2385,34 +2360,37 @@
               <p
                 class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white"
               >
-                Monday: 12-6PM
+                Monday: <span class="pl-1">12 PM</span> - <span>6 PM</span>
               </p>
               <p
                 class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white"
               >
-                Tuesday: 12-6PM
+               
+                Tuesday: <span class="pl-1">12 PM</span> - <span>6 PM</span>
               </p>
               <p
                 class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white"
               >
-                Wednesday: 12-6PM
+                Wednesday: 
+                <span class="pl-1">12 PM</span> - <span>6 PM</span>
               </p>
               <p
                 class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white"
               >
-                Thursday: 12-6PM
+                Thursday: <span class="pl-1">12 PM</span> - <span>6 PM</span>
               </p>
               <p
                 class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white"
               >
-                Friday: 12-6PM
+                Friday: <span class="pl-1">12 PM</span> - <span>6 PM</span>
               </p>
               <p
                 class="font-Raleway font-medium text-sm xl:text-base leading-[21px] xl:leading-6 text-white"
               >
-                Sunday: 12-6PM
+                Sunday: <span class="pl-1">12 PM</span> - <span>6 PM</span>
               </p>
             </div>
+            
           </div>
           <div class="bg-white h-[1px]"></div>
 
@@ -2428,12 +2406,12 @@
             </div>
             <ul class="flex space-x-6">
               <li
-                class="font-Roboto text-xs lg:text-sm leading-[18px] lg:leading-[21px] text-white"
+                class="font-Roboto text-xs lg:text-sm leading-[18px] lg:leading-[21px] text-white border-b"
               >
                 <a href="#">Privacy Policy</a>
               </li>
               <li
-                class="font-Roboto text-xs lg:text-sm leading-[18px] lg:leading-[21px] text-white"
+                class="font-Roboto text-xs lg:text-sm leading-[18px] lg:leading-[21px] text-white border-b"
               >
                 <a href="#">Terms of Service</a>
               </li>
@@ -2680,7 +2658,5 @@
   <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
  
   <script src="./assets/js/common.js"></script>
-  <!-- <script>
-    var $grid = $(".items-container").isotope({});
-  </script> -->
+
 </html>
