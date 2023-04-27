@@ -2675,6 +2675,10 @@ video {
   bottom: -15% !important;
 }
 
+.relatedProductRecipesPage{
+  bottom: -5% !important;
+}
+
 .swiper-pagination-bullets .swiper-pagination-bullet{
   border-radius: 9999px;
   --tw-bg-opacity: 1;
