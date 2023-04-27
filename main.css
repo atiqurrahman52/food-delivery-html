@@ -80,7 +80,6 @@
 
 .not-found-mobile {
   background-image: url("../../assets/image/not-found/not-found-mobile-screen.webp");
-  /* background-image: url("./../assets/image/not-found/not-found.webp"); */
 }
 /* background images end  */
 
@@ -171,20 +170,18 @@
   width: calc(100% - 20px);
 }
 
-/* .grid-item{
+.swiper-pagination-bullets .hero {
+  /* bottom: -5% !important; */
+}
 
-} */
-
-.swiper-pagination-bullets {
-  bottom: -5% !important;
+.ourTeamPage {
+  bottom: -15% !important;
 }
 .swiper-pagination-bullets .swiper-pagination-bullet {
   @apply bg-success rounded-full;
 }
 
-.swiper-pagination-bullets .hero {
-  /* bottom: -5% !important; */
-}
+
 /* all formatting goes inside 'a' */
 .outlets a {
   display: block;

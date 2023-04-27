@@ -1898,11 +1898,6 @@ video {
   padding-bottom: 5px;
 }
 
-.px-1{
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-}
-
 .pb-12{
   padding-bottom: 3rem;
 }
@@ -2576,7 +2571,6 @@ video {
 
 .not-found-mobile {
   background-image: url("../../assets/image/not-found/not-found-mobile-screen.webp");
-  /* background-image: url("./../assets/image/not-found/not-found.webp"); */
 }
 
 /* background images end  */
@@ -2673,22 +2667,18 @@ video {
   width: calc(100% - 20px);
 }
 
-/* .grid-item{
+.swiper-pagination-bullets .hero {
+  /* bottom: -5% !important; */
+}
 
-} */
-
-.swiper-pagination-bullets {
-  bottom: -5% !important;
+.ourTeamPage {
+  bottom: -15% !important;
 }
 
 .swiper-pagination-bullets .swiper-pagination-bullet{
   border-radius: 9999px;
   --tw-bg-opacity: 1;
   background-color: rgb(0 71 56 / var(--tw-bg-opacity));
-}
-
-.swiper-pagination-bullets .hero {
-  /* bottom: -5% !important; */
 }
 
 /* all formatting goes inside 'a' */
