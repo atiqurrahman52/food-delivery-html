@@ -18,44 +18,50 @@
 
 // })
 
-// Quantity started 
+// navbar
+// const btn = document.querySelector("#menu-button2"); // Hamburger Icon
+// const mob_menu = document.querySelector("#menu2"); // Menu
+// const closeMenu2 = document.querySelector("#close-button2");
+
+// btn.addEventListener("click", () => {
+//   mob_menu.classList.toggle("hidden");
+// });
+// if (closeMenu2) {
+//   closeMenu2.addEventListener("click", () => {
+//     mob_menu.classList.add("hidden");
+//   });
+// }
+// Quantity started
 var incrementPlus;
 var incrementMinus;
 
-var buttonPlus  = $(".cart-qty-plus");
+var buttonPlus = $(".cart-qty-plus");
 var buttonMinus = $(".cart-qty-minus");
 
-var incrementPlus = buttonPlus.click(function() {
-	var $n = $(this)
-		.parent(".button-container")
-		.parent(".container-quantity")
-		.find(".qty");
-	$n.val(Number($n.val())+1 );
+var incrementPlus = buttonPlus.click(function () {
+  var $n = $(this)
+    .parent(".button-container")
+    .parent(".container-quantity")
+    .find(".qty");
+  $n.val(Number($n.val()) + 1);
 });
 
-var incrementMinus = buttonMinus.click(function() {
-		var $n = $(this)
-		.parent(".button-container")
-		.parent(".container-quantity")
-		.find(".qty");
-	var amount = Number($n.val());
-	if (amount > 0) {
-		$n.val(amount-1);
-	}
+var incrementMinus = buttonMinus.click(function () {
+  var $n = $(this)
+    .parent(".button-container")
+    .parent(".container-quantity")
+    .find(".qty");
+  var amount = Number($n.val());
+  if (amount > 0) {
+    $n.val(amount - 1);
+  }
 });
-// Quantity end 
+// Quantity end
 
-
-
-
-let dateInit = document.querySelector('.dateInputInitial')
-$( function() {
-  $( "#datepicker" ).datepicker();
+let dateInit = document.querySelector(".dateInputInitial");
+$(function () {
+  $("#datepicker").datepicker();
 });
-
-
-
-
 
 // profile started
 
@@ -89,7 +95,7 @@ $(".save-pay").on("click", function () {
 
 // // payment end
 
-// billing stared 
+// billing stared
 $(".edit-billing").on("click", function () {
   $(".billing").removeClass("hidden");
   $(".edit-div").addClass("hidden");
@@ -99,7 +105,7 @@ $(".save-bill").on("click", function () {
   $(".billing").addClass("hidden");
   $(".edit-div").removeClass("hidden");
 });
-// billing end 
+// billing end
 
 // Step started
 $(".action-btn").click(function () {
@@ -200,7 +206,6 @@ $(document).ready(function () {
 const button = document.querySelector("#menu-button");
 const menu = document.querySelector("#menu");
 const closeMenu = document.querySelector("#close-button");
-
 button.addEventListener("click", () => {
   menu.classList.toggle("hidden");
 });
@@ -219,6 +224,8 @@ const cartCloseMenu = document.querySelector("#cart-close-button");
 const mobCartButton = document.querySelector("#mob-cart-button");
 const mobCartMenu = document.querySelector("#mob-cart-menu");
 const mobCartCloseMenu = document.querySelector("#mob-cart-close-button");
+
+console.log(cartButton);
 
 if (cartButton) {
   cartButton.addEventListener("click", () => {
