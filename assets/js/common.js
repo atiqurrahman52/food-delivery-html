@@ -1,3 +1,29 @@
+// OTP Generator 
+const OTPInputFunction = () => {
+  const inputs = document.querySelectorAll("#otp > *[id]");
+  for (let i = 0; i < inputs.length; i++) {
+    inputs[i].addEventListener("keydown", function (event) {
+      if (event.key === "Backspace") {
+        inputs[i].value = "";
+        if (i !== 0) inputs[i - 1].focus();
+      } else {
+        if (i === inputs.length - 1 && inputs[i].value !== "") {
+          return true;
+        } else if (event.keyCode > 47 && event.keyCode < 58) {
+          inputs[i].value = event.key;
+          if (i !== inputs.length - 1) inputs[i + 1].focus();
+          event.preventDefault();
+        } else if (event.keyCode > 64 && event.keyCode < 91) {
+          inputs[i].value = String.fromCharCode(event.keyCode);
+          if (i !== inputs.length - 1) inputs[i + 1].focus();
+          event.preventDefault();
+        }
+      }
+    });
+  }
+};
+OTPInputFunction();
+
 // let searchText = document.querySelector('.search-input');
 // let suggestion = document.querySelector('.search-suggestion')
 // let items = ['One', 'Two', 'Three','Four','Five', 'Six','Seven','Eight','Nine','Ten', 'Eleven','Twelve','Thirteen','Fourteen','Fifteen'];
@@ -555,3 +581,7 @@ $(function () {
 // payment option end
 
 // Profile started
+
+
+
+
