@@ -2809,6 +2809,10 @@ video {
   bottom: -5% !important;
 }
 
+.recipesDetailsProductPage{
+  bottom: -5% !important;
+}
+
 .swiper-pagination-bullets .swiper-pagination-bullet{
   border-radius: 9999px;
   --tw-bg-opacity: 1;
