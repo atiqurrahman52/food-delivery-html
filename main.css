@@ -269,6 +269,9 @@
 .recipesDetailsProductPage{
   bottom: -5% !important;
 }
+.relatedProductPage {
+  bottom: -8% !important;
+}
 .swiper-pagination-bullets .swiper-pagination-bullet {
   @apply bg-success rounded-full;
 }
