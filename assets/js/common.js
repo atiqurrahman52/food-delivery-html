@@ -1,4 +1,19 @@
-// OTP Generator 
+//  Mobile Menu Start 
+const button = document.querySelector("#menu-button");
+const menu = document.querySelector("#menu");
+const closeMenu = document.querySelector("#close-button");
+button.addEventListener("click", () => {
+  menu.classList.toggle("hidden");
+});
+if (closeMenu) {
+  closeMenu.addEventListener("click", () => {
+    menu.classList.add("hidden");
+  });
+}
+//  Mobile Menu End
+
+
+// OTP Generator start
 const OTPInputFunction = () => {
   const inputs = document.querySelectorAll("#otp > *[id]");
   for (let i = 0; i < inputs.length; i++) {
@@ -24,39 +39,8 @@ const OTPInputFunction = () => {
 };
 OTPInputFunction();
 
-// let searchText = document.querySelector('.search-input');
-// let suggestion = document.querySelector('.search-suggestion')
-// let items = ['One', 'Two', 'Three','Four','Five', 'Six','Seven','Eight','Nine','Ten', 'Eleven','Twelve','Thirteen','Fourteen','Fifteen'];
-// let filterItems = []
+// OTP Generator End
 
-// document.addEventListener('keyup', () => {
-//   let inputText = searchText.value.toLowerCase();
-//   let singleItem;
-//   let para = document.createElement('p')
-//   if(inputText.length > 0){
-//     filterItems.push(items.filter(val => val.toLowerCase().match(inputText)));
-//     for(let i = 0; i < filterItems.length; i++){
-//       singleItem = filterItems[i]
-//       para.innerText = singleItem
-//       suggestion.appendChild(para)
-//     }
-//   }
-
-// })
-
-// navbar
-// const btn = document.querySelector("#menu-button2"); // Hamburger Icon
-// const mob_menu = document.querySelector("#menu2"); // Menu
-// const closeMenu2 = document.querySelector("#close-button2");
-
-// btn.addEventListener("click", () => {
-//   mob_menu.classList.toggle("hidden");
-// });
-// if (closeMenu2) {
-//   closeMenu2.addEventListener("click", () => {
-//     mob_menu.classList.add("hidden");
-//   });
-// }
 // Quantity started
 var incrementPlus;
 var incrementMinus;
@@ -84,11 +68,96 @@ var incrementMinus = buttonMinus.click(function () {
 });
 // Quantity end
 
-let dateInit = document.querySelector(".dateInputInitial");
-$(function () {
-  $("#datepicker").datepicker();
+// cart button started
+
+const cartButton = document.querySelector("#cart-button");
+const cartMenu = document.querySelector("#cart-menu");
+const cartCloseMenu = document.querySelector("#cart-close-button");
+
+const mobCartButton = document.querySelector("#mob-cart-button");
+const mobCartMenu = document.querySelector("#mob-cart-menu");
+const mobCartCloseMenu = document.querySelector("#mob-cart-close-button");
+
+console.log(cartButton);
+
+if (cartButton) {
+  cartButton.addEventListener("click", () => {
+    cartMenu.classList.toggle("hidden");
+  });
+}
+if (cartCloseMenu) {
+  cartCloseMenu.addEventListener("click", (e) => {
+    e.stopPropagation();
+    cartMenu.classList.add("hidden");
+  });
+}
+
+// for mobile
+
+if (mobCartButton) {
+  mobCartButton.addEventListener("click", () => {
+    mobCartMenu.classList.toggle("hidden");
+  });
+}
+if (mobCartCloseMenu) {
+  mobCartCloseMenu.addEventListener("click", (e) => {
+    e.stopPropagation();
+    mobCartMenu.classList.add("hidden");
+  });
+}
+
+// cart button end
+
+
+$(document).ready(function () {
+  //  Password show/hide start 
+  $(".eye-btn").on("click", function () {
+    if ($(".input-psswd").attr("psswd-shown") == "false") {
+      $(".input-psswd").removeAttr("type");
+      $(".input-psswd").attr("type", "text");
+
+      $(".input-psswd").removeAttr("psswd-shown");
+      $(".input-psswd").attr("psswd-shown", "true");
+
+      $(".eye-off").addClass("hidden");
+      $(".eye-on").removeClass("hidden");
+    } else {
+      $(".input-psswd").removeAttr("type");
+      $(".input-psswd").attr("type", "password");
+
+      $(".input-psswd").removeAttr("psswd-shown");
+      $(".input-psswd").attr("psswd-shown", "false");
+
+      $(".eye-on").addClass("hidden");
+      $(".eye-off").removeClass("hidden");
+    }
+  });
+
+    //  Password show/hide end
+
+    // Gallery started
+
+$(".gallery").isotope({
+  itemSelector: ".grid-item",
+  masonry: {
+    gutter: 24,
+  },
 });
 
+// Gallery end
+
+
+
+  
+});
+
+
+
+
+// let dateInit = document.querySelector(".dateInputInitial");
+// $(function () {
+//   $("#datepicker").datepicker();
+// });
 // profile started
 
 $(".edit-profile").on("click", function () {
@@ -106,6 +175,17 @@ $(".saved").on("click", function () {
 });
 
 // profile end
+// billing stared
+$(".edit-billing").on("click", function () {
+  $(".billing").removeClass("hidden");
+  $(".edit-div").addClass("hidden");
+});
+
+$(".save-bill").on("click", function () {
+  $(".billing").addClass("hidden");
+  $(".edit-div").removeClass("hidden");
+});
+// billing end
 
 // payment started
 
@@ -121,17 +201,7 @@ $(".save-pay").on("click", function () {
 
 // // payment end
 
-// billing stared
-$(".edit-billing").on("click", function () {
-  $(".billing").removeClass("hidden");
-  $(".edit-div").addClass("hidden");
-});
 
-$(".save-bill").on("click", function () {
-  $(".billing").addClass("hidden");
-  $(".edit-div").removeClass("hidden");
-});
-// billing end
 
 // Step started
 $(".action-btn").click(function () {
@@ -229,64 +299,8 @@ $(document).ready(function () {
 
 // Step end
 
-const button = document.querySelector("#menu-button");
-const menu = document.querySelector("#menu");
-const closeMenu = document.querySelector("#close-button");
-button.addEventListener("click", () => {
-  menu.classList.toggle("hidden");
-});
-if (closeMenu) {
-  closeMenu.addEventListener("click", () => {
-    menu.classList.add("hidden");
-  });
-}
 
-// cart button started
 
-const cartButton = document.querySelector("#cart-button");
-const cartMenu = document.querySelector("#cart-menu");
-const cartCloseMenu = document.querySelector("#cart-close-button");
-
-const mobCartButton = document.querySelector("#mob-cart-button");
-const mobCartMenu = document.querySelector("#mob-cart-menu");
-const mobCartCloseMenu = document.querySelector("#mob-cart-close-button");
-
-console.log(cartButton);
-
-if (cartButton) {
-  cartButton.addEventListener("click", () => {
-    cartMenu.classList.toggle("hidden");
-  });
-}
-if (cartCloseMenu) {
-  cartCloseMenu.addEventListener("click", (e) => {
-    e.stopPropagation();
-    cartMenu.classList.add("hidden");
-  });
-}
-
-// for mobile
-
-if (mobCartButton) {
-  mobCartButton.addEventListener("click", () => {
-    mobCartMenu.classList.toggle("hidden");
-  });
-}
-if (mobCartCloseMenu) {
-  mobCartCloseMenu.addEventListener("click", (e) => {
-    e.stopPropagation();
-    mobCartMenu.classList.add("hidden");
-  });
-}
-
-// if (cartCloseMenu && cartMenu) {
-//   cartCloseMenu.addEventListener("click", () => {
-//     console.log("click");
-//     cartMenu.classList.add("hidden");
-//   });
-// }
-
-// cart button end
 
 // Filter started
 $(".filter-btn").click(function () {
@@ -539,49 +553,5 @@ $(document).ready(function () {
 
   //  shop filter and categories dropdown end
 }); // end ready
-
-// Custom input design  started
-
-// Custom input design  end
-
-// Gallery started
-
-$(".gallery").isotope({
-  itemSelector: ".grid-item",
-  masonry: {
-    gutter: 24,
-  },
-});
-
-// Gallery end
-
-// Password visibility start
-
-$(function () {
-  $("#eye").click(function () {
-    if ($(this).hasClass("ph-eye-slash")) {
-      $(this).removeClass("ph-eye-slash");
-
-      $(this).addClass("ph-eye");
-
-      $("#password").attr("type", "text");
-    } else {
-      $(this).removeClass("ph-eye");
-
-      $(this).addClass("ph-eye-slash");
-
-      $("#password").attr("type", "password");
-    }
-  });
-});
-// Password visibility end
-
-// payment option started
-
-// payment option end
-
-// Profile started
-
-
 
 
